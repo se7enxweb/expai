@@ -48,6 +48,21 @@
 
         /* ------------------------------------------------------------ utilities */
 
+        /** Shallow copy of the sources into target, skipping undefined values (as jQuery.extend did) */
+        function extend( target ) {
+            for ( var i = 1; i < arguments.length; i++ ) {
+                var source = arguments[i];
+                if ( source === null || source === undefined ) {
+                    continue;
+                }
+                for ( var key in source ) {
+                    if ( source[key] !== undefined ) {
+                        target[key] = source[key];
+                    }
+                }
+            }
+            return target;
+        }
         function stateLabel( s ) { return T( 'state_' + s ); }
         /** the records of the exchanges (expAiTurnRecord) from a history page or a step's answer */
         function takeRecords( data ) { Object.keys( ( data && data.records ) || {} ).forEach( function ( id ) { app.records[id] = data.records[id]; } ); }
@@ -501,7 +516,7 @@
         }
         function reviewCall( fn, data ) {
             showError( q( '.exp-ai-v-error', reviewBox() ), null );
-            return api( fn, $.extend( { thread: app.current.uuid }, data ) ).then( takeReview ).catch( function ( err ) {
+            return api( fn, extend( { thread: app.current.uuid }, data ) ).then( takeReview ).catch( function ( err ) {
                 showError( q( '.exp-ai-v-error', reviewBox() ), err );
                 throw err;
             } );
@@ -713,7 +728,7 @@
             window.clearTimeout( plan.timer );
             plan.timer = window.setTimeout( function () {
                 if ( !plan.data || !plan.data.plan || !app.current ) { return; }
-                api( 'plan_estimate', $.extend( { thread: app.current.uuid }, planEdits() ) ).then( function ( data ) {
+                api( 'plan_estimate', extend( { thread: app.current.uuid }, planEdits() ) ).then( function ( data ) {
                     plan.data = data;
                     renderPlan();
                 } ).catch( function ( err ) { showError( q( '.exp-ai-v-error', planBox() ), err ); } );
@@ -746,7 +761,7 @@
                 if ( op === 'approve' && !plan.selected.length ) { toast( T( 'pl_none_selected' ) ); return; }
                 b.disabled = true;
                 showError( q( '.exp-ai-v-error', box ), null );
-                api( 'plan_decide', $.extend( { thread: app.current.uuid, op: op }, planEdits() ) ).then( function ( data ) {
+                api( 'plan_decide', extend( { thread: app.current.uuid, op: op }, planEdits() ) ).then( function ( data ) {
                     takePlan( data );
                     if ( op === 'reject' ) { toast( T( 'pl_rejected' ) ); return; }
                     var r = data.run || {};
@@ -904,7 +919,7 @@
 
         function save( fields, quiet ) {
             if ( !app.current || !canWrite() ) { return Promise.resolve(); }
-            return api( 'thread_save', $.extend( { thread: app.current.uuid }, fields ) ).then( function ( data ) {
+            return api( 'thread_save', extend( { thread: app.current.uuid }, fields ) ).then( function ( data ) {
                 if ( data.lanes ) { app.lanes = data.lanes; }
                 setHeader( data.thread );
                 ( data.notes || [] ).forEach( function ( n ) { toast( n ); } );
@@ -917,7 +932,6 @@
                 if ( app.current ) { setHeader( app.current ); }
             } );
         }
-        var $ = window.jQuery;
 
         /* --------------------------------------------------------------- running */
 
@@ -935,7 +949,7 @@
 
         var stepCount = 0;
         function step( params ) {
-            return api( 'turn', $.extend( { thread: app.current.uuid }, params ) ).then( function ( data ) {
+            return api( 'turn', extend( { thread: app.current.uuid }, params ) ).then( function ( data ) {
                 takeRecords( data );
                 ExpAi.watchChip( q( '.exp-ai-v-watch' ), data.watch || null, [ 'vector' ] );
                 if ( data.exchange ) {
@@ -1206,7 +1220,7 @@
             var d = app.scopeDraft;
             var names = {};
             ( app.current.scope.nodes.concat( app.current.scope.subtrees ) ).forEach( function ( n ) { names[n.id] = n.name; } );
-            $.extend( names, app.scopeNames || {} );
+            extend( names, app.scopeNames || {} );
             var choices = app.boot ? app.boot.choices.scope : [ 'node', 'subtree', 'class' ];
             var item = function ( id, kind ) {
                 var name = names[id] || '#' + id;
