@@ -3,10 +3,10 @@
  * Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
  * GNU General Public License v2.0 (or any later version)
  *
- * Loaded on every admin page (design.ini [JavaScriptSettings] BackendJavaScriptList[]=expai.js), after ezjscore's
- * jQuery and jqueryio ($.ez). Three parts, each active only where its markup is:
+ * Loaded on every admin page (design.ini [JavaScriptSettings] BackendJavaScriptList[]=expai.js). Plain JavaScript:
+ * it needs neither jQuery nor ezjscore's jqueryio ($.ez). Three parts, each active only where its markup is:
  *
- *   ExpAi (core)   window.ExpAi: api() over ezjscore, events, field adapters, field action hooks, panel sections
+ *   ExpAi (core)   window.ExpAi: api() over ezjscore/call (fetch), events, field adapters, field action hooks, panel sections
  *   labels         the "Exponential Intelligence" label on versions the assistant wrote (draft lists, version
  *                  views, edit forms, approval items)
  *   panel          the full view panel (#exp-ai-panel)
@@ -25,11 +25,6 @@
 (function ( window, document ) {
     'use strict';
 
-    var $ = window.jQuery;
-    if ( !$ ) {
-        return;
-    }
-
     /* ------------------------------------------------------------------ core */
 
     var listeners = {};
@@ -43,43 +38,145 @@
         return input ? input.value : '';
     }
 
+    /** The Exp configuration blocks ({exp_config()}, written by page_head_exp.tpl in the <head> of the admin designs) */
+    function configBlocks() {
+        return document.querySelectorAll( 'script[type="application/json"]#exp-config, script[type="application/json"][data-exp-config]' );
+    }
+
+    /** The installation's root: ezjscore's $.ez where a page still loads it, else the Exp configuration block of the admin <head> */
     function rootUrl() {
-        if ( $.ez && $.ez.root_url ) {
-            return $.ez.root_url;
+        var jq = window.jQuery;
+        if ( jq && jq.ez && jq.ez.root_url ) {
+            return jq.ez.root_url;
         }
-        return '/';
+        var root = '';
+        Array.prototype.forEach.call( configBlocks(), function ( block ) {
+            try {
+                var data = JSON.parse( block.textContent );
+                if ( !root && data && data.config && data.config.root ) {
+                    root = String( data.config.root );
+                }
+            } catch ( e ) {}
+        } );
+        return root || '/';
+    }
+
+    /** Shallow copy of the sources into target, skipping undefined values (as jQuery.extend did) */
+    function extend( target ) {
+        for ( var i = 1; i < arguments.length; i++ ) {
+            var source = arguments[i];
+            if ( source === null || source === undefined ) {
+                continue;
+            }
+            for ( var key in source ) {
+                if ( source[key] !== undefined ) {
+                    target[key] = source[key];
+                }
+            }
+        }
+        return target;
+    }
+
+    /** Form encoding of an object, nested objects and arrays as key[sub] and key[] (as jQuery.param, which PHP reads back) */
+    function param( data ) {
+        var out = [];
+        var add = function ( key, value ) {
+            value = typeof value === 'function' ? value() : value;
+            out.push( encodeURIComponent( key ) + '=' + encodeURIComponent( value === null || value === undefined ? '' : value ) );
+        };
+        var build = function ( prefix, value ) {
+            if ( Array.isArray( value ) ) {
+                value.forEach( function ( v, i ) {
+                    if ( /\[\]$/.test( prefix ) ) {
+                        add( prefix, v );
+                    } else {
+                        build( prefix + '[' + ( typeof v === 'object' && v !== null ? i : '' ) + ']', v );
+                    }
+                } );
+            } else if ( Object.prototype.toString.call( value ) === '[object Object]' ) {
+                for ( var name in value ) {
+                    build( prefix + '[' + name + ']', value[name] );
+                }
+            } else {
+                add( prefix, value );
+            }
+        };
+        for ( var key in data ) {
+            build( key, data[key] );
+        }
+        return out.join( '&' ).replace( /%20/g, '+' );
     }
 
     /** POST expai::<fn> (or <group>::<fn>, e.g. expaivector::threads) through ezjscore; resolves with the content, rejects with { message } */
     function api( fn, data ) {
-        var post = $.extend( {}, data || {} );
+        var post = extend( {}, data || {} );
         post.ezjscServer_function_arguments = String( fn ).indexOf( '::' ) > 0 ? fn : 'expai::' + fn;
         post.ezxform_token = token();
         return new Promise( function ( resolve, reject ) {
-            $.ajax( {
-                url: rootUrl() + 'ezjscore/call',
-                type: 'POST',
-                data: post,
-                dataType: 'json',
-                headers: { 'X-CSRF-Token': post.ezxform_token },
-                timeout: 180000
-            } ).done( function ( json ) {
-                if ( !json || typeof json !== 'object' ) {
-                    reject( { message: '', kind: 'invalid' } );
-                } else if ( json.error_text ) {
-                    reject( { message: String( json.error_text ), kind: 'server' } );
-                } else {
-                    resolve( json.content );
-                }
-            } ).fail( function ( xhr, status ) {
-                var code = xhr && xhr.status ? xhr.status : 0;
+            var failed = function ( status, code, text ) {
                 // an HTML page where JSON was asked for (status 200, parsererror): the login page of a lost session
-                var loginPage = status === 'parsererror' && xhr && /^\s*</.test( String( xhr.responseText || '' ) );
+                var loginPage = status === 'parsererror' && /^\s*</.test( String( text || '' ) );
                 reject( { message: status === 'timeout' ? '' : ( code ? 'HTTP ' + code : '' ),
                           kind: status === 'timeout' || code === 504 || code === 502 ? 'timeout' : 'http',
                           status: code,
                           // 401/403, or the login page instead of JSON: the session is gone (or the permission); polling again cannot help
                           expired: code === 401 || code === 403 || loginPage } );
+            };
+            var abort = window.AbortController ? new window.AbortController() : null;
+            var timedOut = false;
+            var timer = window.setTimeout( function () {
+                timedOut = true;
+                if ( abort ) {
+                    abort.abort();
+                }
+                failed( 'timeout', 0, '' );
+            }, 180000 );
+            window.fetch( rootUrl() + 'ezjscore/call', {
+                method: 'POST',
+                credentials: 'same-origin',
+                headers: {
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-Token': post.ezxform_token
+                },
+                body: param( post ),
+                signal: abort ? abort.signal : undefined
+            } ).then( function ( response ) {
+                return response.text().then( function ( text ) {
+                    window.clearTimeout( timer );
+                    if ( timedOut ) {
+                        return;
+                    }
+                    var code = response.status;
+                    if ( !( code >= 200 && code < 300 || code === 304 ) ) {
+                        failed( 'error', code, text );
+                        return;
+                    }
+                    if ( code === 204 ) {
+                        reject( { message: '', kind: 'invalid' } );
+                        return;
+                    }
+                    var json;
+                    try {
+                        json = JSON.parse( text );
+                    } catch ( e ) {
+                        failed( 'parsererror', code, text );
+                        return;
+                    }
+                    if ( !json || typeof json !== 'object' ) {
+                        reject( { message: '', kind: 'invalid' } );
+                    } else if ( json.error_text ) {
+                        reject( { message: String( json.error_text ), kind: 'server' } );
+                    } else {
+                        resolve( json.content );
+                    }
+                } );
+            } ).catch( function () {
+                window.clearTimeout( timer );
+                if ( !timedOut ) {
+                    failed( 'error', 0, '' );
+                }
             } );
         } );
     }
@@ -556,7 +653,7 @@
     var COLLAB_LINK = /\/collaboration\/item\/full\/(\d+)(?:[\/?#]|$)/;
 
     function labels() {
-        if ( !$.ez && !document.getElementById( 'ezxform_token_js' ) ) {
+        if ( !( window.jQuery && window.jQuery.ez ) && !configBlocks().length && !document.getElementById( 'ezxform_token_js' ) ) {
             return;
         }
         var pairs = {}, collab = {}, anchors = [];
@@ -1005,7 +1102,7 @@
         }
 
         function step( params ) {
-            return api( 'chat', $.extend( { node_id: nodeID }, params ) ).then( function ( data ) {
+            return api( 'chat', extend( { node_id: nodeID }, params ) ).then( function ( data ) {
                 // "Watch this run": the state of the accepted turn with the links to its live record
                 takeRecords( data );
                 ExpAi.watchChip( root.querySelector( '.exp-ai-watch' ), data.watch || null );
@@ -1305,7 +1402,7 @@
                 var hooks = fieldActionHooks[action.name] || {};
                 // the value as sent: when the field differs once the answer is there, it is not overwritten
                 var sent = ctxValue( ctx );
-                var data = $.extend( base(), { attribute_id: ctx.attribute.id, action: action.name, value: sent, context: formContext() }, params );
+                var data = extend( base(), { attribute_id: ctx.attribute.id, action: action.name, value: sent, context: formContext() }, params );
                 if ( hooks.before && hooks.before( ctx, data ) === false ) {
                     return;
                 }
@@ -1471,7 +1568,7 @@
                     clearReview( ctx.block.querySelector( '.exp-ai-field-bar, .exp-ai-review-host' ) );
                     clearReview( ctx.block.querySelector( '.exp-ai-review-host' ) );
                 } );
-                api( 'fill', $.extend( base(), { instruction: text, context: formContext() } ) ).then( function ( data ) {
+                api( 'fill', extend( base(), { instruction: text, context: formContext() } ) ).then( function ( data ) {
                     fillUndo = [];
                     var count = 0, reviews = 0;
                     ( data.fields || [] ).forEach( function ( f ) {
