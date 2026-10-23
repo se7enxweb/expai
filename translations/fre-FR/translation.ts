@@ -265,7 +265,7 @@
     </message>
     <message>
         <source>Failed</source>
-        <translation>Echec</translation>
+        <translation>Échec</translation>
     </message>
     <message>
         <source>Stopped</source>
@@ -3024,7 +3024,7 @@
     </message>
     <message>
         <source>Threads</source>
-        <translation>Threads</translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <source>Nodes</source>
@@ -3255,7 +3255,7 @@
     </message>
     <message>
         <source>Failed</source>
-        <translation>Echec</translation>
+        <translation>Échec</translation>
     </message>
     <message>
         <source>Stopped</source>
@@ -3299,7 +3299,7 @@
     </message>
     <message>
         <source>Threads</source>
-        <translation>Threads</translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <source>%count need you</source>
@@ -3346,7 +3346,7 @@
     </message>
     <message>
         <source>Threads</source>
-        <translation>Threads</translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <source>Plan, changes and cost</source>
@@ -3390,7 +3390,7 @@
     </message>
     <message>
         <source>Thread</source>
-        <translation>Thread</translation>
+        <translation>Fil</translation>
     </message>
     <message>
         <source>Start a thread</source>
@@ -4008,7 +4008,7 @@
     </message>
     <message>
         <source>Failed</source>
-        <translation>Echec</translation>
+        <translation>Échec</translation>
     </message>
     <message>
         <source>Skipped</source>
@@ -5160,7 +5160,7 @@
     </message>
     <message>
         <source>Est.</source>
-        <translation>Est.</translation>
+        <translation>Estim.</translation>
     </message>
     <message>
         <source>Instruction for item %n</source>

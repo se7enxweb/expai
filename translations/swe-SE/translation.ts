@@ -1837,7 +1837,7 @@
     </message>
     <message>
         <source>Reset</source>
-        <translation>Återställd</translation>
+        <translation>Återställ</translation>
     </message>
     <message>
         <source>Export CSV</source>
@@ -3101,7 +3101,7 @@
     </message>
     <message>
         <source>Reset</source>
-        <translation>Återställd</translation>
+        <translation>Återställ</translation>
     </message>
     <message>
         <source>Reset all shortcuts</source>
