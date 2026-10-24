@@ -17,7 +17,7 @@ as the start for a new language). site.ini `[RegionalSettings] TranslationExtens
 | `extension/expai/usage`, `extension/expai/limits`, `extension/expai/links` | figures, limits and the icon links of the dashboard and the log |
 | `extension/expai/model`, `extension/expai/models` | the model picker; the models and providers page |
 | `extension/expai/threads`, `extension/expai/vector`, `extension/expai/keyboard` | threads, Vector, the command palette and the shortcuts |
-| `extension/expai/chain`, `extension/expai/translation` | AI chains; translation sync |
+| `extension/expai/chain`, `extension/expai/translation` | AI chains; translation sync and translation services (the Translations section) |
 | `extension/expai/budget` | budgets and lanes |
 | `extension/expai/preset`, `extension/expai/alttext`, `extension/expai/summary` | presets and the Improve menu; alt text; the "EI: Summary" page |
 | `extension/expai/help` | the "?" links and the dashboard's Help entry |

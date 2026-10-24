@@ -22,6 +22,7 @@
 | [packages.md](packages.md) | Content packages are the kernel's (Setup > Packages, ezpm, the JSON format): what expai adds, the provenance metadata and the draft label |
 | [package-authoring-for-agents.md](package-authoring-for-agents.md) | How a local CLI agent writes a package in the kernel's JSON format and brings it to the site with Setup > Packages or ezpm (terms, data, the validation loop, a minimal package) |
 | [diff.md](diff.md) | The diff engine: segmenters per datatype, sentences, hunks with stable ids, metrics, compare and apply |
+| [translation-providers.md](translation-providers.md) | Translation services: llm (the default), DeepL, LibreTranslate; rules per language pair and purpose, the fallback, no service, markup, language codes, cost, the run job, a service of your own |
 | [translation-sync.md](translation-sync.md) | Translation sync: no-op / patch / full after a source change, thresholds, the workflow event, the Translations section, the CLI |
 | [permissions.md](permissions.md) | Policies, and how the editor's own permissions limit everything the assistant does |
 | [full-view-panel.md](full-view-panel.md) | The Intelligence tab: sections, conversation, history, context window, drafts |
@@ -53,6 +54,7 @@
 | [changelog/0.0.1.15.md](changelog/0.0.1.15.md) | EI: Help, the dashboard's Help link and the "?" links open the help center directly |
 | [changelog/0.0.1.16.md](changelog/0.0.1.16.md) | Translations in French, Ukrainian, Arabic, Persian, Pashto and Kurdish (Kurmanji) |
 | [changelog/0.0.1.17.md](changelog/0.0.1.17.md) | The old help reader is removed; the documentation needs the help center of Exponential 6.0.15 |
+| [changelog/0.0.1.19.md](changelog/0.0.1.19.md) | Translation services: DeepL and LibreTranslate next to the model, per language pair and purpose |
 | [changelog/0.0.1.2.md](changelog/0.0.1.2.md) | Every translation file validates again, so expai is translated |
 | [changelog/0.0.1.3.md](changelog/0.0.1.3.md) | Draft log entries of removed objects show as removed, without an "Object not found" error |
 | [changelog/0.0.1.1.md](changelog/0.0.1.1.md) | No "Decorative" choice for a field that requires an alt text |

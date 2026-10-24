@@ -883,7 +883,8 @@ Instruction=Shorten the current value of this field to about half its length. Ke
 
 [FieldAction_translate]
 Label=Translate
-Handler=expAiPromptFieldAction
+# the translation service of the pair ([TranslationSettings], purpose field); with llm the prompt below
+Handler=expAiTranslateFieldAction
 Datatypes[]=ezstring
 Datatypes[]=eztext
 Datatypes[]=ezxmltext
@@ -1513,6 +1514,88 @@ Template=expai/panel/translations.tpl
 [QueueSettings]
 # translation patches and full translations write their answer into a draft of the target language
 Appliers[translation_sync]=expAiTranslationSyncApplier
+
+# Translation services (doc/translation-providers.md): who translates for the translation sync, the field action
+# Translate and the chain step translate. Without this group: llm, as before.
+[TranslationSettings]
+# The default service: llm (the model providers of expai: [TranslationSync] Model, Instructions and the lanes), none
+# (no translation at all), or the id of a [TranslationProvider_<id>] group
+Provider=llm
+# Per language pair and purpose (patch, full, field), the most specific rule wins: <source>:<target>:<purpose>,
+# <source>:<target>, *:<target>:<purpose>, *:<target>, <source>:*:<purpose>, <source>:*, *:*:<purpose>, then Provider.
+# Example: full translations by DeepL, patches (which keep the wording of the existing translation) by the model:
+#   ProviderFor[*:*:full]=deepl
+ProviderFor[]
+# When the chosen service is not configured, does not translate the pair, or the data policy keeps the content away
+# from it: llm, the id of another service, or none (the translation is reported as not possible). A failure while a
+# service translates (an outage, a used-up quota) never falls back to another service: it fails visibly.
+Fallback=llm
+# Terms that are never translated (names of products and brands), for every service
+DoNotTranslate[]
+# A glossary of a pair for the llm service: Glossary[ger-DE:eng-GB]=<file>, a UTF-8 file with one term, a tab and its
+# translation per line, relative to the installation. DeepL uses a glossary of its own: GlossaryId[] below.
+Glossary[]
+
+# The model providers of expai (the default service)
+[TranslationProvider_llm]
+Class=expAiTranslationProviderLlm
+Label=Exponential Intelligence model
+
+# DeepL. Not used until Provider or ProviderFor[] names it and it has a key.
+[TranslationProvider_deepl]
+Class=expAiTranslationProviderDeepl
+Label=DeepL
+# The DeepL API Pro; the Free plan: https://api-free.deepl.com/v2/translate
+Endpoint=https://api.deepl.com/v2/translate
+# in settings/override or a [ProviderSettings] KeyLocations[] location that git does not track
+ApiKey=
+Region=eu
+# unknown until you have read the terms of your DeepL plan: the Pro plans promise to delete the texts after the
+# translation (then none, and the day in TermsCheckedAt); the Free plan may keep them. Zero retention rules of the
+# data policy refuse a service whose retention is unknown.
+Retention=unknown
+TermsCheckedAt=
+# The price of a million characters, in PriceCurrency (converted to [Pricing] Currency); empty: the cost is unknown
+PricePerMChars=20
+PriceCurrency=EUR
+# default, more, less, prefer_more or prefer_less (more and less fail for a target language without formality)
+Formality=default
+# LanguageMap[<eZ locale>]=<DeepL code>, when the built-in rules do not fit (e.g. LanguageMap[esl-MX]=ES-419)
+LanguageMap[]
+# The base codes DeepL translates (empty: the built-in list of expAiTranslationLocale)
+Languages[]
+# A DeepL glossary per pair: GlossaryId[ger-DE:eng-GB]=<id of the glossary in your DeepL account>
+GlossaryId[]
+Timeout=30
+MaxTextsPerRequest=50
+MaxBytesPerRequest=120000
+# Retries of a busy service (429) or a server error (5xx) within one job; a longer retry-after is left to the queue
+MaxRetries=2
+RetryAfterMax=10
+# enabled: the text of the blocks next to a block goes along as context (not translated, not billed; one block per
+# request then)
+SendContext=enabled
+
+# LibreTranslate, usually on this server (Region=local meets every rule of the data policy). Not used until Provider
+# or ProviderFor[] names it.
+[TranslationProvider_libretranslate]
+Class=expAiTranslationProviderLibreTranslate
+Label=LibreTranslate
+Endpoint=http://127.0.0.1:5000/translate
+# only when the server asks for one (then ApiKeyRequired=enabled)
+ApiKey=
+ApiKeyRequired=disabled
+Region=local
+Retention=none
+TermsCheckedAt=
+PricePerMChars=0
+LanguageMap[]
+Languages[]
+Timeout=60
+MaxTextsPerRequest=25
+MaxBytesPerRequest=60000
+MaxRetries=2
+RetryAfterMax=10
 
 
 # ---- Alt text for images (doc/alt-text.md, #370 M5 alt text) ----------------------------------------------------

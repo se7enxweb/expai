@@ -11,11 +11,15 @@
  *   --skip                    mark --languages as up to date with the current source version
  *   --status                  print the stored decisions and job states
  *   --diff                    print the hunks of the source-language change per translation
+ *   --provider=<id>           the translation service that must translate (llm, deepl, ...: a [TranslationProvider_<id>]
+ *                             group); without it the rules of [TranslationSettings] choose (doc/translation-providers.md)
  *   --login=<user>            the user (drafts are written and jobs run as this user; required for --approve)
  *   --json                    the report as JSON
  *
  * Without --approve, --skip or --status it does what the workflow event does after a publish: decide for every
  * translation, store the decisions, and queue the patches that are below the thresholds of expai.ini [TranslationSync].
+ * Every line names the translation service. When no translation service can take a translation (state no_provider or
+ * blocked) the reason is printed and the script exits with 2.
  *
  * -s <siteaccess> is mandatory: the script prints the siteaccess and its database (stderr) and does not run
  * where expai is not active (expAiScript).
@@ -32,11 +36,11 @@ $cli = eZCLI::instance();
 $script = eZScript::instance( array( 'description' => "Translation sync of Exponential Intelligence: decide, queue, skip or show the updates of translations\n",
                                      'use-session' => false, 'use-modules' => true, 'use-extensions' => true ) );
 $script->startup();
-$options = $script->getOptions( '[object:][languages:][dry-run][approve][mode:][skip][status][diff][login:][json]', '', array(
+$options = $script->getOptions( '[object:][languages:][dry-run][approve][mode:][skip][status][diff][provider:][login:][json]', '', array(
     'object' => 'the object: id or remote id', 'languages' => 'only these translations, separated by commas',
     'dry-run' => 'decide and print only', 'approve' => 'queue the update of --languages', 'mode' => 'with --approve: patch or full',
     'skip' => 'mark --languages as up to date', 'status' => 'print the stored decisions', 'diff' => 'print the hunks of the source change',
-    'login' => 'the user', 'json' => 'print the report as JSON' ) );
+    'provider' => 'the translation service that must translate (llm, deepl, ...)', 'login' => 'the user', 'json' => 'print the report as JSON' ) );
 expAiScript::requireSiteAccess( $script, $options );
 $script->initialize();
 expAiScript::announce( $script );
@@ -66,14 +70,20 @@ if ( !$sync->enabled() )
 $json = (bool) $options['json'];
 $report = array( 'object_id' => (int) $object->attribute( 'id' ), 'name' => (string) $object->attribute( 'name' ),
                  'source' => $sync->sourceLanguage( $object ), 'current_version' => (int) $object->attribute( 'current_version' ), 'languages' => array() );
+$provider = (string) $options['provider'];
+if ( $provider !== '' && !preg_match( '/^[a-z0-9_]{1,30}$/', $provider ) )
+    $fail( '--provider is the id of a translation service (a-z, 0-9, _)' );
 $line = function ( $code, array $row )
 {
-    return sprintf( '%-8s %-10s %-6s ratio %5s  blocks %3d  units %3d  estimate %-10s %s%s',
+    $unserved = isset( $row['state'] ) && in_array( $row['state'], array( 'no_provider', 'blocked' ), true );
+    return sprintf( '%-8s %-11s %-6s ratio %5s  blocks %3d  units %3d  estimate %-10s by %-14s %s%s',
                     $code, isset( $row['state'] ) ? $row['state'] : '', isset( $row['decision'] ) ? $row['decision'] : '',
                     isset( $row['change_ratio'] ) ? round( 100 * (float) $row['change_ratio'] ) . '%' : '-',
                     isset( $row['blocks_changed'] ) ? (int) $row['blocks_changed'] : 0, isset( $row['units'] ) ? (int) $row['units'] : 0,
                     isset( $row['estimate_micros'] ) ? expAiBudget::money( (int) $row['estimate_micros'] ) : '',
-                    isset( $row['reason'] ) ? $row['reason'] : '', !empty( $row['job_uuid'] ) ? '  job ' . $row['job_uuid'] : '' );
+                    !empty( $row['provider'] ) ? $row['provider'] : '-',
+                    $unserved && !empty( $row['provider_reason'] ) ? $row['provider_reason'] : ( isset( $row['reason'] ) ? $row['reason'] : '' ),
+                    !empty( $row['job_uuid'] ) ? '  job ' . $row['job_uuid'] : '' );
 };
 
 try
@@ -86,7 +96,7 @@ try
             $fail( '--login is required with --approve and --skip' );
         foreach ( $languages as $language )
             $report['languages'][$language] = $options['skip'] ? $sync->skip( $object, $language )
-                                                                : $sync->approve( $object, $language, (string) $options['mode'] );
+                                                                : $sync->approve( $object, $language, (string) $options['mode'], array( 'provider' => $provider ) );
     }
     elseif ( $options['status'] )
     {
@@ -96,18 +106,18 @@ try
                 $report['languages'][$language] = $row;
     }
     else
-        $report['languages'] = $sync->check( $object, array( 'languages' => $languages, 'dry_run' => (bool) $options['dry-run'], 'trigger' => 'cli' ) );
+        $report['languages'] = $sync->check( $object, array( 'languages' => $languages, 'dry_run' => (bool) $options['dry-run'], 'trigger' => 'cli', 'provider' => $provider ) );
 
     if ( $options['diff'] )
         foreach ( array_keys( $report['languages'] ) as $language )
         {
-            $plan = $sync->plan( $object, $language );
+            $plan = $sync->plan( $object, $language, $provider !== '' ? array( 'provider' => $provider ) : array() );
             $report['diff'][$language] = $plan['diff']->toArray();
         }
 }
 catch ( expAiException $e )
 {
-    $fail( $e->getMessage() . ( $e->detail() !== '' ? ' (' . $e->detail() . ')' : '' ) );
+    $fail( strtr( $e->getMessage(), $e->arguments() ) . ( $e->detail() !== '' ? ' (' . $e->detail() . ')' : '' ) );
 }
 catch ( expQueueException $e )
 {
@@ -139,4 +149,11 @@ else
             }
     }
 }
-$script->shutdown( 0 );
+// no translation service could take a translation: reported above, and not a success
+$unserved = 0;
+foreach ( $report['languages'] as $row )
+    if ( isset( $row['state'] ) && in_array( $row['state'], array( 'no_provider', 'blocked' ), true ) )
+        ++$unserved;
+if ( $unserved )
+    $cli->error( 'FAIL ' . $unserved . ' translation(s) without a translation service' );
+$script->shutdown( $unserved ? 2 : 0 );

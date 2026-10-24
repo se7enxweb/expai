@@ -36,6 +36,12 @@ written through `exp:ini` or the settings views; role changes are `access.role.*
 (`'write' => true` services are refused, [service-tools.md](service-tools.md)), so their use is the request that
 asked for them.
 
+A request to a machine translation service (DeepL, LibreTranslate, [translation-providers.md](translation-providers.md))
+writes the same `system.expai.request` (or `.failed`) event as a model request, with `provider` = the service's id
+(`deepl`), `model` = its engine, `model alias` = `translation.<id>`, no token counts and the cost of its billed
+characters. Its draft is audited by `content.expai_draft.write` as before (source `translation`, provider = the
+service's id). No event of its own is needed.
+
 ## Where it is shown
 
 With expai active, the audit console has an **Exponential Intelligence** source

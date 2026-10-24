@@ -76,6 +76,8 @@ class expAiSchema
                 'name' => 'expai_usage_log',
                 'fields' => array(
                     'action' => $varchar( 40 ),
+                    // a translation service (expAiTranslationRecorder): the characters it billed
+                    'billed_chars' => $int,
                     'cache_read_tokens' => $int,
                     'cache_write_tokens' => $int,
                     'conversation_id' => $int,
@@ -395,6 +397,9 @@ class expAiSchema
     /** @var array "table:col,col" => array( bool have, int recheck after (0: never again) ) */
     protected static $columnChecks = array();
 
+    /** @var array table => array( string[]|null columns, int asked at ): one lookup serves every check of a table for a while */
+    protected static $tableColumns = array();
+
     /**
      * Has a table these columns? Asked once per process: a positive answer is kept for good, a negative one (an
      * installation not upgraded with expaischema.php --install) is asked again after COLUMN_RECHECK_SECONDS, so the
@@ -411,13 +416,21 @@ class expAiSchema
         $key = (string) $table . ':' . implode( ',', $columns );
         if ( isset( self::$columnChecks[$key] ) && ( self::$columnChecks[$key][1] === 0 || self::$columnChecks[$key][1] > $now ) )
             return self::$columnChecks[$key][0];
-        try
+        // the columns of the table were looked up a moment ago (for another set of columns): not asked again
+        if ( isset( self::$tableColumns[(string) $table] ) && $now - self::$tableColumns[(string) $table][1] >= 0
+             && $now - self::$tableColumns[(string) $table][1] < self::COLUMN_RECHECK_SECONDS )
+            $have = self::$tableColumns[(string) $table][0];
+        else
         {
-            $have = $lister ? call_user_func( $lister, (string) $table ) : self::existingColumns( $table );
-        }
-        catch ( Exception $e )
-        {
-            $have = null;
+            try
+            {
+                $have = $lister ? call_user_func( $lister, (string) $table ) : self::existingColumns( $table );
+            }
+            catch ( Exception $e )
+            {
+                $have = null;
+            }
+            self::$tableColumns[(string) $table] = array( $have, $now );
         }
         if ( !is_array( $have ) || !$have )
         {
@@ -434,6 +447,7 @@ class expAiSchema
     public static function forgetColumns()
     {
         self::$columnChecks = array();
+        self::$tableColumns = array();
     }
 
     /** @return string[] the index names of an expai table in the database (lower case), null when unknown */

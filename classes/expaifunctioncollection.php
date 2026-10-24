@@ -20,6 +20,19 @@ class expAiFunctionCollection
         return array( 'result' => expAiDashboard::myDrafts( max( 0, (int) $offset ), max( 1, min( 100, (int) $limit ) ) ) );
     }
 
+    /**
+     * @return array the names of the field actions that cannot be used at all (expAiFieldActionRegistry::describe()
+     *               leaves them out), e.g. Translate without any translation service
+     */
+    public function fetchUnavailableFieldActions()
+    {
+        $out = array();
+        foreach ( ( new expAiFieldActionRegistry( expAiConfig::instance() ) )->actions() as $name => $action )
+            if ( method_exists( $action, 'unavailableReason' ) && $action->unavailableReason() !== '' )
+                $out[] = (string) $name;
+        return array( 'result' => $out );
+    }
+
     public function fetchMyDraftCount()
     {
         return array( 'result' => expAiServerFunctions::hasPolicy() ? expAiDashboard::myDraftCount() : 0 );

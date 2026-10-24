@@ -267,8 +267,9 @@ class expAiLimits
      * Refuses a request when a limit is reached, or would be passed together with the requests under way, naming
      * the limit and when it resets; and a request to a model without a price while a cost limit applies
      * ([Limits] UnpricedCost=block).
-     * @param array $context user_id, conversation_id, provider, model (the model id), model_alias
-     * @throws expAiException
+     * @param array $context user_id, conversation_id, provider, model (the model id), model_alias, units (only the limits
+     *                       of these units: cost and/or tokens; a translation service checks the cost limits only)
+     * @throws expAiLimitException
      */
     public static function check( array $context )
     {
@@ -282,7 +283,7 @@ class expAiLimits
              && self::costLimitsFor( isset( $context['provider'] ) ? (string) $context['provider'] : '', $config )
              && expAiUsage::cost( (string) $context['model'], 1000, 1000, 0, 0, isset( $context['model_alias'] ) ? (string) $context['model_alias'] : '' ) === null )
         {
-            throw new expAiException( 'The model %model has no price, so a cost limit of this site cannot be kept for it. Choose another model, or ask an administrator to set its price.',
+            throw new expAiLimitException( 'The model %model has no price, so a cost limit of this site cannot be kept for it. Choose another model, or ask an administrator to set its price.',
                                       'limit: unpriced model with a cost limit (UnpricedCost=block)', 0,
                                       array( '%model' => isset( $context['model_alias'] ) && $context['model_alias'] !== '' ? (string) $context['model_alias'] : (string) $context['model'] ) );
         }
@@ -291,11 +292,13 @@ class expAiLimits
             $verdict = self::verdict( $limit );
             if ( $verdict === '' )
                 continue;
+            if ( isset( $context['units'] ) && !in_array( $limit['unit'], (array) $context['units'], true ) )
+                continue;
             // a provider's limit stops only requests to that provider
             if ( isset( $limit['provider'] ) && ( !isset( $context['provider'] ) || $context['provider'] !== $limit['provider'] ) )
                 continue;
             if ( $verdict === 'reserved' )
-                throw new expAiException( 'The limit %limit would be passed together with the requests under way (%used used and %reserved reserved of %max). Try again in a moment.',
+                throw new expAiLimitException( 'The limit %limit would be passed together with the requests under way (%used used and %reserved reserved of %max). Try again in a moment.',
                                           'limit ' . $limit['setting'] . ' (reserved)', 0, array(
                     '%limit' => self::label( $limit['key'] ),
                     '%used' => $limit['unit'] === 'cost' ? $limit['used'] . ' ' . expAiUsage::currency() : number_format( $limit['used'] ),
@@ -307,7 +310,7 @@ class expAiLimits
                 'day' => ezpI18n::tr( 'extension/expai/limits', 'at %time', null, array( '%time' => $limit['reset'] ? date( 'Y-m-d H:i', $limit['reset'] ) : '' ) ),
                 'month' => ezpI18n::tr( 'extension/expai/limits', 'at %time', null, array( '%time' => $limit['reset'] ? date( 'Y-m-d H:i', $limit['reset'] ) : '' ) ),
             );
-            throw new expAiException( 'The limit %limit is reached (%used of %max). It resets %reset.', 'limit ' . $limit['setting'], 0, array(
+            throw new expAiLimitException( 'The limit %limit is reached (%used of %max). It resets %reset.', 'limit ' . $limit['setting'], 0, array(
                 '%limit' => self::label( $limit['key'] ),
                 '%used' => $limit['unit'] === 'cost' ? $limit['used'] . ' ' . expAiUsage::currency() : number_format( $limit['used'] ),
                 '%max' => $limit['unit'] === 'cost' ? $limit['max'] . ' ' . expAiUsage::currency() : number_format( $limit['max'] ),

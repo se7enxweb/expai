@@ -6745,4 +6745,114 @@
         <translation>Daq per Hoch wa&apos;logh choHbe&apos;taHvIS cheghchugh neH, mIwDaj pol ghItlh naQ.</translation>
     </message>
 </context>
+<!-- expai translation services: begin -->
+<context>
+    <name>extension/expai/translation</name>
+    <message>
+        <source>No translation service</source>
+        <translation>mughmeH QaHwI' tu'lu'be'</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>botta' De' chut</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>mughta' %provider Suy</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/error</name>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>%source → %target mughmeH QaHwI' jomlu'be'.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Hoch mughmeH QaHwI' De'vam Hevbe'meH De' chut ra'ta' (%source → %target).</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>%service mughmeH QaHwI' SeHlu'be'.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>%source Hol %target HolDaq mughbe' %service mughmeH QaHwI'.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>ngaQHa'moHwI' lajQo' %service mughmeH QaHwI'.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Qu'taH %service mughmeH QaHwI'. tugh yInIDqa'.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Qapbe' %service mughmeH QaHwI' (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>tlhobghach lajQo' %service mughmeH QaHwI' (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>%service mughmeH QaHwI' chaw'ghachDaj lo'lu'pu'.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>%service mughmeH QaHwI' Suchlu'be'.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>%service mughmeH QaHwI' jangghach laDlu'be'.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>chIm tlhegh: mughmeH pagh tu'lu'.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/summary</name>
+    <message>
+        <source>Translation services</source>
+        <translation>mughmeH QaHwI'mey</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>QaHwI' motlh: %default; wIvlu'ta'bogh QaHwI' Hol chang'eng mughlaHbe'chugh: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>chut</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>QaHwI'</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>De'wI' mughghach</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>yab</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>mughlu'meH ngoghmey ghItlh neH Hev De'wI' mughghach QaHwI' (SendContext lo'lu'chugh, retlhDaj ngoghmey je); latlh tlheghmey Doch pong ghap not Hev.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/rad</name>
+    <message>
+        <source>AI translation services</source>
+        <translation>yab ngeb mughmeH QaHwI'mey</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>mughghach rapmoHghach yImugh tlhegh vangghach je mughmeH QaHwI'mey (expai.ini [TranslationProvider_&lt;name&gt;] Class=, expAiTranslationProvider mab ta'; [TranslationSettings] wIv).</translation>
+    </message>
+</context>
+<!-- expai translation services: end -->
 </TS>

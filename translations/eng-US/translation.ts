@@ -6785,4 +6785,114 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<!-- expai translation services: begin -->
+<context>
+    <name>extension/expai/translation</name>
+    <message>
+        <source>No translation service</source>
+        <translation>No translation service</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Blocked by the data policy</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Translated by %provider</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/error</name>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>No translation service is installed for %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>The data policy keeps this content away from every translation service for %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>The translation service %service is not configured.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>The translation service %service does not translate %source into %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>The translation service %service refused the key.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>The translation service %service is busy. Please try again later.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>The translation service %service is not available (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>The translation service %service refused the request (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>The quota of the translation service %service is used up.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>The translation service %service could not be reached.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>The answer of the translation service %service could not be read.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>The field is empty: there is nothing to translate.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/summary</name>
+    <message>
+        <source>Translation services</source>
+        <translation>Translation services</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Default service: %default; when the chosen service cannot translate a pair: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Rule</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Service</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>machine translation</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>model</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/rad</name>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI translation services</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</translation>
+    </message>
+</context>
+<!-- expai translation services: end -->
 </TS>

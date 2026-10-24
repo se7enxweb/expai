@@ -5,7 +5,9 @@
  *
  * Loaded by expai/panel/translations.tpl. Reads expaitranslation::status, and sends check, approve and skip (POST
  * with the form token, through ExpAi.api of expai.js). While a job of the object is queued or running it asks again
- * every 5 seconds (not while the browser tab is hidden).
+ * every 5 seconds (not while the browser tab is hidden). A machine translation service has no lane: the estimate
+ * names the service instead (doc/translation-providers.md). Without a translation service (no_provider) or with the
+ * data policy against every one (blocked) the row says why, and Approve and Translate in full are not offered.
  */
 (function ( window, document ) {
     'use strict';
@@ -67,6 +69,9 @@
                 if ( row.reason && state === 'waiting' ) {
                     status += '<br><span class="exp-ai-hint">' + esc( row.reason ) + '</span>';
                 }
+                if ( row.provider_reason && ( state === 'no_provider' || state === 'blocked' ) ) {
+                    status += '<br><span class="exp-ai-hint">' + esc( row.provider_reason ) + '</span>';
+                }
                 if ( row.error ) {
                     status += '<br><span class="exp-ai-hint">' + esc( row.error ) + '</span>';
                 }
@@ -82,20 +87,29 @@
                     job += ( job ? '<br>' : '' ) + '<a href="' + esc( ExpAi.url( 'content/versionview/' + data.object_id + '/' + row.draft_version + '/' + row.language ) ) + '">' + esc( strings.view_draft ) + '</a>';
                 }
                 var actions = '';
+                // no translation service can take it: nothing to approve until the settings change (Check translations asks again)
+                var unserved = state === 'no_provider' || state === 'blocked';
                 if ( data.can_act && row.can_edit ) {
                     var waiting = state === 'waiting' || state === 'failed' || state === 'unchecked' || row.stale;
-                    if ( waiting && row.decision && row.decision !== 'noop' ) {
+                    if ( waiting && !unserved && row.decision && row.decision !== 'noop' ) {
                         actions += '<input type="button" class="button exp-ai-btn" data-act="approve" data-i="' + i + '" value="' + esc( strings.approve ) + '"> ';
                     }
-                    if ( state !== 'queued' && state !== 'held' && row.decision !== 'full' ) {
+                    if ( !unserved && state !== 'queued' && state !== 'held' && row.decision !== 'full' ) {
                         actions += '<input type="button" class="button exp-ai-btn" data-act="full" data-i="' + i + '" value="' + esc( strings.approve_full ) + '"> ';
                     }
                     if ( state !== 'up_to_date' && state !== 'skipped' ) {
                         actions += '<input type="button" class="button exp-ai-btn" data-act="skip" data-i="' + i + '" value="' + esc( strings.skip ) + '">';
                     }
                 }
+                // the lane of a model request; a machine translation service has none: its name instead
+                var by = '';
+                if ( row.provider_kind === 'mt' && row.provider_label ) {
+                    by = fmt( strings.translated_by, { '%provider': row.provider_label } );
+                } else if ( row.lane ) {
+                    by = row.lane;
+                }
                 return '<tr class="' + ( i % 2 ? 'bgdark' : 'bglight' ) + '"><td>' + esc( row.name ) + '</td><td>' + status + '</td><td>' + changed + '</td><td>'
-                     + esc( row.estimate || '' ) + ( row.lane ? '<br><span class="exp-ai-hint">' + esc( row.lane ) + '</span>' : '' ) + '</td><td>' + job + '</td><td>' + actions + '</td></tr>';
+                     + esc( row.estimate || '' ) + ( by ? '<br><span class="exp-ai-hint">' + esc( by ) + '</span>' : '' ) + '</td><td>' + job + '</td><td>' + actions + '</td></tr>';
             } ).join( '' );
             Array.prototype.forEach.call( body.querySelectorAll( 'input[data-act]' ), function ( button ) {
                 button.addEventListener( 'click', function () {

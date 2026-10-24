@@ -39,6 +39,7 @@ CREATE SEQUENCE IF NOT EXISTS expai_usage_log_id_seq
 CREATE TABLE IF NOT EXISTS expai_usage_log (
   "action" character varying(40) DEFAULT ''::character varying NOT NULL,
   batch_id integer DEFAULT 0 NOT NULL,
+  billed_chars integer DEFAULT 0 NOT NULL,
   cache_read_tokens integer DEFAULT 0 NOT NULL,
   cache_write_tokens integer DEFAULT 0 NOT NULL,
   conversation_id integer DEFAULT 0 NOT NULL,

@@ -6769,4 +6769,114 @@
         <translation>Ця частина вилучила б %items з тексту, тому її не можна прийняти. Відхиліть її або попросіть нову пропозицію, яка їх збереже.</translation>
     </message>
 </context>
+<!-- expai translation services: begin -->
+<context>
+    <name>extension/expai/translation</name>
+    <message>
+        <source>No translation service</source>
+        <translation>Немає сервісу перекладу</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Заблоковано політикою даних</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Перекладено сервісом %provider</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/error</name>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Для %source → %target не встановлено жодного сервісу перекладу.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Політика даних не допускає цей вміст до жодного сервісу перекладу для %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Сервіс перекладу %service не налаштовано.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Сервіс перекладу %service не перекладає з мови %source на мову %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Сервіс перекладу %service відхилив ключ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Сервіс перекладу %service зайнятий. Спробуйте пізніше.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Сервіс перекладу %service недоступний (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Сервіс перекладу %service відхилив запит (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Квоту сервісу перекладу %service вичерпано.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Не вдалося зв'язатися із сервісом перекладу %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Не вдалося прочитати відповідь сервісу перекладу %service.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Поле порожнє: немає чого перекладати.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/summary</name>
+    <message>
+        <source>Translation services</source>
+        <translation>Сервіси перекладу</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Типовий сервіс: %default; коли вибраний сервіс не може перекласти мовну пару: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Правило</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Сервіс</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>машинний переклад</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>модель</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>До сервісу машинного перекладу надсилається лише текст блоків, які потрібно перекласти (із SendContext — також сусідні блоки), і ніколи інші поля чи назва об'єкта.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/rad</name>
+    <message>
+        <source>AI translation services</source>
+        <translation>Сервіси перекладу ШІ</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Сервіси перекладу для синхронізації перекладів і дії поля «Перекласти» (expai.ini [TranslationProvider_&lt;name&gt;] Class=, реалізує expAiTranslationProvider; вибираються в [TranslationSettings]).</translation>
+    </message>
+</context>
+<!-- expai translation services: end -->
 </TS>

@@ -59,6 +59,31 @@ The model is `[TranslationSync] Model` (for example `anthropic.claude-haiku-5-5`
 `PatchLane` and `FullLane` (`auto`: `[LanePolicy] ClassOrder[translation_patch]` and `ClassOrder[translation_full]`,
 so a batch lane is used where the provider offers one and the job waits for the provider's batch).
 
+## Who translates: the translation service
+
+The decision above does not depend on who translates. The translation itself is done by the **translation service**
+of the language pair and purpose (`patch` or `full`), chosen in `[TranslationSettings]`
+([translation-providers.md](translation-providers.md)):
+
+- `llm` (the default, and the only service without the group): the model above; the request is queued as an
+  `expai.request` job with its lane, as before.
+- a machine translation service (DeepL, LibreTranslate): the job `expai.translation.run`, class
+  `translation_patch` or `translation_full`, resource `translation:<id>`. A patch by such a service translates the
+  new text of the changed blocks (it gets neither the old source nor the current translation); unchanged blocks keep
+  their translation byte for byte, as with the model. The usual split is `ProviderFor[*:*:full]=deepl`: full
+  translations by DeepL, patches by the model.
+
+**Cost with a machine translation service**: the estimate is the characters to translate (without markup) x
+`[TranslationProvider_<id>] PricePerMChars`, and `CostThreshold` compares that estimate as it is. A free local
+service (`PricePerMChars=0`) queues every small patch at once.
+
+**No service**: when no service can take the translation (`Provider=none`, the chosen service not configured or not
+translating the pair and `Fallback=none`, or the data policy refusing every service), the decision is still made and
+stored, with the state **No translation service** (`no_provider`) or **Blocked by the data policy** (`blocked`) and
+the reason. Nothing is queued; Approve and Translate in full are not offered, and Approve over ezjscore or the command
+line refuses with the reason. Runtime failures of a service (an outage, a used-up quota) never fall back to another
+service: the job fails and the section shows "Failed" with the reason.
+
 ## Triggers
 
 ### After a publish: the workflow event
@@ -76,7 +101,8 @@ If a post-publish trigger already has a workflow, add the event to that workflow
 ### In the Intelligence tab
 
 The section **Translations** of the Intelligence tab (objects with more than one language) lists per translation the
-status, the decision, the changed share and blocks, the estimate and lane, the job (a link to `expqueue/job/<uuid>`
+status, the decision, the changed share and blocks, the estimate and lane (or "Translated by DeepL" for a machine
+translation service), the job (a link to `expqueue/job/<uuid>`
 for users with `expqueue/view`) and the draft (View draft). Buttons, for users with `expai/translation_sync` who may
 edit the object in that language:
 
@@ -97,7 +123,11 @@ token), so nothing personal is in the cached view; while a job is queued it asks
 ./console ext:expai:translation-sync --object=<id> --status
 ./console ext:expai:translation-sync --object=<id> --languages=ger-DE --approve [--mode=patch|full] --login=<user>
 ./console ext:expai:translation-sync --object=<id> --languages=ger-DE --skip --login=<user>
+./console ext:expai:translation-sync --object=<id> --languages=ger-DE --approve --provider=deepl --login=<user>
 ```
+
+`--provider=<id>` makes that translation service translate (no rule, no fallback). Every line names the service;
+when no service can take a translation the reason is printed and the script exits with 2.
 
 Without `--approve`, `--skip` or `--status` it does what the workflow event does. `--dry-run` decides and prints
 without storing or queueing anything; `--diff` also prints the hunks of the source change; `--json` prints the report
@@ -120,7 +150,8 @@ The applier refuses (the job ends dead, the section shows "Failed" with the reas
 ## Where the state is kept
 
 Per object and translation in `ezsite_data` under `expai_tsync:<object id>:<language>` (JSON: decision, base, versions,
-metrics, estimate, job uuid, draft version, who checked, approved or skipped). No table of its own.
+metrics, estimate, job uuid, draft version, who checked, approved or skipped, and the translation service: `provider`,
+`provider_label`, `provider_kind`, `provider_reason`; a row without `provider` was stored for `llm`). No table of its own.
 
 ## Permissions
 

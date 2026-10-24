@@ -46,6 +46,7 @@ END;
 CREATE TABLE expai_usage_log (
   action VARCHAR2(40),
   batch_id INTEGER DEFAULT 0 NOT NULL,
+  billed_chars INTEGER DEFAULT 0 NOT NULL,
   cache_read_tokens INTEGER DEFAULT 0 NOT NULL,
   cache_write_tokens INTEGER DEFAULT 0 NOT NULL,
   conversation_id INTEGER DEFAULT 0 NOT NULL,

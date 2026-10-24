@@ -67,6 +67,14 @@ $FunctionList['switched_on'] = array( 'name' => 'switched_on',
                                       'parameter_type' => 'standard',
                                       'parameters' => array() );
 
+// the field actions that cannot be used at all (doc/translation-providers.md): fetch( 'expai', 'unavailable_field_actions' ),
+// e.g. Translate when no translation service is installed; the edit form leaves them out
+$FunctionList['unavailable_field_actions'] = array( 'name' => 'unavailable_field_actions',
+                                                    'operation_types' => array( 'read' ),
+                                                    'call_method' => array( 'class' => 'expAiFunctionCollection', 'method' => 'fetchUnavailableFieldActions' ),
+                                                    'parameter_type' => 'standard',
+                                                    'parameters' => array() );
+
 // alt text for images (#370 M5 alt text, classes/alttext/): fetch( 'expai', 'alt_text_model', hash( 'object', $object ) )
 // the vision model the "Write alt text" button uses for the object's images, or why there is none
 $FunctionList['alt_text_model'] = array( 'name' => 'alt_text_model',

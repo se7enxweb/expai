@@ -65,7 +65,9 @@ write (Opus) -> review (Sonnet) --fail--> revise (Opus) -> review ... (at most 3
    step's languages they are checked now (no-op, small patches queued at once, the rest waiting for an editor, as the
    sync decides). A new draft, the usual result of a chain, is not published and has no translations yet: the step is
    skipped and says so; once the editor publishes, later changes reach the translations through the sync's publish
-   event. With `TranslateHandler` empty the step is always skipped.
+   event. With `TranslateHandler` empty the step is always skipped. Who translates is the translation service of each
+   pair ([translation-providers.md](translation-providers.md)); when no service can take any of the step's languages
+   (none installed, or the data policy refuses every one), the step is skipped with that reason.
 
 The text between the steps lives in the run (`expai_chain_run.data`), not in content. Each step's answer, verdict,
 score, tokens and cost is a row of `expai_chain_step`, and each model call has its usage row (`expai/log`, action

@@ -53,6 +53,10 @@ Version 0.0.1.3. What is new: [doc/changelog/0.0.1.3.md](doc/changelog/0.0.1.3.m
 - **Translation sync**: after the source language changed, each translation is classified as unchanged, patch or
   full retranslation, with cost thresholds and the drafts waiting for an editor
   ([doc/translation-sync.md](doc/translation-sync.md), [doc/diff.md](doc/diff.md)).
+- **Translation services**: the model translates by default; DeepL or a local LibreTranslate can take full
+  translations, patches or the field action per language pair, with the data policy, budgets, the usage log and the
+  audit trail as for a model, and a fallback only for configuration problems
+  ([doc/translation-providers.md](doc/translation-providers.md)).
 - **The "Exponential Intelligence" label** on every version it wrote: in My drafts, the drafts page, version views,
   edit forms and approval items.
 - **The dashboard** (Dashboard > Exponential Intelligence): estimated cost, tokens, requests and drafts with trends,

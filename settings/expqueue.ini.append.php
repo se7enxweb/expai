@@ -90,6 +90,25 @@ RetryBase=30
 MaxBackoff=600
 Description=Checks the translations of an object after its source language was published
 
+# The translation sync with a machine translation service (doc/translation-providers.md): one translation of an object
+# by the service ([TranslationSettings]), written into a draft of the target language. The class comes from the sync
+# (translation_patch or translation_full); the resource is translation:<service id>.
+[JobType_expai.translation.run]
+Handler=expAiTranslationRunHandler
+Class=translation_patch
+MaxAttempts=5
+Timeout=300
+RetryBase=30
+MaxBackoff=1800
+Description=Translates an object with a translation service and writes a draft of the target language
+
+# Requests of each translation service at once across all workers
+[QueueResource_translation:deepl]
+MaxConcurrent=4
+
+[QueueResource_translation:libretranslate]
+MaxConcurrent=1
+
 
 # Alt text for images (#370 M5 alt text, doc/alt-text.md): one suggestion of the "Missing alt text" report, written
 # into a new draft of the object (never published). The resource is <provider>:standard.

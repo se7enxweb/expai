@@ -333,6 +333,7 @@ block is missing is shown as broken.
 | `expai_lanes` | `[Lane_<provider>.<lane>] Type=` | `sync` or `batch` |
 | `expai_tools` | `[Tool_<name>] Class=` | a class extending `expAiTool` |
 | `expai_search_providers` | `[SearchProvider_<name>] Class=` | a class extending `expAiWebSearchProvider` |
+| `expai_translation_providers` | `[TranslationProvider_<name>] Class=` | a class implementing `expAiTranslationProvider` |
 | `expai_mcp_servers` | `[McpSettings] Servers[]` | a block `[McpServer_<name>]` |
 | `expai_mcp_bridge_tools` | `[McpBridge] Tools[]` | a tool of `expMcpBridge` (listed, not added: counted by expmcp) |
 | `expai_service_tools` | `[ServiceTools] Services[]`, `Domains[]` | any (listed, not added: counted as remote services) |
@@ -350,3 +351,55 @@ block is missing is shown as broken.
 The job types of expai (`settings/expqueue.ini.append.php`) are counted by expqueue's registry `expqueue_job_types`, its
 listener of `package/install/drafts` by the kernel's registry `eventlisteners`, its server functions by the kernel's
 ezjscore registry, and its policy functions with their limitations in the survey's modules section.
+
+## 8. A translation service
+
+A machine translation service of your own (doc/translation-providers.md) is one class and one group. Extending
+`expAiTranslationProviderBase` gives you the settings, the key, the endpoint check, the language codes
+(`expAiTranslationLocale`), the markup of the placeholders and its check (`expAiTranslationMarkup`), batching,
+retries of 429 and 5xx, the cost from `PricePerMChars` and the data policy from `Region` and `Retention`. You write
+one request:
+
+```php
+class myTranslationProvider extends expAiTranslationProviderBase
+{
+    protected function defaultEndpoint()
+    {
+        return 'https://mt.example.org/v1/translate';
+    }
+
+    protected function sendBatch( array $texts, $format, $context, expAiTranslationRequest $request )
+    {
+        list( $status, $body, $headers, $retries ) = $this->post( $this->endpoint(), array( 'Authorization: Bearer ' . $this->setting( 'ApiKey' ) ),
+            json_encode( array( 'texts' => $texts, 'from' => $this->sourceCode( $request->source ), 'to' => $this->targetCode( $request->target ),
+                                'markup' => $format === 'html' ? 'html' : 'xml' ) ) );
+        if ( $status < 200 || $status >= 300 )
+            throw $this->failure( $status, $body, $headers );
+        $data = json_decode( $body, true );
+        return array( 'texts' => $data['translations'], 'billed' => null, 'status' => $status, 'retries' => $retries, 'engine' => 'mymt' );
+    }
+}
+```
+
+```ini
+# settings/expai.ini.append.php of your extension (the key in settings/override)
+[TranslationProvider_mymt]
+Class=myTranslationProvider
+Label=My MT
+Region=eu
+Retention=none
+PricePerMChars=10
+LanguageRules=generic
+
+[TranslationSettings]
+ProviderFor[*:*:full]=mymt
+```
+
+`$texts` carry the placeholders as `<x i="1">...</x>` and `<x i="2"/>` (override `markupStyle()` to get
+`expAiTranslationMarkup::STYLE_HTML` instead); the base turns your answers back into the coded form and refuses a text
+whose placeholders changed. `$context` is the text around the block when `SendContext` is enabled. `billed` is the
+number of characters the service billed, or null to price the characters sent. Throw `expAiTranslationException` for
+your own errors: `transient()` (429, 5xx, timeouts) lets the queue retry, everything else fails the job. A service
+that is not a machine translation (another model gateway, a human translation agency with a queue of its own)
+implements `expAiTranslationProvider` directly. The registry `expai_translation_providers` lists it in the extension
+point survey; `php bin/php/ezpgenerateautoloads.php -e` after adding the class.

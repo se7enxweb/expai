@@ -6785,4 +6785,114 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<!-- expai translation services: begin -->
+<context>
+    <name>extension/expai/translation</name>
+    <message>
+        <source>No translation service</source>
+        <translation>Ingen oversettelsestjeneste</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Blokkert av datapolicyen</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Oversatt av %provider</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/error</name>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Ingen oversettelsestjeneste er installert for %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Datapolicyen holder dette innholdet unna alle oversettelsestjenester for %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Oversettelsestjenesten %service er ikke konfigurert.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Oversettelsestjenesten %service oversetter ikke %source til %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Oversettelsestjenesten %service avviste nøkkelen.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Oversettelsestjenesten %service er opptatt. Prøv igjen senere.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Oversettelsestjenesten %service er ikke tilgjengelig (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Oversettelsestjenesten %service avviste forespørselen (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Kvoten til oversettelsestjenesten %service er brukt opp.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Oversettelsestjenesten %service kunne ikke nås.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Svaret fra oversettelsestjenesten %service kunne ikke leses.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Feltet er tomt: det er ingenting å oversette.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/summary</name>
+    <message>
+        <source>Translation services</source>
+        <translation>Oversettelsestjenester</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Standardtjeneste: %default; når den valgte tjenesten ikke kan oversette et språkpar: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Regel</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Tjeneste</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>maskinoversettelse</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>modell</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Bare teksten i blokkene som skal oversettes, sendes til en maskinoversettelsestjeneste (med SendContext også blokkene ved siden av), aldri andre felter eller navnet på objektet.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/rad</name>
+    <message>
+        <source>AI translation services</source>
+        <translation>KI-oversettelsestjenester</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Oversettelsestjenestene for synkroniseringen av oversettelser og felthandlingen Oversett (expai.ini [TranslationProvider_&lt;name&gt;] Class=, som implementerer expAiTranslationProvider; valgt av [TranslationSettings]).</translation>
+    </message>
+</context>
+<!-- expai translation services: end -->
 </TS>

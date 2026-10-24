@@ -26,6 +26,7 @@ CREATE  INDEX expai_conversation_user_node ON expai_conversation  ( user_id, nod
 CREATE TABLE expai_usage_log (
   action varchar(40) NOT NULL DEFAULT '',
   batch_id INTEGER(11) NOT NULL DEFAULT '0',
+  billed_chars INTEGER(11) NOT NULL DEFAULT '0',
   cache_read_tokens INTEGER(11) NOT NULL DEFAULT '0',
   cache_write_tokens INTEGER(11) NOT NULL DEFAULT '0',
   conversation_id INTEGER(11) NOT NULL DEFAULT '0',

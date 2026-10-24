@@ -47,6 +47,13 @@ an unknown region meets no region requirement. Without any rule everything may g
   section), `update_draft`: a refused object is a tool error the model reads; lists leave such objects out and add
   `withheld_by_data_policy: <n>`; a path shows only the node id of a withheld ancestor.
 - **The edit form**: field actions and "Fill the fields" check the object before anything is sent.
+- **Translation services** ([translation-providers.md](translation-providers.md)): a machine translation service
+  (DeepL, LibreTranslate, ...) has its own `[TranslationProvider_<id>] Region` and `Retention`. The object is checked
+  against them when the service is chosen (a refusal tries `[TranslationSettings] Fallback`, else the translation's
+  state is `blocked` with the rule), again in the job `expai.translation.run` before anything is sent, and in the field
+  action Translate before its request. Such a service gets only the text of the blocks to translate (with
+  `SendContext` also the blocks next to them), never other fields, the object's name or the current translation. The
+  translation service `llm` follows the rules of its model's provider, checked by the queue as before.
 - **MCP**: the in-process bridge leaves withheld nodes out of its results; an external server has its own `Region`
   and `Retention`, checked against the panel node before every call ([mcp.md](mcp.md)).
 

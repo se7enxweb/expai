@@ -73,6 +73,9 @@ class expAiUsageLog extends eZPersistentObject
                 // while the table lacks them (reservationColumns())
                 'reserved_tokens' => $int( 'ReservedTokens' ),
                 'reserved_micros' => $int( 'ReservedMicros' ),
+                // a translation service (expAiTranslationRecorder): the characters it billed; left out while the table lacks
+                // the column (billedCharsColumn())
+                'billed_chars' => $int( 'BilledChars' ),
             ),
             'keys' => array( 'id' ),
             'increment_key' => 'id',
@@ -83,6 +86,8 @@ class expAiUsageLog extends eZPersistentObject
         );
         if ( !self::reservationColumns() )
             unset( $definition['fields']['reserved_tokens'], $definition['fields']['reserved_micros'] );
+        if ( !self::billedCharsColumn() )
+            unset( $definition['fields']['billed_chars'] );
         return $definition;
     }
 
@@ -111,6 +116,30 @@ class expAiUsageLog extends eZPersistentObject
             self::$warned = true;
             eZDebug::writeWarning( 'expai: expai_usage_log has no columns reserved_tokens and reserved_micros, so requests are not reserved before they '
                                    . 'are sent. Run php extension/expai/bin/php/expaischema.php --install -s <siteaccess>.', __METHOD__ );
+        }
+        return $ok;
+    }
+
+    /** the column of the characters a translation service billed, added by an upgrade */
+    const BILLED_CHARS_COLUMNS = array( 'billed_chars' );
+
+    /** @var bool the warning about the missing billed_chars column was written in this process */
+    protected static $warnedBilled = false;
+
+    /**
+     * Has expai_usage_log the column billed_chars? An installation updated without expaischema.php --install lacks it:
+     * the definition and the recorder of translation services then leave it out (the cost is still stored in
+     * reported_cost_micros), with one warning per process.
+     * @return bool
+     */
+    public static function billedCharsColumn()
+    {
+        $ok = expAiSchema::hasColumns( 'expai_usage_log', self::BILLED_CHARS_COLUMNS, self::$columnLister );
+        if ( !$ok && !self::$warnedBilled )
+        {
+            self::$warnedBilled = true;
+            eZDebug::writeWarning( 'expai: expai_usage_log has no column billed_chars, so the characters translation services bill are not stored. '
+                                   . 'Run php extension/expai/bin/php/expaischema.php --install -s <siteaccess>.', __METHOD__ );
         }
         return $ok;
     }

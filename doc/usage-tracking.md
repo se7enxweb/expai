@@ -13,7 +13,10 @@ One row in `expai_usage_log` per request (columns in [database.md](database.md))
   the stop reason;
 - how it went: HTTP status, retries, time of the call, the tools the answer asked for (names, outcome and time; never
   their input), drafts written, the error of a failed request;
-- the rate limit headers of the response (`anthropic-ratelimit-*`, `retry-after`).
+- the rate limit headers of the response (`anthropic-ratelimit-*`, `retry-after`);
+- for a machine translation service ([translation-providers.md](translation-providers.md)): `provider` = the
+  service's id, `model` = its engine, `model_alias` = `translation.<id>`, no tokens, the characters it billed
+  (`billed_chars`) and the cost in `reported_cost_micros`.
 
 The texts of requests and answers are **not** stored. Only with `[UsageSettings] LogRequests=enabled` is the full
 request kept with each row, for debugging; it contains content and the editors' words, so leave it disabled in
@@ -81,7 +84,12 @@ date or `-latest` suffix, then by family and version; a model without a row uses
 is shown as approximate (`≈`). Claude Haiku 5.5 has a second tier: a request whose prompt (input + cache write + cache
 read) is over `LongContextThreshold` uses the `*Long` prices.
 
-Because nothing is stored as money, correcting the price table corrects every past figure too. The estimate is not
+A machine translation service is priced per character, not per token: its row stores the cost when it is made,
+billed characters x `[TranslationProvider_<id>] PricePerMChars` (in `PriceCurrency`, converted to `[Pricing]
+Currency`), and that stored cost is shown (source "reported"). A local service with `PricePerMChars=0` costs nothing.
+Only the cost limits of `[Limits]` apply to it; the token limits do not count characters.
+
+Because nothing is stored as money, correcting the price table corrects every past model figure too. The estimate is not
 an invoice: Anthropic's invoice is authoritative. `[Pricing] Enabled=false` hides costs everywhere.
 
 Check the matcher against the shipped table:
