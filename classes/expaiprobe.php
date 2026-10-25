@@ -92,29 +92,37 @@ class expAiProbe
             && self::gateOpens( (int) $latest->attribute( 'pass_rate' ), $latest->results(), $config );
     }
 
-    /** @return string why a model may not write ('' when it may), English */
+    /**
+     * @return string why a model may not write ('' when it may), in the interface language (context
+     * extension/expai/probe; English where the catalogue has no translation, as on the command line)
+     */
     public static function writeRefusal( $alias, ?expAiConfig $config = null )
     {
         $config = $config ?: expAiConfig::instance();
         $model = $config->registry()->getModel( $alias );
         if ( !$model )
-            return 'unknown model';
+            return ezpI18n::tr( 'extension/expai/probe', 'unknown model' );
         if ( $model['tool_use'] !== 'native' )
-            return 'the model has no native tool calling (ToolUse=' . $model['tool_use'] . ')';
+            return ezpI18n::tr( 'extension/expai/probe', 'the model has no native tool calling (ToolUse=%tooluse)', null,
+                                array( '%tooluse' => $model['tool_use'] ) );
         if ( !$model['write_tools'] )
-            return 'WriteTools is not enabled for the model';
+            return ezpI18n::tr( 'extension/expai/probe', 'WriteTools is not enabled for the model' );
         if ( $model['write_gate'] === 'trusted' )
             return '';
         $latest = self::latest( $alias, 'live' );
         if ( !$latest )
-            return 'the model has not passed the probe (bin/php/expaiprobe.php --model=' . $alias . ' --live)';
+            return ezpI18n::tr( 'extension/expai/probe', 'the model has not passed the probe (%command)', null,
+                                array( '%command' => 'bin/php/expaiprobe.php --model=' . $alias . ' --live' ) );
         if ( (string) $latest->attribute( 'model' ) !== $model['id'] )
-            return 'the probe was run with another model id';
+            return ezpI18n::tr( 'extension/expai/probe', 'the probe was run with another model id' );
         if ( (int) $latest->attribute( 'pass_rate' ) < self::threshold( $config ) )
-            return 'the probe pass rate ' . (int) $latest->attribute( 'pass_rate' ) . '% is below ' . self::threshold( $config ) . '%';
+            return ezpI18n::tr( 'extension/expai/probe', 'the probe pass rate %rate% is below %threshold%', null,
+                                array( '%rate' => (int) $latest->attribute( 'pass_rate' ), '%threshold' => self::threshold( $config ) ) );
         $failed = self::failedMandatory( $latest->results(), $config );
         if ( $failed )
-            return 'the mandatory probe task' . ( count( $failed ) > 1 ? 's ' : ' ' ) . implode( ', ', $failed ) . ' did not pass';
+            return count( $failed ) > 1
+                ? ezpI18n::tr( 'extension/expai/probe', 'the mandatory probe tasks %tasks did not pass', null, array( '%tasks' => implode( ', ', $failed ) ) )
+                : ezpI18n::tr( 'extension/expai/probe', 'the mandatory probe task %tasks did not pass', null, array( '%tasks' => implode( ', ', $failed ) ) );
         return '';
     }
 

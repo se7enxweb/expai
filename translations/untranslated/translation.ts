@@ -6785,4 +6785,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>
