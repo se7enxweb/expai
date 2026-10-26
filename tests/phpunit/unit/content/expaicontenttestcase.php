@@ -84,6 +84,18 @@ abstract class expAiContentTestCase extends expAiTestCase
     /** @var array the $_POST, $_GET, $_SERVER of the process before the test */
     private $globals = array();
 
+    /**
+     * The label a prompt gives a language: the international name of the kernel's locale and the code, for example
+     * "German (Germany) (ger-DE)". The name comes from the kernel's locale files (CLDR), which can change with the
+     * kernel, so a test never spells it out.
+     */
+    protected static function languageLabel( $code )
+    {
+        $name = (string) eZLocale::instance( $code )->attribute( 'intl_language_name' );
+        self::assertNotSame( '', $name, "the kernel has a locale $code" );
+        return $name . ' (' . $code . ')';
+    }
+
     protected function setUp(): void
     {
         parent::setUp();

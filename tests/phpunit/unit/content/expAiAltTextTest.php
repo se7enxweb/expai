@@ -30,7 +30,8 @@ class expAiAltTextTest extends expAiContentTestCase
         $choice = expAiAltText::chooseModel( $config, $image );
         $this->assertSame( array( self::ALIAS, 'Stub model', self::PROVIDER ), array( $choice['alias'], $choice['label'], $choice['provider'] ) );
         $this->assertStringContainsString( 'House rules of this site: Mention the brand colours.', expAiAltText::systemPrompt( $config ) );
-        $this->assertSame( 'German (ger-DE)', expAiAltText::languageName( 'ger-DE' ) );
+        $this->assertSame( self::languageLabel( 'ger-DE' ), expAiAltText::languageName( 'ger-DE' ) );
+        $this->assertStringStartsWith( 'German', expAiAltText::languageName( 'ger-DE' ) );
         $this->assertSame( 'xx-YY', expAiAltText::languageName( 'xx-YY' ) );
 
         $attribute = self::imageAttribute( $image );

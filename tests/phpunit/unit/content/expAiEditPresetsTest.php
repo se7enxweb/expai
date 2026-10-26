@@ -133,7 +133,7 @@ class expAiEditPresetsTest extends expAiContentTestCase
         $provider = $config->registry()->providerFor( self::ALIAS );
         $this->assertRefused( function () use ( $translate, $request, $provider ) { $translate->run( $request, $provider ); }, 'choose the target language' );
         $request->targetLanguage = self::TARGET;
-        $this->assertStringContainsString( 'Target language: German (ger-DE)', $translate->userMessage( $request ) );
+        $this->assertStringContainsString( "\nTarget language: " . self::languageLabel( self::TARGET ) . "\n", $translate->userMessage( $request ) . "\n" );
         $rewrite = $registry->get( 'rewrite' );
         $this->assertRefused( function () use ( $rewrite, $request, $provider ) { $rewrite->run( $request, $provider ); }, 'nothing to rewrite' );
         $request->value = 'Old title';
