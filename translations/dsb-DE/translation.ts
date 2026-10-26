@@ -363,18 +363,6 @@
         <translation>Model %model jo how pśepómałki za akcije pólow (wěcej ako %seconds sekundow na napšašowanje). Wubjeŕśo drugi model w menije modelow abo wužywajśo rejtarik „Intelligence“, kótaryž pómałe modele w slězynje wuwjeźo.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Toś ten model njejo k dispoziciji.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Njeznata akcija.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Cakański rěd nadawkow njejo k dispoziciji.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Toś ta wersija njejo se wót Exponential Intelligence napisała.</translation>
     </message>

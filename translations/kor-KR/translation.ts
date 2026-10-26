@@ -363,18 +363,6 @@
         <translation>%model 모델은 여기서 필드 작업에 사용하기에는 너무 느립니다(요청당 %seconds초 초과). 모델 메뉴에서 다른 모델을 선택하거나, 느린 모델을 백그라운드에서 실행하는 Intelligence 탭을 사용하십시오.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>이 모델은 사용할 수 없습니다.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>알 수 없는 작업입니다.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>작업 큐를 사용할 수 없습니다.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>이 버전은 Exponential Intelligence가 작성하지 않았습니다.</translation>
     </message>

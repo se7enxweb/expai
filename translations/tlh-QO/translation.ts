@@ -5778,7 +5778,7 @@
     </message>
     <message>
         <source>waiting for a worker, %seconds s</source>
-        <translation>vangwI&apos;vaD loStaH, %seconds lup</translation>
+        <translation>vumwI&apos;vaD loStaH, %seconds lup</translation>
     </message>
     <message>
         <source>%seconds s</source>

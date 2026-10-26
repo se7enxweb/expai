@@ -363,18 +363,6 @@
         <translation>Model %model je tu na akcie polí príliš pomalý (viac ako %seconds s na požiadavku). V ponuke modelov vyberte iný model alebo použite kartu Intelligence, ktorá spúšťa pomalé modely na pozadí.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Tento model nie je k dispozícii.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Neznáma akcia.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Front úloh nie je k dispozícii.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Túto verziu nenapísala Exponential Intelligence.</translation>
     </message>

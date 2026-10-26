@@ -364,18 +364,6 @@
         <translation>%model modeli buradaki alan işlemleri için çok yavaş (istek başına %seconds saniyeden fazla). Model menüsünden başka bir model seçin veya yavaş modelleri arka planda çalıştıran Intelligence sekmesini kullanın.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Bu model kullanılamıyor.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Bilinmeyen işlem.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>İş kuyruğu kullanılamıyor.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Bu sürüm Exponential Intelligence tarafından yazılmadı.</translation>
     </message>

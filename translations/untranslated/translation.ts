@@ -364,18 +364,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation type="unfinished"></translation>
     </message>

@@ -364,18 +364,6 @@
         <translation>Il modello %model è troppo lento per le azioni sui campi qui (più di %seconds secondi per richiesta). Scegli un altro modello nel menu dei modelli, oppure usa la scheda Intelligence, che esegue i modelli lenti in background.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Questo modello non è disponibile.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Azione sconosciuta.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>La coda dei job non è disponibile.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Questa versione non è stata scritta da Exponential Intelligence.</translation>
     </message>

@@ -363,18 +363,6 @@
         <translation>Model %model je tukaj prepočasen za dejanja na poljih (več kot %seconds s na zahtevo). V meniju modelov izberite drug model ali uporabite zavihek Inteligenca, ki počasne modele izvaja v ozadju.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ta model ni na voljo.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Neznano dejanje.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Čakalna vrsta opravil ni na voljo.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Te različice ni napisal Exponential Intelligence.</translation>
     </message>

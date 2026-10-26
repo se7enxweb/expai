@@ -364,18 +364,6 @@
         <translation>Modellen %model er for langsom til felthandlinger her (mere end %seconds sekunder pr. forespørgsel). Vælg en anden model i modelmenuen, eller brug fanen Intelligence, som kører langsomme modeller i baggrunden.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Denne model er ikke tilgængelig.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Ukendt handling.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Opgavekøen er ikke tilgængelig.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Denne version er ikke skrevet af Exponential Intelligence.</translation>
     </message>

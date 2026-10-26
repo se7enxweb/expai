@@ -364,18 +364,6 @@
         <translation>Modela %model ji bo çalakiyên qadan li vir pir hêdî ye (ji bo her daxwazê zêdetirî %seconds çirke). Di menûya modelan de modeleke din hilbijêrin, an taba Intelligence bi kar bînin, ku modelên hêdî li paşperdeyê dixebitîne.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ev model ne berdest e.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Çalakiya nenas.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Rêza karan ne berdest e.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Ev guherto ji aliyê Exponential Intelligence ve nehatiye nivîsandin.</translation>
     </message>
@@ -3627,7 +3615,7 @@
     </message>
     <message>
         <source>batch: approved plans only</source>
-        <translation>batch: tenê planên pejirandî</translation>
+        <translation>deste: tenê planên pejirandî</translation>
     </message>
     <message>
         <source>Runs in this window use the standard lane; the chosen lane applies to background runs.</source>
@@ -5883,7 +5871,7 @@
     </message>
     <message>
         <source>Before writing accepted changes to drafts</source>
-        <translation>Berî nivîsandina guhertinên pejirandî di reşnivîsan de</translation>
+        <translation>Berî nivîsandina guhertinên qebûlkirî di reşnivîsan de</translation>
     </message>
     <message>
         <source>Before the approved plan runs</source>
@@ -6172,7 +6160,7 @@
     </message>
     <message>
         <source>Alerts on AI events</source>
-        <translation>Hişyarî li ser bûyerên ZÇ</translation>
+        <translation>Alarm li ser bûyerên ZÇ</translation>
     </message>
     <message>
         <source>Chain</source>
@@ -6763,11 +6751,11 @@
     <name>extension/expai/error</name>
     <message>
         <source>This part would remove %items from the text and cannot be accepted. Reject it, or ask for a new proposal that keeps them.</source>
-        <translation>Ev beş dê %items ji nivîsê rake û nayê pejirandin. Wê red bikin, an pêşniyareke nû bixwazin ku wan biparêze.</translation>
+        <translation>Ev beş dê %items ji nivîsê rake û nayê qebûlkirin. Wê red bikin, an pêşniyareke nû bixwazin ku wan biparêze.</translation>
     </message>
     <message>
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
-        <translation>Beşên pejirandî dê %items ji qada %field rakin. Tiştek nehate nivîsandin.</translation>
+        <translation>Beşên qebûlkirî dê %items ji qada %field rakin. Tiştek nehate nivîsandin.</translation>
     </message>
 </context>
 <context>
@@ -6781,7 +6769,7 @@
     <name>extension/expai/vector</name>
     <message>
         <source>This part would remove %items from the text, so it cannot be accepted. Reject it, or ask for a new proposal that keeps them.</source>
-        <translation>Ev beş dê %items ji nivîsê rake, ji ber vê yekê nayê pejirandin. Wê red bikin, an pêşniyareke nû bixwazin ku wan biparêze.</translation>
+        <translation>Ev beş dê %items ji nivîsê rake, ji ber vê yekê nayê qebûlkirin. Wê red bikin, an pêşniyareke nû bixwazin ku wan biparêze.</translation>
     </message>
 </context>
 <!-- expai rich text placeholders: end -->

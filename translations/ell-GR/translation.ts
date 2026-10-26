@@ -363,18 +363,6 @@
         <translation>Το μοντέλο %model είναι πολύ αργό για ενέργειες πεδίων εδώ (περισσότερα από %seconds δευτερόλεπτα ανά αίτηση). Επιλέξτε άλλο μοντέλο στο μενού μοντέλων ή χρησιμοποιήστε την καρτέλα Intelligence, η οποία εκτελεί τα αργά μοντέλα στο παρασκήνιο.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Αυτό το μοντέλο δεν είναι διαθέσιμο.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Άγνωστη ενέργεια.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Η ουρά εργασιών δεν είναι διαθέσιμη.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Αυτή η έκδοση δεν γράφτηκε από το Exponential Intelligence.</translation>
     </message>

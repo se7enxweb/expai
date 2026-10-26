@@ -363,18 +363,6 @@
         <translation>Mudel %model on siin väljatoimingute jaoks liiga aeglane (üle %seconds sekundi päringu kohta). Valige mudelite menüüst teine mudel või kasutage vahekaarti „Intelligence“, mis käitab aeglaseid mudeleid taustal.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>See mudel pole saadaval.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Tundmatu toiming.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Tööde järjekord pole saadaval.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Seda versiooni ei kirjutanud Exponential Intelligence.</translation>
     </message>

@@ -364,18 +364,6 @@
         <translation>مدل %model برای کنش‌های فیلد در اینجا بیش از حد کند است (بیش از %seconds ثانیه برای هر درخواست). مدل دیگری را در منوی مدل انتخاب کنید، یا از زبانهٔ «هوشمندی» استفاده کنید که مدل‌های کند را در پس‌زمینه اجرا می‌کند.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>این مدل در دسترس نیست.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>عملیات ناشناخته.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>صف کارها در دسترس نیست.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>این نسخه را Exponential Intelligence ننوشته است.</translation>
     </message>

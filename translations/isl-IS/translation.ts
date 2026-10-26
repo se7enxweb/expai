@@ -363,18 +363,6 @@
         <translation>Líkanið %model er of hægt fyrir reitaaðgerðir hér (meira en %seconds sekúndur á beiðni). Veldu annað líkan í líkanavalmyndinni, eða notaðu Intelligence-flipann, sem keyrir hæg líkön í bakgrunni.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Þetta líkan er ekki tiltækt.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Óþekkt aðgerð.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Verkbiðröðin er ekki tiltæk.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Þessi útgáfa var ekki skrifuð af Exponential Intelligence.</translation>
     </message>

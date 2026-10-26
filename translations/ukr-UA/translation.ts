@@ -363,18 +363,6 @@
         <translation>Модель %model надто повільна для дій із полями тут (понад %seconds секунд на запит). Виберіть іншу модель у меню моделей або скористайтеся вкладкою Intelligence, яка виконує повільні моделі у фоновому режимі.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ця модель недоступна.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Невідома дія.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Черга завдань недоступна.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Цю версію написав не Exponential Intelligence.</translation>
     </message>
@@ -848,7 +836,7 @@
     </message>
     <message>
         <source>Site default model</source>
-        <translation>Модель сайту за замовчуванням</translation>
+        <translation>Типова модель сайту</translation>
     </message>
     <message>
         <source>%model, set in expai.ini (%placement: %file); change it there.</source>
@@ -876,11 +864,11 @@
     </message>
     <message>
         <source>You may not create content in the default location. Choose a location for your request.</source>
-        <translation>Ви не можете створювати вміст у розташуванні за замовчуванням. Виберіть розташування для свого запиту.</translation>
+        <translation>Ви не можете створювати вміст у типовому розташуванні. Виберіть розташування для свого запиту.</translation>
     </message>
     <message>
         <source>The default location is not available to you. Choose a location for your request.</source>
-        <translation>Розташування за замовчуванням вам недоступне. Виберіть розташування для свого запиту.</translation>
+        <translation>Типове розташування вам недоступне. Виберіть розташування для свого запиту.</translation>
     </message>
     <message>
         <source>What should Exponential Intelligence write?</source>

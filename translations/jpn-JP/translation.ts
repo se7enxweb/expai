@@ -363,18 +363,6 @@
         <translation>モデル %model は、ここでのフィールド操作には遅すぎます (リクエストあたり %seconds 秒超)。モデルメニューで別のモデルを選択するか、遅いモデルをバックグラウンドで実行する「Intelligence」タブを使用してください。</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>このモデルは使用できません。</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>不明な操作です。</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>ジョブキューを使用できません。</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>このバージョンは Exponential Intelligence によって作成されたものではありません。</translation>
     </message>

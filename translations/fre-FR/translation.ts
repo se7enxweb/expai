@@ -265,7 +265,7 @@
     </message>
     <message>
         <source>Failed</source>
-        <translation>Echec</translation>
+        <translation>Échec</translation>
     </message>
     <message>
         <source>Stopped</source>
@@ -361,18 +361,6 @@
     <message>
         <source>The model %model is too slow for field actions here (more than %seconds seconds per request). Choose another model in the model menu, or use the Intelligence tab, which runs slow models in the background.</source>
         <translation>Le modèle %model est trop lent pour les actions de champ ici (plus de %seconds secondes par requête). Choisissez un autre modèle dans le menu des modèles, ou utilisez l&apos;onglet Intelligence, qui exécute les modèles lents en arrière-plan.</translation>
-    </message>
-    <message>
-        <source>This model is not available.</source>
-        <translation>Ce modèle n&apos;est pas disponible.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Action inconnue.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>La file d&apos;attente n&apos;est pas disponible.</translation>
     </message>
     <message>
         <source>This version was not written by Exponential Intelligence.</source>
@@ -3024,7 +3012,7 @@
     </message>
     <message>
         <source>Threads</source>
-        <translation>Threads</translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <source>Nodes</source>
@@ -3255,7 +3243,7 @@
     </message>
     <message>
         <source>Failed</source>
-        <translation>Echec</translation>
+        <translation>Échec</translation>
     </message>
     <message>
         <source>Stopped</source>
@@ -3299,7 +3287,7 @@
     </message>
     <message>
         <source>Threads</source>
-        <translation>Threads</translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <source>%count need you</source>
@@ -3346,7 +3334,7 @@
     </message>
     <message>
         <source>Threads</source>
-        <translation>Threads</translation>
+        <translation>Fils</translation>
     </message>
     <message>
         <source>Plan, changes and cost</source>
@@ -3390,7 +3378,7 @@
     </message>
     <message>
         <source>Thread</source>
-        <translation>Thread</translation>
+        <translation>Fil</translation>
     </message>
     <message>
         <source>Start a thread</source>
@@ -4008,7 +3996,7 @@
     </message>
     <message>
         <source>Failed</source>
-        <translation>Echec</translation>
+        <translation>Échec</translation>
     </message>
     <message>
         <source>Skipped</source>
@@ -5160,7 +5148,7 @@
     </message>
     <message>
         <source>Est.</source>
-        <translation>Est.</translation>
+        <translation>Estim.</translation>
     </message>
     <message>
         <source>Instruction for item %n</source>
