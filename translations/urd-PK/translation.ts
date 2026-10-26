@@ -364,18 +364,6 @@
         <translation>ماڈل %model یہاں فیلڈ ایکشنز کے لیے بہت سست ہے (فی درخواست %seconds سیکنڈ سے زیادہ)۔ ماڈل مینو میں سے کوئی دوسرا ماڈل چنیں، یا Intelligence ٹیب استعمال کریں، جو سست ماڈلز کو پس منظر میں چلاتا ہے۔</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>یہ ماڈل دستیاب نہیں ہے۔</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>نامعلوم عمل۔</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>جاب قطار دستیاب نہیں ہے۔</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>یہ ورژن Exponential Intelligence نے نہیں لکھا۔</translation>
     </message>

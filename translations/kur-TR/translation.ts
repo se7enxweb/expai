@@ -364,18 +364,6 @@
         <translation>Modela %model ji bo çalakiyên qadan li vir pir hêdî ye (ji bo her daxwazê zêdetirî %seconds çirke). Di menûya modelan de modeleke din hilbijêrin, an taba Intelligence bi kar bînin, ku modelên hêdî li paşperdeyê dixebitîne.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ev model ne berdest e.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Çalakiya nenas.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Rêza karan ne berdest e.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Ev guherto ji aliyê Exponential Intelligence ve nehatiye nivîsandin.</translation>
     </message>

@@ -364,18 +364,6 @@
         <translation>Imodeli %model ihamba kancane kakhulu ezenzweni zezinkambu lapha (ngaphezu kwamasekhondi angu-%seconds ngesicelo ngasinye). Khethani enye imodeli kumenyu yemodeli, noma sebenzisani ithebhu ye-Intelligence, esebenzisa amamodeli ahamba kancane ngemuva.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Le modeli ayitholakali.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Isenzo esingaziwa.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Ulayini wemisebenzi awutholakali.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Le nguqulo ayibhalwanga yi-Exponential Intelligence.</translation>
     </message>

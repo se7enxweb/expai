@@ -363,18 +363,6 @@
         <translation>मॉडल %model यहाँ फ़ील्ड क्रियाओं के लिए बहुत धीमा है (प्रति अनुरोध %seconds सेकंड से अधिक)। मॉडल मेनू में कोई अन्य मॉडल चुनें, या Intelligence टैब का उपयोग करें, जो धीमे मॉडल पृष्ठभूमि में चलाता है।</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>यह मॉडल उपलब्ध नहीं है।</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>अज्ञात कार्रवाई।</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>जॉब कतार उपलब्ध नहीं है।</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>यह संस्करण Exponential Intelligence द्वारा नहीं लिखा गया था।</translation>
     </message>

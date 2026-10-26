@@ -364,18 +364,6 @@
         <translation>மாதிரி %model இங்கு புல செயல்களுக்கு மிகவும் மெதுவாக உள்ளது (ஒரு கோரிக்கைக்கு %seconds வினாடிகளுக்கு மேல்). மாதிரி பட்டியில் வேறொரு மாதிரியைத் தேர்ந்தெடுங்கள், அல்லது மெதுவான மாதிரிகளைப் பின்னணியில் இயக்கும் Intelligence தாவலைப் பயன்படுத்துங்கள்.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>இந்த மாதிரி கிடைக்கவில்லை.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>தெரியாத செயல்.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>பணி வரிசை கிடைக்கவில்லை.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>இந்தப் பதிப்பை Exponential Intelligence எழுதவில்லை.</translation>
     </message>

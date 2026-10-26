@@ -363,18 +363,6 @@
         <translation>Modeli %model maani immersugassani iliuutsinut kigaavallaarpoq (qinnummut sekundit %seconds sinnerlugit). Modelinut menumi modeli alla toqqaruk, imaluunniit Intelligence-imut tabi atoruk, modelinik kigaatsunik tunuani ingerlatsisartoq.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Modeli una pissarsiarineqarsinnaanngilaq.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Iliuuseq ilisimaneqanngitsoq.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Suliassat utaqqiffiat pissarsiarineqarsinnaanngilaq.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Versioni una Exponential Intelligence-imit allanneqarsimanngilaq.</translation>
     </message>

@@ -363,18 +363,6 @@
         <translation>A(z) %model modell itt túl lassú a mezőműveletekhez (kérésenként több mint %seconds másodperc). Válasszon másik modellt a modellmenüben, vagy használja az Intelligencia lapot, amely a lassú modelleket a háttérben futtatja.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ez a modell nem érhető el.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Ismeretlen művelet.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>A feladat-várólista nem érhető el.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Ezt a verziót nem az Exponential Intelligence írta.</translation>
     </message>

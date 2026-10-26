@@ -364,18 +364,6 @@
         <translation>Ụdị %model nwayọọ nke ukwuu maka omume ubi ebe a (karịa sekọnd %seconds n&apos;otu arịrịọ). Biko, họrọ Ụdị ọzọ na menu Ụdị, ma ọ bụ jiri taabụ Intelligence, nke na-agba ụdị ndị nwayọọ n&apos;azụ.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ụdị a adịghị.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Omume amaghị.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Ahịrị ọrụ adịghị.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Exponential Intelligence adịghị edepụta Ụdị a.</translation>
     </message>

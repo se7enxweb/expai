@@ -364,18 +364,6 @@
         <translation>ମଡେଲ୍ %model ଏଠାରେ କ୍ଷେତ୍ର କାର୍ଯ୍ୟ ପାଇଁ ଅତ୍ୟନ୍ତ ଧୀର (ପ୍ରତି ଅନୁରୋଧରେ %seconds ସେକେଣ୍ଡରୁ ଅଧିକ)। ମଡେଲ୍ ମେନୁରେ ଅନ୍ୟ ଏକ ମଡେଲ୍ ବାଛନ୍ତୁ, କିମ୍ବା Intelligence ଟ୍ୟାବ୍ ବ୍ୟବହାର କରନ୍ତୁ, ଯାହା ଧୀର ମଡେଲ୍‌ଗୁଡ଼ିକୁ ପୃଷ୍ଠଭୂମିରେ ଚଲାଏ।</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>ଏହି ମଡେଲ୍ ଉପଲବ୍ଧ ନାହିଁ।</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>ଅଜଣା କାର୍ଯ୍ୟ।</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>ଜବ୍ କ୍ୟୁ ଉପଲବ୍ଧ ନାହିଁ।</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>ଏହି ସଂସ୍କରଣ Exponential Intelligence ଦ୍ୱାରା ଲେଖାଯାଇନାହିଁ।</translation>
     </message>

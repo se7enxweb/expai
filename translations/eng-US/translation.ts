@@ -364,18 +364,6 @@
         <translation>The model %model is too slow for field actions here (more than %seconds seconds per request). Choose another model in the model menu, or use the Intelligence tab, which runs slow models in the background.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>This model is not available.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Unknown action.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>The job queue is not available.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>This version was not written by Exponential Intelligence.</translation>
     </message>

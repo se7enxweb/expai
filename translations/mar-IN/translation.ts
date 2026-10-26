@@ -364,18 +364,6 @@
         <translation>मॉडेल %model येथील फील्ड क्रियांसाठी खूप संथ आहे (प्रति विनंती %seconds सेकंदांपेक्षा जास्त). मॉडेल मेनूमध्ये दुसरे मॉडेल निवडा किंवा Intelligence टॅब वापरा, जो संथ मॉडेल पार्श्वभूमीत चालवतो.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>हे मॉडेल उपलब्ध नाही.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>अज्ञात क्रिया.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>जॉब रांग उपलब्ध नाही.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>ही आवृत्ती Exponential Intelligence ने लिहिलेली नाही.</translation>
     </message>

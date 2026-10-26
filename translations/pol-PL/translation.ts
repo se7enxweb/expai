@@ -364,18 +364,6 @@
         <translation>Model %model jest tutaj zbyt wolny dla akcji pól (ponad %seconds s na żądanie). Wybierz inny model w menu modeli lub użyj karty Intelligence, która uruchamia wolne modele w tle.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ten model jest niedostępny.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Nieznana akcja.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Kolejka zadań jest niedostępna.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Ta wersja nie została napisana przez Exponential Intelligence.</translation>
     </message>

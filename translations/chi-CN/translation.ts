@@ -364,18 +364,6 @@
         <translation>模型 %model 速度过慢，无法在此处执行字段操作（每次请求超过 %seconds 秒）。请在模型菜单中选择其他模型，或使用“Intelligence”选项卡，它会在后台运行速度较慢的模型。</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>此模型不可用。</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>未知的操作。</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>作业队列不可用。</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>此版本不是由 Exponential Intelligence 编写的。</translation>
     </message>

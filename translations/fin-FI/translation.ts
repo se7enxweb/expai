@@ -363,18 +363,6 @@
         <translation>Malli %model on tässä liian hidas kenttätoimintoihin (yli %seconds sekuntia pyyntöä kohden). Valitse mallivalikosta toinen malli tai käytä Intelligence-välilehteä, joka suorittaa hitaat mallit taustalla.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Tämä malli ei ole käytettävissä.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Tuntematon toiminto.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Työjono ei ole käytettävissä.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Tätä versiota ei ole kirjoittanut Exponential Intelligence.</translation>
     </message>

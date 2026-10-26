@@ -364,18 +364,6 @@
         <translation>Model %model je prespor za radnje nad poljima ovde (više od %seconds sekundi po zahtevu). Izaberite drugi model u meziju modela ili koristite karticu Intelligence, koja spore modele pokreće u pozadini.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ovaj model nije dostupan.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Nepoznata radnja.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Red poslova nije dostupan.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Ovu verziju nije napisao Exponential Intelligence.</translation>
     </message>

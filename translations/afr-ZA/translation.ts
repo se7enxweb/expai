@@ -364,18 +364,6 @@
         <translation>Die model %model is te stadig vir veldaksies hier (meer as %seconds sekondes per versoek). Kies &apos;n ander model in die modelkieslys, of gebruik die Intelligensie-oortjie, wat stadige modelle in die agtergrond laat loop.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Hierdie model is nie beskikbaar nie.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Onbekende aksie.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Die werktou is nie beskikbaar nie.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Hierdie weergawe is nie deur Exponential Intelligence geskryf nie.</translation>
     </message>

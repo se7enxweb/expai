@@ -364,18 +364,6 @@
         <translation>મૉડલ %model અહીં ફીલ્ડ ક્રિયાઓ માટે ખૂબ ધીમું છે (પ્રતિ વિનંતી %seconds સેકન્ડથી વધુ). મૉડલ મેનુમાંથી અન્ય મૉડલ પસંદ કરો, અથવા Intelligence ટૅબનો ઉપયોગ કરો, જે ધીમા મૉડલ પૃષ્ઠભૂમિમાં ચલાવે છે.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>આ મૉડલ ઉપલબ્ધ નથી.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>અજ્ઞાત ક્રિયા.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>જૉબ કતાર ઉપલબ્ધ નથી.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>આ આવૃત્તિ Exponential Intelligence દ્વારા લખવામાં આવી ન હતી.</translation>
     </message>

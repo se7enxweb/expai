@@ -363,18 +363,6 @@
         <translation>Tá an tsamhail %model ró-mhall do ghníomhartha réimse anseo (níos mó ná %seconds soicind in aghaidh an iarratais). Roghnaigh samhail eile i roghchlár na samhlacha, nó úsáid an cluaisín Intelligence, a ritheann samhlacha malla sa chúlra.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Níl an tsamhail seo ar fáil.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Gníomh anaithnid.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Níl scuaine na jabanna ar fáil.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Níor scríobh Exponential Intelligence an leagan seo.</translation>
     </message>

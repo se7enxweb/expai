@@ -364,18 +364,6 @@
         <translation>El model %model és massa lent per a les accions de camp aquí (més de %seconds segons per sol·licitud). Tria un altre model al menú de models, o utilitza la pestanya Intelligence, que executa els models lents en segon pla.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Aquest model no està disponible.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Acció desconeguda.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>La cua de treballs no està disponible.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Aquesta versió no l&apos;ha escrit Exponential Intelligence.</translation>
     </message>

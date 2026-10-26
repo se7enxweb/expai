@@ -363,18 +363,6 @@
         <translation>Modeli %model është shumë i ngadaltë për veprimet në fusha këtu (më shumë se %seconds sekonda për kërkesë). Zgjidhni një model tjetër në menynë e modeleve ose përdorni skedën Intelligence, e cila i ekzekuton modelet e ngadalta në prapavijë.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ky model nuk është i disponueshëm.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Veprim i panjohur.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Radha e punëve nuk është e disponueshme.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Ky version nuk është shkruar nga Exponential Intelligence.</translation>
     </message>

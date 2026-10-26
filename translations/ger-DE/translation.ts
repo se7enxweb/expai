@@ -364,18 +364,6 @@
         <translation>Das Modell %model ist für Feldaktionen hier zu langsam (mehr als %seconds Sekunden pro Anfrage). Wählen Sie im Modellmenü ein anderes Modell, oder nutzen Sie den Intelligence-Reiter, der langsame Modelle im Hintergrund ausführt.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Dieses Modell ist nicht verfügbar.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Unbekannte Aktion.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Die Auftragswarteschlange ist nicht verfügbar.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Diese Version wurde nicht von Exponential Intelligence geschrieben.</translation>
     </message>

@@ -364,18 +364,6 @@
         <translation>ሞዴሉ %model ለመስክ ድርጊቶች በዚህ ቦታ በጣም ዘገምተኛ ነው (በአንድ ጥያቄ ከ%seconds ሰከንዶች በላይ)። በሞዴል ምናሌው ውስጥ ሌላ ሞዴል ይምረጡ፣ ወይም ዘገምተኛ ሞዴሎችን ከጀርባ የሚያሄደውን የኢንተለጀንስ ትር ይጠቀሙ።</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>ይህ ሞዴል አይገኝም።</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>ያልታወቀ ተግባር።</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>የሥራ ወረፋው አይገኝም።</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>ይህ ስሪት በExponential Intelligence አልተጻፈም።</translation>
     </message>

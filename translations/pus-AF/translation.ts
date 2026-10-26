@@ -364,18 +364,6 @@
         <translation>ماډل %model دلته د ساحې د کړنو لپاره ډېر ورو دی (په هره غوښتنه کې تر %seconds ثانیو ډېر). د ماډل په مینو کې بل ماډل وټاکئ، یا Intelligence ټب وکاروئ، چې ورو ماډلونه په شالید کې چلوي.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>دغه ماډل شتون نه لري.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>نامعلومه کړنه.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>د دندو کتار شتون نه لري.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>دغه نسخه د Exponential Intelligence له خوا نه ده لیکل شوې.</translation>
     </message>

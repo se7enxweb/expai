@@ -363,18 +363,6 @@
         <translation>Модель %model надто повільна для дій із полями тут (понад %seconds секунд на запит). Виберіть іншу модель у меню моделей або скористайтеся вкладкою Intelligence, яка виконує повільні моделі у фоновому режимі.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Ця модель недоступна.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Невідома дія.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Черга завдань недоступна.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Цю версію написав не Exponential Intelligence.</translation>
     </message>

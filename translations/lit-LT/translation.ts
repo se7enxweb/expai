@@ -364,18 +364,6 @@
         <translation>Modelis %model yra per lėtas laukų veiksmams čia (daugiau nei %seconds s per užklausą). Pasirinkite kitą modelį modelių meniu arba naudokite skirtuką „Intelligence“, kuriame lėti modeliai vykdomi fone.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Šis modelis nepasiekiamas.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Nežinomas veiksmas.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Darbų eilė nepasiekiama.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Šios versijos neparašė „Exponential Intelligence“.</translation>
     </message>

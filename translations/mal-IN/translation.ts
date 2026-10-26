@@ -364,18 +364,6 @@
         <translation>%model മോഡൽ ഇവിടെ ഫീൽഡ് പ്രവർത്തനങ്ങൾക്ക് വളരെ മന്ദഗതിയിലാണ് (ഒരു അഭ്യർത്ഥനയ്ക്ക് %seconds സെക്കൻഡിൽ കൂടുതൽ). മോഡൽ മെനുവിൽ മറ്റൊരു മോഡൽ തിരഞ്ഞെടുക്കുക, അല്ലെങ്കിൽ മന്ദഗതിയിലുള്ള മോഡലുകളെ പശ്ചാത്തലത്തിൽ പ്രവർത്തിപ്പിക്കുന്ന Intelligence ടാബ് ഉപയോഗിക്കുക.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>ഈ മോഡൽ ലഭ്യമല്ല.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>അജ്ഞാതമായ പ്രവർത്തനം.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>ജോബ് ക്യൂ ലഭ്യമല്ല.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>ഈ പതിപ്പ് Exponential Intelligence എഴുതിയതല്ല.</translation>
     </message>

@@ -363,18 +363,6 @@
         <translation>النموذج %model بطيء جدًا لإجراءات الحقول هنا (أكثر من %seconds ثانية لكل طلب). اختر نموذجًا آخر من قائمة النماذج، أو استخدم علامة تبويب Intelligence التي تشغّل النماذج البطيئة في الخلفية.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>هذا النموذج غير متاح.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>إجراء غير معروف.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>قائمة انتظار المهام غير متاحة.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>لم يكتب Exponential Intelligence هذا الإصدار.</translation>
     </message>

@@ -364,18 +364,6 @@
         <translation>%model ಮಾದರಿಯು ಇಲ್ಲಿ ಕ್ಷೇತ್ರ ಕ್ರಿಯೆಗಳಿಗೆ ತುಂಬಾ ನಿಧಾನವಾಗಿದೆ (ಪ್ರತಿ ವಿನಂತಿಗೆ %seconds ಸೆಕೆಂಡ್‌ಗಳಿಗಿಂತ ಹೆಚ್ಚು). ಮಾದರಿ ಮೆನುವಿನಲ್ಲಿ ಬೇರೆ ಮಾದರಿಯನ್ನು ಆರಿಸಿ, ಅಥವಾ ನಿಧಾನ ಮಾದರಿಗಳನ್ನು ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಚಲಾಯಿಸುವ Intelligence ಟ್ಯಾಬ್ ಬಳಸಿ.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>ಈ ಮಾದರಿ ಲಭ್ಯವಿಲ್ಲ.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>ಅಜ್ಞಾತ ಕ್ರಿಯೆ.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>ಜಾಬ್ ಸರತಿ ಲಭ್ಯವಿಲ್ಲ.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>ಈ ಆವೃತ್ತಿಯನ್ನು Exponential Intelligence ಬರೆದಿಲ್ಲ.</translation>
     </message>

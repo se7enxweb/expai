@@ -364,18 +364,6 @@
         <translation>Het model %model is hier te traag voor veldacties (meer dan %seconds seconden per verzoek). Kies een ander model in het modelmenu, of gebruik het tabblad Intelligence, dat trage modellen op de achtergrond uitvoert.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Dit model is niet beschikbaar.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Onbekende actie.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>De takenwachtrij is niet beschikbaar.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Deze versie is niet geschreven door Exponential Intelligence.</translation>
     </message>

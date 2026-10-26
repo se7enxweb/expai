@@ -364,18 +364,6 @@
         <translation>Samfurin AI %model yana jinkiri sosai don ayyukan fili a nan (fiye da daƙiƙa %seconds a kowace buƙata). Zaɓi wani samfurin AI a cikin menu na samfura, ko a yi amfani da Shafin ƙarami na Intelligence, wanda ke gudanar da samfura masu jinkiri a bayan fage.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Wannan samfurin AI ba ya samuwa.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Aiki da ba a sani ba.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Layin aiki ba ya samuwa.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Exponential Intelligence ba ta rubuta wannan sigar ba.</translation>
     </message>

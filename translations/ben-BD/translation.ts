@@ -364,18 +364,6 @@
         <translation>%model মডেলটি এখানে ক্ষেত্রের অ্যাকশনের জন্য খুব ধীর (প্রতি অনুরোধে %seconds সেকেন্ডের বেশি)। মডেল মেনু থেকে অন্য একটি মডেল বেছে নিন, অথবা Intelligence ট্যাব ব্যবহার করুন, যা ধীর মডেলগুলিকে ব্যাকগ্রাউন্ডে চালায়।</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>এই মডেলটি উপলব্ধ নেই।</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>অজানা অ্যাকশন।</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>জব সারি উপলব্ধ নেই।</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>এই সংস্করণটি Exponential Intelligence দ্বারা লেখা হয়নি।</translation>
     </message>

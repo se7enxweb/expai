@@ -364,18 +364,6 @@
         <translation>Imodeli %model icotha kakhulu kwezi zenzo zebala apha (ngaphezu kwemizuzwana engama-%seconds ngesicelo ngasinye). Khetha enye imodeli kwimenyu yemodeli, okanye sebenzisani ithebhu ye-Intelligence, eqhuba iimodeli ezicothayo ngasemva.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Le modeli ayifumaneki.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Isenzo esingaziwayo.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Umgca wemisebenzi awufumaneki.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Le nguqulo ayibhalwanga yi-Exponential Intelligence.</translation>
     </message>

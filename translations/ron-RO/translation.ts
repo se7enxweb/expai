@@ -363,18 +363,6 @@
         <translation>Modelul %model este prea lent pentru acțiunile pe câmpuri de aici (peste %seconds s per solicitare). Alegeți alt model în meniul de modele sau utilizați fila Intelligence, care rulează modelele lente în fundal.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Acest model nu este disponibil.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Acțiune necunoscută.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Coada de activități nu este disponibilă.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Această versiune nu a fost scrisă de Exponential Intelligence.</translation>
     </message>

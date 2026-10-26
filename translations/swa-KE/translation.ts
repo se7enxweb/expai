@@ -363,18 +363,6 @@
         <translation>Modeli %model ni ya polepole mno kwa vitendo vya visanduku hapa (zaidi ya sekunde %seconds kwa kila ombi). Chagua modeli nyingine kwenye menyu ya modeli, au tumia kichupo cha Intelligence, kinachoendesha modeli za polepole kwenye usuli.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Modeli hii haipatikani.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Kitendo kisichojulikana.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Foleni ya kazi haipatikani.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Toleo hili halikuandikwa na Exponential Intelligence.</translation>
     </message>

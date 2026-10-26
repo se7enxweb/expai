@@ -364,18 +364,6 @@
         <translation>Модель %model слишком медленная для действий с полями (более %seconds с на запрос). Выберите другую модель в меню моделей или воспользуйтесь вкладкой «Intelligence», которая выполняет медленные модели в фоновом режиме.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Эта модель недоступна.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Неизвестное действие.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Очередь заданий недоступна.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Эта версия написана не Exponential Intelligence.</translation>
     </message>

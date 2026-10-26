@@ -364,18 +364,6 @@
         <translation>మోడల్ %model ఇక్కడ ఫీల్డ్ చర్యలకు చాలా నెమ్మదిగా ఉంది (ప్రతి అభ్యర్థనకు %seconds సెకన్ల కంటే ఎక్కువ). మోడల్ మెనూలో మరొక మోడల్‌ను ఎంచుకోండి, లేదా నెమ్మదిగా ఉండే మోడళ్లను నేపథ్యంలో నడిపే Intelligence ట్యాబ్‌ను ఉపయోగించండి.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>ఈ మోడల్ అందుబాటులో లేదు.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>తెలియని చర్య.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>జాబ్ క్యూ అందుబాటులో లేదు.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>ఈ వెర్షన్‌ను Exponential Intelligence రాయలేదు.</translation>
     </message>

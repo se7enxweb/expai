@@ -364,18 +364,6 @@
         <translation>Моделът %model е твърде бавен за действия с полета тук (повече от %seconds секунди на заявка). Изберете друг модел от менюто за модели или използвайте раздела „Интелигентност“, който изпълнява бавните модели във фонов режим.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Този модел не е наличен.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Неизвестно действие.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Опашката за задания не е налична.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Тази версия не е написана от Exponential Intelligence.</translation>
     </message>

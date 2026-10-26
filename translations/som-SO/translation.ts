@@ -364,18 +364,6 @@
         <translation>Moodelka %model aad buu u gaabiyahay ficillada goobta halkan (in ka badan %seconds ilbiriqsi codsi kasta). Fadlan dooro moodel kale menu-ga moodelka, ama isticmaal tabka Intelligence, kaas oo moodellada gaabiya ka shaaciya gadaal.“</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Moodelkan ma diyaar aha.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Ficil aan la aqoon.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Safka shaqooyinka ma diyaar aha.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Noocan ma qorin Exponential Intelligence.</translation>
     </message>

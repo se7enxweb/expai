@@ -364,18 +364,6 @@
         <translation>Àwòṣe %model lọ́ra jù fún àwọn iṣẹ́ pápá níbí (ó ju ìṣẹ́jú-àáyá %seconds lọ fún ìbéèrè kọ̀ọ̀kan). Ẹ yan àwòṣe mìíràn nínú àtòjọ àṣàyàn àwòṣe, tàbí ẹ lo táàbù Intelligence, èyí tí ń ṣiṣẹ́ àwọn àwòṣe tó lọ́ra ní ẹ̀yìn.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Àwòṣe yìí kò sí.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Iṣẹ́ àìmọ̀.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Ìtẹ̀léra iṣẹ́ kò sí.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Exponential Intelligence kọ́ ló kọ ẹ̀dà yìí.</translation>
     </message>

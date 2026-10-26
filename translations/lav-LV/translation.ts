@@ -363,18 +363,6 @@
         <translation>Modelis %model šeit ir pārāk lēns lauku darbībām (vairāk nekā %seconds sekundes uz pieprasījumu). Izvēlieties citu modeli modeļu izvēlnē vai izmantojiet cilni „Intelligence“, kas lēnos modeļus palaiž fonā.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Šis modelis nav pieejams.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Nezināma darbība.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Darbu rinda nav pieejama.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Šo versiju nav uzrakstījis Exponential Intelligence.</translation>
     </message>

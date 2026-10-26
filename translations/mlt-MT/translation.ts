@@ -363,18 +363,6 @@
         <translation>Il-mudell tal-AI %model huwa bil-mod wisq għall-azzjonijiet tal-oqsma hawn (aktar minn %seconds sekondi għal kull talba). Agħżel mudell tal-AI ieħor fil-menu tal-mudelli, jew uża t-tab Intelligence, li jħaddem il-mudelli bil-mod fl-isfond.</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>Dan il-mudell tal-AI mhuwiex disponibbli.</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>Azzjoni mhux magħrufa.</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>Il-kju tal-kompiti mhuwiex disponibbli.</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>Din il-verżjoni ma nkitbitx minn Exponential Intelligence.</translation>
     </message>

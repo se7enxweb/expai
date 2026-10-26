@@ -364,18 +364,6 @@
         <translation>ਮਾਡਲ %model ਇੱਥੇ ਖੇਤਰ ਕਾਰਵਾਈਆਂ ਲਈ ਬਹੁਤ ਹੌਲੀ ਹੈ (ਪ੍ਰਤੀ ਬੇਨਤੀ %seconds ਸਕਿੰਟਾਂ ਤੋਂ ਵੱਧ)। ਮਾਡਲ ਮੀਨੂ ਵਿੱਚੋਂ ਹੋਰ ਮਾਡਲ ਚੁਣੋ, ਜਾਂ Intelligence ਟੈਬ ਵਰਤੋ, ਜੋ ਹੌਲੀ ਮਾਡਲਾਂ ਨੂੰ ਪਿਛੋਕੜ ਵਿੱਚ ਚਲਾਉਂਦੀ ਹੈ।</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>ਇਹ ਮਾਡਲ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>ਅਣਜਾਣ ਕਾਰਵਾਈ।</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>ਜੌਬ ਕਤਾਰ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>ਇਹ ਵਰਜ਼ਨ Exponential Intelligence ਵੱਲੋਂ ਨਹੀਂ ਲਿਖਿਆ ਗਿਆ ਸੀ।</translation>
     </message>

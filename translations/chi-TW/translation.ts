@@ -364,18 +364,6 @@
         <translation>模型 %model 速度太慢，無法在此處執行欄位動作（每次要求超過 %seconds 秒）。請在模型選單中選擇其他模型，或使用「Intelligence」索引標籤，它會在背景執行速度較慢的模型。</translation>
     </message>
     <message>
-        <source>This model is not available.</source>
-        <translation>此模型無法使用。</translation>
-    </message>
-    <message>
-        <source>Unknown action.</source>
-        <translation>未知的動作。</translation>
-    </message>
-    <message>
-        <source>The job queue is not available.</source>
-        <translation>工作佇列無法使用。</translation>
-    </message>
-    <message>
         <source>This version was not written by Exponential Intelligence.</source>
         <translation>此版本不是由 Exponential Intelligence 撰寫的。</translation>
     </message>
