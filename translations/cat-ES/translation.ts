@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: sincronització de traduccions</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Cap servei de traducció</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Bloquejat per la política de dades</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Traduït per %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: resum</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Serveis de traducció</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Servei per defecte: %default; quan el servei triat no pot traduir un parell d&apos;idiomes: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Regla</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Servei</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>traducció automàtica</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>model</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Només el text dels blocs que s&apos;han de traduir s&apos;envia a un servei de traducció automàtica (amb SendContext també els blocs del costat), mai altres camps ni el nom de l&apos;objecte.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Les regles que rebutgen una sol·licitud (expai.ini [RequestVeto] Rules[], cadascuna amb el seu [RequestVeto_&lt;rule&gt;]).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>Serveis de traducció amb IA</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Els serveis de traducció de la sincronització de traduccions i de l&apos;acció de camp Tradueix (expai.ini [TranslationProvider_&lt;name&gt;] Class=, que implementa expAiTranslationProvider; triats a [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Les parts acceptades suprimirien %items del camp %field. No s&apos;ha escrit res.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>No hi ha cap servei de traducció instal·lat per a %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>La política de dades manté aquest contingut lluny de tots els serveis de traducció per a %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>El servei de traducció %service no està configurat.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>El servei de traducció %service no tradueix de %source a %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>El servei de traducció %service ha rebutjat la clau.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>El servei de traducció %service està ocupat. Torna-ho a provar més tard.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>El servei de traducció %service no està disponible (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>El servei de traducció %service ha rebutjat la sol·licitud (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>La quota del servei de traducció %service s&apos;ha esgotat.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>No s&apos;ha pogut connectar amb el servei de traducció %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>No s&apos;ha pogut llegir la resposta del servei de traducció %service.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>El camp és buit: no hi ha res a traduir.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>model desconegut</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>el model no té crides d&apos;eines natives (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools no està activat per al model</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>el model no ha superat la sonda (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>la sonda es va executar amb un altre ID de model</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>el percentatge d&apos;èxit de la sonda %rate% és inferior a %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>la tasca obligatòria de la sonda %tasks no s&apos;ha superat</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>les tasques obligatòries de la sonda %tasks no s&apos;han superat</translation>
+    </message>
+</context>
 </TS>

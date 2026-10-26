@@ -6867,4 +6867,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>modeli ilisimaneqanngitsoq</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>modelip sakkussanik nammineq atuinissamut periarfissaqanngilaq (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools modelimut atuutsinneqanngilaq</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>modeli misileraanermi akuerineqanngilaq (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>misileraaneq modelip allap ID-ianik ingerlanneqarpoq</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>misileraanermi iluatsitsisarneq (%rate%) killiliussamit (%threshold%) appasinnerusoq</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>misileraanermi suliassaq pinngitsoorani naammassisassaq %tasks iluatsinngilaq</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>misileraanermi suliassat pinngitsoorani naammassisassat %tasks iluatsinngillat</translation>
+    </message>
+</context>
 </TS>

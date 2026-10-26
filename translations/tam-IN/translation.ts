@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: மொழிபெயர்ப்பு ஒத்திசைவு</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>மொழிபெயர்ப்புச் சேவை இல்லை</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>தரவு கொள்கையால் தடுக்கப்பட்டது</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>மொழிபெயர்த்தது: %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: சுருக்கம்</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>மொழிபெயர்ப்புச் சேவைகள்</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>இயல்புநிலைச் சேவை: %default; தேர்ந்தெடுத்த சேவை ஒரு மொழி இணையை மொழிபெயர்க்க முடியாதபோது: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>விதி</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>சேவை</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>இயந்திர மொழிபெயர்ப்பு</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>மாதிரி</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>மொழிபெயர்க்க வேண்டிய தொகுதிகளின் உரை மட்டுமே இயந்திர மொழிபெயர்ப்புச் சேவைக்குச் செல்லும் (SendContext உடன் அவற்றின் அருகிலுள்ள தொகுதிகளும்), பிற புலங்களோ பொருளின் பெயரோ ஒருபோதும் செல்லாது.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>கோரிக்கையை மறுக்கும் விதிகள் (expai.ini [RequestVeto] Rules[], ஒவ்வொன்றும் தனது [RequestVeto_&lt;rule&gt;] உடன்).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI மொழிபெயர்ப்புச் சேவைகள்</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>மொழிபெயர்ப்பு ஒத்திசைவு மற்றும் “மொழிபெயர்” புலச் செயலின் மொழிபெயர்ப்புச் சேவைகள் (expai.ini [TranslationProvider_&lt;name&gt;] Class=, expAiTranslationProvider ஐச் செயல்படுத்துபவை; [TranslationSettings] மூலம் தேர்ந்தெடுக்கப்படுபவை).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>ஏற்கப்பட்ட பகுதிகள் %field புலத்திலிருந்து %items ஐ அகற்றிவிடும். எதுவும் எழுதப்படவில்லை.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>%source → %target க்கு எந்த மொழிபெயர்ப்புச் சேவையும் நிறுவப்படவில்லை.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>தரவு கொள்கை இந்த உள்ளடக்கத்தை %source → %target க்கான ஒவ்வொரு மொழிபெயர்ப்புச் சேவையிலிருந்தும் விலக்கி வைக்கிறது.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service உள்ளமைக்கப்படவில்லை.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service ஆனது %source இலிருந்து %target க்கு மொழிபெயர்ப்பதில்லை.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service விசையை நிராகரித்தது.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service பணிமிகுதியில் உள்ளது. பின்னர் மீண்டும் முயலவும்.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service கிடைக்கவில்லை (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service கோரிக்கையை நிராகரித்தது (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service இன் ஒதுக்கீடு தீர்ந்துவிட்டது.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service ஐ அணுக முடியவில்லை.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>மொழிபெயர்ப்புச் சேவை %service இன் பதிலைப் படிக்க முடியவில்லை.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>புலம் காலியாக உள்ளது: மொழிபெயர்க்க எதுவும் இல்லை.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>அறியப்படாத மாதிரி</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>இந்த மாதிரியில் சொந்த கருவி அழைப்பு இல்லை (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>இந்த மாதிரிக்கு WriteTools இயக்கப்படவில்லை</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>மாதிரி சோதனையில் தேர்ச்சி பெறவில்லை (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>சோதனை வேறொரு மாதிரி ID உடன் இயக்கப்பட்டது</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>சோதனையின் தேர்ச்சி விகிதம் %rate% ஆனது %threshold% ஐ விடக் குறைவு</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>கட்டாய சோதனைப் பணி %tasks தேர்ச்சி பெறவில்லை</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>கட்டாய சோதனைப் பணிகள் %tasks தேர்ச்சி பெறவில்லை</translation>
+    </message>
+</context>
 </TS>

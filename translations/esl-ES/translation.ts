@@ -6852,4 +6852,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>modelo desconocido</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>el modelo no tiene llamadas a herramientas nativas (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools no está activado para el modelo</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>el modelo no ha superado la prueba (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>la prueba se ejecutó con otro ID de modelo</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>la tasa de aciertos de la prueba %rate% es inferior a %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>la tarea obligatoria de la prueba %tasks no se ha superado</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>las tareas obligatorias de la prueba %tasks no se han superado</translation>
+    </message>
+</context>
 </TS>

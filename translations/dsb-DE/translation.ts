@@ -6867,4 +6867,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>njeznaty model</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>model njama natiwne wołanje rědow (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools njejo za model zmóžnjone</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>model njejo test wobstał (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>test jo se z drugim ID modela wuwjadł</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>kwota wobstaśa testa %rate% jo pód %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>obligatoriski nadawk testa %tasks njejo se wobstał</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>obligatoriske nadawki testa %tasks njejsu se wobstali</translation>
+    </message>
+</context>
 </TS>

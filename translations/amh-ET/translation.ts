@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence፦ የትርጉም ማመሳሰል</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>የትርጉም አገልግሎት የለም</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>በውሂብ መመሪያው ታግዷል</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>የተተረጎመው በ %provider ነው</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI፦ ማጠቃለያ</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>የትርጉም አገልግሎቶች</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>ነባሪ አገልግሎት፦ %default፤ የተመረጠው አገልግሎት አንድን የቋንቋ ጥንድ መተርጎም ሲያቅተው፦ %fallback።</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>ደንብ</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>አገልግሎት</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>የማሽን ትርጉም</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>ሞዴል</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>ወደ የማሽን ትርጉም አገልግሎት የሚላከው የሚተረጎሙት ብሎኮች ጽሑፍ ብቻ ነው (በ SendContext አጠገባቸው ያሉት ብሎኮችም)፣ ሌሎች መስኮች ወይም የነገሩ ስም ፈጽሞ አይላኩም።</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>ጥያቄን የሚከለክሉ ደንቦች (expai.ini [RequestVeto] Rules[]፣ እያንዳንዳቸው የራሳቸው [RequestVeto_&lt;rule&gt;] አላቸው)።</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>የሰው ሠራሽ ልቦና የትርጉም አገልግሎቶች</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>የትርጉም ማመሳሰያው እና የመስክ ተግባሩ «ተርጉም» የትርጉም አገልግሎቶች (expai.ini [TranslationProvider_&lt;name&gt;] Class=, expAiTranslationProvider የሚተገብሩ፤ በ [TranslationSettings] የሚመረጡ)።</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>የተቀበሏቸው ክፍሎች %itemsን ከመስክ %field ያስወግዳሉ። ምንም አልተጻፈም።</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>ለ %source → %target ምንም የትርጉም አገልግሎት አልተጫነም።</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>የውሂብ መመሪያው ይህን ይዘት ለ %source → %target ከማንኛውም የትርጉም አገልግሎት ያርቃል።</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>የትርጉም አገልግሎቱ %service አልተዋቀረም።</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>የትርጉም አገልግሎቱ %service ከ %source ወደ %target አይተረጉምም።</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>የትርጉም አገልግሎቱ %service ቁልፉን አልተቀበለም።</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>የትርጉም አገልግሎቱ %service ተይዟል። እባክዎ ቆየት ብለው እንደገና ይሞክሩ።</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>የትርጉም አገልግሎቱ %service አይገኝም (HTTP %status)።</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>የትርጉም አገልግሎቱ %service ጥያቄውን አልተቀበለም (HTTP %status)።</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>የትርጉም አገልግሎቱ %service ኮታ ተሟጧል።</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>የትርጉም አገልግሎቱ %service ሊደረስበት አልቻለም።</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>የትርጉም አገልግሎቱ %service ምላሽ ሊነበብ አልቻለም።</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>መስኩ ባዶ ነው፦ የሚተረጎም ነገር የለም።</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>ያልታወቀ ሞዴል</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>ሞዴሉ የራሱ የመሣሪያ ጥሪ የለውም (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools ለሞዴሉ አልነቃም</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>ሞዴሉ ፍተሻውን አላለፈም (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>ፍተሻው በሌላ የሞዴል መታወቂያ ተካሂዷል</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>የፍተሻው የማለፊያ መጠን %rate% ከ %threshold% በታች ነው</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>የግዴታ የፍተሻ ተግባር %tasks አላለፈም</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>የግዴታ የፍተሻ ተግባራት %tasks አላለፉም</translation>
+    </message>
+</context>
 </TS>

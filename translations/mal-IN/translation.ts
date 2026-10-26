@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: വിവർത്തന സമന്വയം</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>വിവർത്തന സേവനമില്ല</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>ഡാറ്റാ നയം തടഞ്ഞു</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>വിവർത്തനം ചെയ്തത്: %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: സംഗ്രഹം</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>വിവർത്തന സേവനങ്ങൾ</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>സ്ഥിര സേവനം: %default; തിരഞ്ഞെടുത്ത സേവനത്തിന് ഒരു ഭാഷാ ജോഡി വിവർത്തനം ചെയ്യാൻ കഴിയാത്തപ്പോൾ: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>നിയമം</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>സേവനം</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>മെഷീൻ വിവർത്തനം</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>മോഡൽ</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>മെഷീൻ വിവർത്തന സേവനത്തിലേക്ക് വിവർത്തനം ചെയ്യേണ്ട ബ്ലോക്കുകളുടെ ടെക്സ്റ്റ് മാത്രമേ പോകുന്നുള്ളൂ (SendContext ഉണ്ടെങ്കിൽ അവയുടെ അടുത്തുള്ള ബ്ലോക്കുകളും), മറ്റ് ഫീൽഡുകളോ ഒബ്ജക്റ്റിന്റെ പേരോ ഒരിക്കലും പോകില്ല.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>ഒരു അഭ്യർത്ഥന നിരസിക്കുന്ന നിയമങ്ങൾ (expai.ini [RequestVeto] Rules[], ഓരോന്നിനും അതിന്റെ [RequestVeto_&lt;rule&gt;] ഉണ്ട്).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI വിവർത്തന സേവനങ്ങൾ</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>വിവർത്തന സമന്വയത്തിന്റെയും ഫീൽഡ് പ്രവർത്തനമായ “വിവർത്തനം ചെയ്യുക” എന്നതിന്റെയും വിവർത്തന സേവനങ്ങൾ (expai.ini [TranslationProvider_&lt;name&gt;] Class=, expAiTranslationProvider നടപ്പിലാക്കുന്നവ; [TranslationSettings] വഴി തിരഞ്ഞെടുക്കുന്നു).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>അംഗീകരിച്ച ഭാഗങ്ങൾ %field ഫീൽഡിൽ നിന്ന് %items നീക്കം ചെയ്യും. ഒന്നും എഴുതിയില്ല.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>%source → %target എന്നതിനായി വിവർത്തന സേവനമൊന്നും ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>ഡാറ്റാ നയം ഈ ഉള്ളടക്കത്തെ %source → %target എന്നതിനുള്ള എല്ലാ വിവർത്തന സേവനങ്ങളിൽ നിന്നും അകറ്റി നിർത്തുന്നു.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>വിവർത്തന സേവനം %service കോൺഫിഗർ ചെയ്തിട്ടില്ല.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>വിവർത്തന സേവനം %service, %source എന്നതിൽ നിന്ന് %target എന്നതിലേക്ക് വിവർത്തനം ചെയ്യുന്നില്ല.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>വിവർത്തന സേവനം %service കീ നിരസിച്ചു.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>വിവർത്തന സേവനം %service തിരക്കിലാണ്. ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>വിവർത്തന സേവനം %service ലഭ്യമല്ല (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>വിവർത്തന സേവനം %service അഭ്യർത്ഥന നിരസിച്ചു (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>വിവർത്തന സേവനം %service എന്നതിന്റെ ക്വാട്ട തീർന്നു.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>വിവർത്തന സേവനം %service എന്നതിൽ എത്താൻ കഴിഞ്ഞില്ല.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>വിവർത്തന സേവനം %service എന്നതിന്റെ മറുപടി വായിക്കാൻ കഴിഞ്ഞില്ല.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>ഫീൽഡ് ശൂന്യമാണ്: വിവർത്തനം ചെയ്യാൻ ഒന്നുമില്ല.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>അജ്ഞാത മോഡൽ</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>മോഡലിന് സ്വന്തമായ ടൂൾ കോളിംഗ് ഇല്ല (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>മോഡലിനായി WriteTools പ്രവർത്തനക്ഷമമല്ല</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>മോഡൽ പരിശോധനയിൽ വിജയിച്ചില്ല (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>മറ്റൊരു മോഡൽ ID ഉപയോഗിച്ചാണ് പരിശോധന നടത്തിയത്</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>പരിശോധനയുടെ വിജയ നിരക്ക് %rate%, ഇത് %threshold% നേക്കാൾ കുറവാണ്</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>നിർബന്ധിത പരിശോധനാ ടാസ്ക് %tasks വിജയിച്ചില്ല</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>നിർബന്ധിത പരിശോധനാ ടാസ്കുകൾ %tasks വിജയിച്ചില്ല</translation>
+    </message>
+</context>
 </TS>

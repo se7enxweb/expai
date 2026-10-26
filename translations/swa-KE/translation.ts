@@ -4074,6 +4074,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: usawazishaji wa tafsiri</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Hakuna huduma ya tafsiri</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Imezuiwa na sera ya data</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Imetafsiriwa na %provider</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/fieldaction</name>
@@ -4841,6 +4853,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: Muhtasari</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Huduma za tafsiri</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Huduma chaguomsingi: %default; huduma iliyochaguliwa isipoweza kutafsiri jozi ya lugha: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Kanuni</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Huduma</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>tafsiri ya mashine</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>modeli</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Ni maandishi ya bloku za kutafsiriwa pekee yanayotumwa kwa huduma ya tafsiri ya mashine (pamoja na SendContext pia bloku zilizo karibu nazo), kamwe si sehemu nyingine za data wala jina la kitu.</translation>
     </message>
 </context>
 <context>
@@ -6617,6 +6657,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Kanuni zinazokataa ombi (expai.ini [RequestVeto] Rules[], kila moja na [RequestVeto_&lt;rule&gt;] yake).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>Huduma za tafsiri za AI</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Huduma za tafsiri za ulinganishaji wa tafsiri na kitendo cha sehemu ya data Tafsiri (expai.ini [TranslationProvider_&lt;name&gt;] Class=, inayotekeleza expAiTranslationProvider; huchaguliwa na [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6742,6 +6790,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Sehemu zilizokubaliwa zingeondoa %items kutoka kwenye sehemu ya data %field. Hakuna kilichoandikwa.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Hakuna huduma ya tafsiri iliyosakinishwa kwa %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Sera ya data inazuia maudhui haya yasifikie huduma yoyote ya tafsiri kwa %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Huduma ya tafsiri %service haijasanidiwa.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Huduma ya tafsiri %service haitafsiri kutoka %source kwenda %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Huduma ya tafsiri %service imekataa ufunguo.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Huduma ya tafsiri %service ina shughuli nyingi. Tafadhali jaribu tena baadaye.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Huduma ya tafsiri %service haipatikani (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Huduma ya tafsiri %service imekataa ombi (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Kiwango cha matumizi cha huduma ya tafsiri %service kimekwisha.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Huduma ya tafsiri %service haikuweza kufikiwa.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Jibu la huduma ya tafsiri %service halikuweza kusomwa.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Sehemu ya data ni tupu: hakuna cha kutafsiri.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6755,6 +6851,41 @@
     <message>
         <source>This part would remove %items from the text, so it cannot be accepted. Reject it, or ask for a new proposal that keeps them.</source>
         <translation>Sehemu hii ingeondoa %items kutoka kwenye maandishi, kwa hivyo haiwezi kukubaliwa. Ikatae, au omba pendekezo jipya linalovihifadhi.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>modeli isiyojulikana</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>modeli haina miito asilia ya zana (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools haijawezeshwa kwa modeli hii</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>modeli haijafaulu jaribio (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>jaribio liliendeshwa kwa ID nyingine ya modeli</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>kiwango cha kufaulu jaribio %rate% kiko chini ya %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>kazi ya lazima ya jaribio %tasks haikufaulu</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>kazi za lazima za jaribio %tasks hazikufaulu</translation>
     </message>
 </context>
 </TS>

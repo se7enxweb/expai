@@ -6867,4 +6867,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>अज्ञात मॉडल</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>मॉडल में मूल टूल कॉलिंग नहीं है (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>मॉडल के लिए WriteTools सक्षम नहीं है</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>मॉडल जाँच में सफल नहीं हुआ है (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>जाँच किसी अन्य मॉडल ID के साथ चलाई गई थी</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>जाँच की सफलता दर %rate% है, जो %threshold% से कम है</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>अनिवार्य जाँच कार्य %tasks सफल नहीं हुआ</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>अनिवार्य जाँच कार्य %tasks सफल नहीं हुए</translation>
+    </message>
+</context>
 </TS>

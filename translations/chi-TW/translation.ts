@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence：翻譯同步</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>沒有翻譯服務</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>已被資料原則封鎖</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>由 %provider 翻譯</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI：總覽</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>翻譯服務</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>預設服務：%default；當所選服務無法翻譯某個語言組合時：%fallback。</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>規則</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>服務</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>機器翻譯</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>模型</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>只有要翻譯的區塊文字會傳送到機器翻譯服務（若使用 SendContext，也會傳送相鄰的區塊），絕不會傳送其他欄位或物件名稱。</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>拒絕要求的規則（expai.ini [RequestVeto] Rules[]，各有其 [RequestVeto_&lt;rule&gt;]）。</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI 翻譯服務</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>翻譯同步與欄位動作「翻譯」所使用的翻譯服務（expai.ini [TranslationProvider_&lt;name&gt;] Class=，實作 expAiTranslationProvider；由 [TranslationSettings] 選擇）。</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>接受的部分會從欄位 %field 中移除 %items。未寫入任何內容。</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>未安裝 %source → %target 的翻譯服務。</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>資料原則禁止將此內容傳送給任何 %source → %target 的翻譯服務。</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>翻譯服務 %service 尚未設定。</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>翻譯服務 %service 不支援從 %source 翻譯為 %target。</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>翻譯服務 %service 拒絕了此金鑰。</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>翻譯服務 %service 忙碌中。請稍後再試一次。</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>翻譯服務 %service 無法使用（HTTP %status）。</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>翻譯服務 %service 拒絕了此要求（HTTP %status）。</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>翻譯服務 %service 的配額已用盡。</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>無法連線到翻譯服務 %service。</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>無法讀取翻譯服務 %service 的回應。</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>此欄位是空的：沒有可翻譯的內容。</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>未知的模型</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>此模型沒有原生工具呼叫（ToolUse=%tooluse）</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>此模型未啟用 WriteTools</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>此模型未通過探測測試（%command）</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>探測測試是以另一個模型 ID 執行的</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>探測測試的通過率 %rate% 低於 %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>必要的探測任務 %tasks 未通過</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>必要的探測任務 %tasks 皆未通過</translation>
+    </message>
+</context>
 </TS>

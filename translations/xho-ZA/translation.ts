@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: ukuvumelanisa uguqulelo</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Akukho nkonzo yoguqulelo</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Kuthintelwe ngumgaqo-nkqubo wedatha</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Kuguqulelwe ngu: %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: Isishwankathelo</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Iinkonzo zoguqulelo</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Inkonzo ehlala ikho: %default; xa inkonzo ekhethiweyo ingakwazi ukuguqulela isibini seelwimi: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Umthetho</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Inkonzo</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>uguqulelo ngomatshini</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>imodeli</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Kuphela sisicatshulwa seebhloko ekufuneka ziguqulelwe esiya kwinkonzo yoguqulelo ngomatshini (nge-SendContext kunye neebhloko ezikufuphi nazo), zingaze ziye ezinye iindawo okanye igama lento.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Imigaqo ekhaba isicelo (expai.ini [RequestVeto] Rules[], nganye nge-[RequestVeto_&lt;rule&gt;] yayo).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>Iinkonzo zoguqulelo ze-AI</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Iinkonzo zoguqulelo zokuvumelanisa uguqulelo kunye nesenzo sendawo “Guqulela” (expai.ini [TranslationProvider_&lt;name&gt;] Class=, ezisebenzisa i-expAiTranslationProvider; ezikhethwa ngu-[TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Izahlulo ezamkelweyo zasiza kususa %items kwibala %field. Akukho nto ibhalwe.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Akukho nkonzo yoguqulelo efakelweyo ye-%source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Umgaqo-nkqubo wedatha ugcina lo mxholo kude nayo yonke inkonzo yoguqulelo ye-%source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Inkonzo yoguqulelo %service ayiqwalaselwanga.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Inkonzo yoguqulelo %service ayiguquleli ukusuka ku-%source ukuya ku-%target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Inkonzo yoguqulelo %service iyalile isitshixo.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Inkonzo yoguqulelo %service ixakekile. Nceda nizame kwakhona kamva.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Inkonzo yoguqulelo %service ayifumaneki (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Inkonzo yoguqulelo %service iyalile isicelo (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Isabelo senkonzo yoguqulelo %service siphelile.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Inkonzo yoguqulelo %service ayikwazanga ukufikelelwa.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Impendulo yenkonzo yoguqulelo %service ayikwazanga ukufundwa.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Indawo ayinanto: akukho nto yokuguqulela.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>imodeli engaziwayo</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>imodeli ayinakho ukubiza izixhobo ngokwemvelo (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>i-WriteTools ayivulelwanga le modeli</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>imodeli ayiphumelelanga kuvavanyo (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>uvavanyo luqhutywe nge-ID yenye imodeli</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>izinga lokuphumelela kovavanyo %rate% lingaphantsi kwe-%threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>umsebenzi onyanzelekileyo wovavanyo %tasks awuphumelelanga</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>imisebenzi enyanzelekileyo yovavanyo %tasks ayiphumelelanga</translation>
+    </message>
+</context>
 </TS>

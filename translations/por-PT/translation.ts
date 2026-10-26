@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: sincronização de traduções</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Nenhum serviço de tradução</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Bloqueado pela política de dados</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Traduzido por %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: Resumo</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Serviços de tradução</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Serviço predefinido: %default; quando o serviço escolhido não consegue traduzir um par de idiomas: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Regra</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Serviço</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>tradução automática</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>modelo</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Apenas o texto dos blocos a traduzir é enviado para um serviço de tradução automática (com SendContext, também os blocos vizinhos), nunca outros campos nem o nome do objeto.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>As regras que recusam um pedido (expai.ini [RequestVeto] Rules[], cada uma com o respetivo [RequestVeto_&lt;rule&gt;]).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>Serviços de tradução por IA</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Os serviços de tradução da sincronização de traduções e da ação de campo Traduzir (expai.ini [TranslationProvider_&lt;name&gt;] Class=, que implementam expAiTranslationProvider; escolhidos através de [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>As partes aceites removeriam %items do campo %field. Nada foi escrito.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Não está instalado nenhum serviço de tradução para %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>A política de dados mantém este conteúdo afastado de todos os serviços de tradução para %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>O serviço de tradução %service não está configurado.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>O serviço de tradução %service não traduz de %source para %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>O serviço de tradução %service recusou a chave.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>O serviço de tradução %service está ocupado. Tente novamente mais tarde.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>O serviço de tradução %service não está disponível (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>O serviço de tradução %service recusou o pedido (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>A quota do serviço de tradução %service esgotou-se.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Não foi possível contactar o serviço de tradução %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Não foi possível ler a resposta do serviço de tradução %service.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>O campo está vazio: não há nada para traduzir.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>modelo desconhecido</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>o modelo não tem chamada de ferramentas nativa (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools não está ativado para o modelo</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>o modelo não passou na sonda (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>a sonda foi executada com outro ID de modelo</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>a taxa de aprovação da sonda %rate% está abaixo de %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>a tarefa obrigatória da sonda %tasks não passou</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>as tarefas obrigatórias da sonda %tasks não passaram</translation>
+    </message>
+</context>
 </TS>

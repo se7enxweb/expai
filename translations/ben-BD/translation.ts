@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: অনুবাদ সিঙ্ক</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>কোনো অনুবাদ পরিষেবা নেই</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>ডেটা নীতির কারণে অবরুদ্ধ</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>অনুবাদ করেছে %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: সারসংক্ষেপ</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>অনুবাদ পরিষেবাসমূহ</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>ডিফল্ট পরিষেবা: %default; নির্বাচিত পরিষেবা কোনো ভাষা-জোড়া অনুবাদ করতে না পারলে: %fallback।</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>নিয়ম</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>পরিষেবা</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>মেশিন অনুবাদ</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>মডেল</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>মেশিন অনুবাদ পরিষেবায় শুধু অনুবাদযোগ্য ব্লকগুলোর টেক্সট যায় (SendContext থাকলে পাশের ব্লকগুলোও), অন্য কোনো ফিল্ড বা অবজেক্টের নাম কখনো যায় না।</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>যে নিয়মগুলো কোনো অনুরোধ প্রত্যাখ্যান করে (expai.ini [RequestVeto] Rules[], প্রতিটির নিজস্ব [RequestVeto_&lt;rule&gt;] সহ)।</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI অনুবাদ পরিষেবাসমূহ</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>অনুবাদ সিঙ্ক এবং ফিল্ড অ্যাকশন “অনুবাদ করুন” এর অনুবাদ পরিষেবাসমূহ (expai.ini [TranslationProvider_&lt;name&gt;] Class=, যা expAiTranslationProvider বাস্তবায়ন করে; [TranslationSettings] দ্বারা নির্বাচিত)।</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>গৃহীত অংশগুলো %field ক্ষেত্র থেকে %items অপসারণ করবে। কিছুই লেখা হয়নি।</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>%source → %target এর জন্য কোনো অনুবাদ পরিষেবা ইনস্টল করা নেই।</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>ডেটা নীতি এই কনটেন্টকে %source → %target এর জন্য সব অনুবাদ পরিষেবা থেকে দূরে রাখে।</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>অনুবাদ পরিষেবা %service কনফিগার করা নেই।</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>অনুবাদ পরিষেবা %service, %source থেকে %target এ অনুবাদ করে না।</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>অনুবাদ পরিষেবা %service কীটি প্রত্যাখ্যান করেছে।</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>অনুবাদ পরিষেবা %service ব্যস্ত। অনুগ্রহ করে পরে আবার চেষ্টা করুন।</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>অনুবাদ পরিষেবা %service উপলভ্য নয় (HTTP %status)।</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>অনুবাদ পরিষেবা %service অনুরোধটি প্রত্যাখ্যান করেছে (HTTP %status)।</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>অনুবাদ পরিষেবা %service এর কোটা শেষ হয়ে গেছে।</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>অনুবাদ পরিষেবা %service এর সাথে সংযোগ করা যায়নি।</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>অনুবাদ পরিষেবা %service এর উত্তর পড়া যায়নি।</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>ফিল্ডটি খালি: অনুবাদ করার মতো কিছু নেই।</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>অজানা মডেল</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>মডেলটিতে নিজস্ব টুল কলিং নেই (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>মডেলটির জন্য WriteTools সক্রিয় নয়</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>মডেলটি যাচাই পরীক্ষায় উত্তীর্ণ হয়নি (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>যাচাই পরীক্ষাটি অন্য একটি মডেল আইডি দিয়ে চালানো হয়েছিল</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>যাচাই পরীক্ষার সাফল্যের হার %rate%, যা %threshold% এর চেয়ে কম</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>বাধ্যতামূলক যাচাই কাজ %tasks উত্তীর্ণ হয়নি</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>বাধ্যতামূলক যাচাই কাজগুলো %tasks উত্তীর্ণ হয়নি</translation>
+    </message>
+</context>
 </TS>

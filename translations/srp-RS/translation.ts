@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: синхронизација превода</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Нема услуге превођења</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Блокирано политиком података</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Превео: %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: Преглед</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Услуге превођења</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Подразумевана услуга: %default; када изабрана услуга не може да преведе језички пар: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Правило</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Услуга</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>машинско превођење</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>модел</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Услузи машинског превођења шаље се само текст блокова које треба превести (са SendContext и блокови поред њих), никада друга поља нити назив објекта.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Правила која одбијају захтев (expai.ini [RequestVeto] Rules[], свако са својим [RequestVeto_&lt;rule&gt;]).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI услуге превођења</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Услуге превођења за синхронизацију превода и радњу поља „Преведи“ (expai.ini [TranslationProvider_&lt;name&gt;] Class=, које имплементирају expAiTranslationProvider; бирају се преко [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Прихваћени делови би из поља %field уклонили %items. Ништа није записано.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Ниједна услуга превођења није инсталирана за %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Политика података држи овај садржај даље од свих услуга превођења за %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Услуга превођења %service није конфигурисана.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Услуга превођења %service не преводи са %source на %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Услуга превођења %service је одбила кључ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Услуга превођења %service је заузета. Покушајте поново касније.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Услуга превођења %service није доступна (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Услуга превођења %service је одбила захтев (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Квота услуге превођења %service је потрошена.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Услуга превођења %service није доступна за повезивање.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Одговор услуге превођења %service није могуће прочитати.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Поље је празно: нема шта да се преведе.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>непознат модел</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>модел нема изворно позивање алатки (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools није омогућен за модел</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>модел није прошао пробу (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>проба је покренута са другим ID-јем модела</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>стопа пролазности пробе %rate% је испод %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>обавезни задатак пробе %tasks није прошао</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>обавезни задаци пробе %tasks нису прошли</translation>
+    </message>
+</context>
 </TS>

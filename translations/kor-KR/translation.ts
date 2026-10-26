@@ -6867,4 +6867,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>알 수 없는 모델</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>모델이 네이티브 도구 호출을 지원하지 않습니다 (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>모델에 WriteTools가 활성화되어 있지 않습니다</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>모델이 검사를 통과하지 못했습니다 (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>검사가 다른 모델 ID로 실행되었습니다</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>검사 통과율(%rate%)이 기준(%threshold%)보다 낮습니다</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>필수 검사 작업(%tasks)을 통과하지 못했습니다</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>필수 검사 작업들(%tasks)을 통과하지 못했습니다</translation>
+    </message>
+</context>
 </TS>

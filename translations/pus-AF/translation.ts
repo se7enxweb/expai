@@ -6883,4 +6883,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>نامعلوم ماډل</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>ماډل اصلي د وسیلو غوښتنه نه لري (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools د ماډل لپاره فعال نه دی</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>ماډل له ازموینې نه دی تېر شوی (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>ازموینه د بل ماډل ID سره ترسره شوې وه</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>د ازموینې د بریالیتوب کچه %rate% له %threshold% څخه ټیټه ده</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>د ازموینې لازمي دنده %tasks بریالۍ نه شوه</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>د ازموینې لازمي دندې %tasks بریالۍ نه شوې</translation>
+    </message>
+</context>
 </TS>

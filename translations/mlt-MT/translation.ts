@@ -6867,4 +6867,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>mudell mhux magħruf</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>il-mudell m&apos;għandux sejħa nattiva tal-għodod (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools mhux attivat għall-mudell</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>il-mudell ma għaddiex mill-prova (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>il-prova saret b&apos;ID ta&apos; mudell ieħor</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>ir-rata ta&apos; suċċess tal-prova %rate% hija taħt %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>il-kompitu obbligatorju tal-prova %tasks ma għaddiex</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>il-kompiti obbligatorji tal-prova %tasks ma għaddewx</translation>
+    </message>
+</context>
 </TS>

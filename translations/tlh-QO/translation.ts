@@ -6855,4 +6855,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>De&apos;wI&apos; yab Sovlu&apos;be&apos;</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>jan lo&apos;ghach ghajbe&apos; De&apos;wI&apos; yab (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>De&apos;wI&apos; yabvaD WriteTools chu&apos;lu&apos;be&apos;</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>waHghach chavbe&apos; De&apos;wI&apos; yab (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>latlh De&apos;wI&apos; yab ngu&apos;meH mI&apos; lo&apos;taHvIS waHghach QapmoHlu&apos;pu&apos;</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>waHghach Qap mI&apos;: %rate% mach law&apos; %threshold% mach puS</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>waHghach Qu&apos; potlh %tasks Qapbe&apos;pu&apos;</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>waHghach Qu&apos;mey potlh %tasks Qapbe&apos;pu&apos;</translation>
+    </message>
+</context>
 </TS>

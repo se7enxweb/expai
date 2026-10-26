@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: isku-xidhka tarjumaadda</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Ma jiro adeeg tarjumaad</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Waxaa xannibay siyaasadda xogta</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Waxaa tarjumay %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: Soo koobid</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Adeegyada tarjumaadda</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Adeegga caadiga ah: %default; marka adeegga la doortay uusan tarjumi karin lammaane luqadeed: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Xeer</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Adeeg</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>tarjumaad mashiin</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>moodel</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Kaliya qoraalka baloogyada la tarjumayo ayaa loo diraa adeeg tarjumaad mashiin (SendContext waxaa sidoo kale la socda baloogyada ku xiga), marnaba goobo kale ama magaca shayga.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Xeerarka diida codsi (expai.ini [RequestVeto] Rules[], mid kastaana leh [RequestVeto_&lt;rule&gt;]).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>Adeegyada tarjumaadda AI</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Adeegyada tarjumaadda ee isku-xidhka tarjumaadda iyo ficilka goobta “Tarjum” (expai.ini [TranslationProvider_&lt;name&gt;] Class=, oo hirgeliya expAiTranslationProvider; lagu doorto [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Qaybaha la aqbalay waxay goobta %field ka saari lahaayeen %items. Wax lama qorin.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Ma jiro adeeg tarjumaad oo loo rakibay %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Siyaasadda xogta waxay nuxurkan ka fogeysaa adeeg kasta oo tarjumaad ee %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Adeegga tarjumaadda %service lama habeeyn.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Adeegga tarjumaadda %service kama tarjumo %source una tarjumo %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Adeegga tarjumaadda %service wuu diiday furaha.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Adeegga tarjumaadda %service waa mashquul. Fadlan mar dambe isku day.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Adeegga tarjumaadda %service lama heli karo (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Adeegga tarjumaadda %service wuu diiday codsiga (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Kootada adeegga tarjumaadda %service waa dhammaatay.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Adeegga tarjumaadda %service lama gaari karin.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Jawaabta adeegga tarjumaadda %service lama akhrin karin.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Goobtu waa madhan tahay: ma jiro wax la tarjumo.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>moodel aan la aqoon</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>moodelku ma laha wicitaan qalab oo asal ah (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools looma furin moodelka</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>moodelku kama gudbin tijaabada (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>tijaabada waxaa lagu sameeyay aqoonsi moodel kale</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>heerka gudbitaanka tijaabada %rate% wuxuu ka hooseeyaa %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>hawsha tijaabada ee qasabka ah %tasks kama gudbin</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>hawlaha tijaabada ee qasabka ah %tasks kama gudbin</translation>
+    </message>
+</context>
 </TS>

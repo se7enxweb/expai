@@ -6867,4 +6867,39 @@
     </message>
 </context>
 <!-- expai translation services: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>άγνωστο μοντέλο</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>το μοντέλο δεν διαθέτει εγγενή κλήση εργαλείων (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>το WriteTools δεν είναι ενεργοποιημένο για το μοντέλο</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>το μοντέλο δεν πέρασε τον δοκιμαστικό έλεγχο (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>ο δοκιμαστικός έλεγχος εκτελέστηκε με άλλο αναγνωριστικό μοντέλου</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>το ποσοστό επιτυχίας του δοκιμαστικού ελέγχου %rate% είναι κάτω από %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>η υποχρεωτική εργασία του δοκιμαστικού ελέγχου %tasks δεν πέρασε</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>οι υποχρεωτικές εργασίες του δοκιμαστικού ελέγχου %tasks δεν πέρασαν</translation>
+    </message>
+</context>
 </TS>

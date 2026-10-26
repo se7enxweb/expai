@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: vertimų sinchronizavimas</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Nėra vertimo paslaugos</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Užblokuota pagal duomenų politiką</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Išvertė %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: santrauka</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Vertimo paslaugos</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Numatytoji paslauga: %default; kai pasirinkta paslauga negali išversti kalbų poros: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Taisyklė</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Paslauga</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>mašininis vertimas</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>modelis</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Mašininio vertimo paslaugai siunčiamas tik verčiamų blokų tekstas (su SendContext – ir gretimi blokai), niekada kiti laukai ar objekto pavadinimas.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Taisyklės, pagal kurias užklausa atmetama (expai.ini [RequestVeto] Rules[], kiekviena su savo [RequestVeto_&lt;rule&gt;]).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>DI vertimo paslaugos</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Vertimų sinchronizavimo ir lauko veiksmo „Versti“ vertimo paslaugos (expai.ini [TranslationProvider_&lt;name&gt;] Class=, įgyvendinančios expAiTranslationProvider; pasirenkamos per [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Priimtos dalys pašalintų iš lauko %field %items. Nieko neįrašyta.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Kalbų porai %source → %target neįdiegta jokia vertimo paslauga.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Duomenų politika neleidžia šio turinio perduoti jokiai vertimo paslaugai kalbų porai %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Vertimo paslauga %service nesukonfigūruota.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Vertimo paslauga %service neverčia iš %source į %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Vertimo paslauga %service atmetė raktą.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Vertimo paslauga %service užimta. Bandykite vėliau.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Vertimo paslauga %service nepasiekiama (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Vertimo paslauga %service atmetė užklausą (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Vertimo paslaugos %service kvota išnaudota.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Nepavyko pasiekti vertimo paslaugos %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Nepavyko perskaityti vertimo paslaugos %service atsakymo.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Laukas tuščias: nėra ką versti.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>nežinomas modelis</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>modelis neturi savųjų įrankių iškvietimų (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools šiam modeliui neįjungta</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>modelis neišlaikė patikros (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>patikra buvo vykdyta su kitu modelio ID</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>patikros sėkmės rodiklis %rate% yra mažesnis nei %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>privaloma patikros užduotis %tasks neišlaikyta</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>privalomos patikros užduotys %tasks neišlaikytos</translation>
+    </message>
+</context>
 </TS>

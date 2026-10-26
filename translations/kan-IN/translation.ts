@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: ಅನುವಾದ ಸಿಂಕ್</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>ಯಾವುದೇ ಅನುವಾದ ಸೇವೆ ಇಲ್ಲ</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>ಡೇಟಾ ನೀತಿಯಿಂದ ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>ಅನುವಾದಿಸಿದವರು: %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: ಸಾರಾಂಶ</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>ಅನುವಾದ ಸೇವೆಗಳು</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>ಡೀಫಾಲ್ಟ್ ಸೇವೆ: %default; ಆಯ್ಕೆ ಮಾಡಿದ ಸೇವೆಯು ಒಂದು ಭಾಷಾ ಜೋಡಿಯನ್ನು ಅನುವಾದಿಸಲು ಸಾಧ್ಯವಾಗದಿದ್ದಾಗ: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>ನಿಯಮ</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>ಸೇವೆ</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>ಯಂತ್ರ ಅನುವಾದ</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>ಮಾದರಿ</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>ಯಂತ್ರ ಅನುವಾದ ಸೇವೆಗೆ ಅನುವಾದಿಸಬೇಕಾದ ಬ್ಲಾಕ್‌ಗಳ ಪಠ್ಯ ಮಾತ್ರ ಹೋಗುತ್ತದೆ (SendContext ಇದ್ದರೆ ಅವುಗಳ ಪಕ್ಕದ ಬ್ಲಾಕ್‌ಗಳೂ), ಇತರ ಕ್ಷೇತ್ರಗಳು ಅಥವಾ ವಸ್ತುವಿನ ಹೆಸರು ಎಂದಿಗೂ ಹೋಗುವುದಿಲ್ಲ.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>ವಿನಂತಿಯನ್ನು ನಿರಾಕರಿಸುವ ನಿಯಮಗಳು (expai.ini [RequestVeto] Rules[], ಪ್ರತಿಯೊಂದೂ ತನ್ನ [RequestVeto_&lt;rule&gt;] ಜೊತೆಗೆ).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI ಅನುವಾದ ಸೇವೆಗಳು</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>ಅನುವಾದ ಸಿಂಕ್ ಮತ್ತು ಕ್ಷೇತ್ರ ಕ್ರಿಯೆ “ಅನುವಾದಿಸು” ದ ಅನುವಾದ ಸೇವೆಗಳು (expai.ini [TranslationProvider_&lt;name&gt;] Class=, expAiTranslationProvider ಅನ್ನು ಅಳವಡಿಸುವವು; [TranslationSettings] ಮೂಲಕ ಆಯ್ಕೆಮಾಡಲಾಗುತ್ತದೆ).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>ಸ್ವೀಕರಿಸಿದ ಭಾಗಗಳು ಕ್ಷೇತ್ರ %field ರಿಂದ %items ಅನ್ನು ತೆಗೆದುಹಾಕುತ್ತವೆ. ಏನನ್ನೂ ಬರೆಯಲಾಗಿಲ್ಲ.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>%source → %target ಗಾಗಿ ಯಾವುದೇ ಅನುವಾದ ಸೇವೆಯನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>ಡೇಟಾ ನೀತಿಯು ಈ ವಿಷಯವನ್ನು %source → %target ಗಾಗಿ ಪ್ರತಿಯೊಂದು ಅನುವಾದ ಸೇವೆಯಿಂದ ದೂರವಿಡುತ್ತದೆ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service, %source ನಿಂದ %target ಗೆ ಅನುವಾದಿಸುವುದಿಲ್ಲ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service ಕೀಲಿಯನ್ನು ನಿರಾಕರಿಸಿದೆ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service ಕಾರ್ಯನಿರತವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service ಲಭ್ಯವಿಲ್ಲ (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service ವಿನಂತಿಯನ್ನು ನಿರಾಕರಿಸಿದೆ (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service ನ ಕೋಟಾ ಮುಗಿದಿದೆ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>ಅನುವಾದ ಸೇವೆ %service ನ ಉತ್ತರವನ್ನು ಓದಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>ಕ್ಷೇತ್ರ ಖಾಲಿಯಾಗಿದೆ: ಅನುವಾದಿಸಲು ಏನೂ ಇಲ್ಲ.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>ಅಜ್ಞಾತ ಮಾದರಿ</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>ಮಾದರಿಯಲ್ಲಿ ಸ್ಥಳೀಯ ಟೂಲ್ ಕರೆ ಸೌಲಭ್ಯವಿಲ್ಲ (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>ಮಾದರಿಗೆ WriteTools ಸಕ್ರಿಯಗೊಳಿಸಿಲ್ಲ</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>ಮಾದರಿಯು ಪರೀಕ್ಷೆಯಲ್ಲಿ ಉತ್ತೀರ್ಣವಾಗಿಲ್ಲ (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>ಪರೀಕ್ಷೆಯನ್ನು ಬೇರೆ ಮಾದರಿ ID ಯೊಂದಿಗೆ ನಡೆಸಲಾಗಿದೆ</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>ಪರೀಕ್ಷೆಯ ಉತ್ತೀರ್ಣ ದರ %rate%, ಇದು %threshold% ಕ್ಕಿಂತ ಕಡಿಮೆ ಇದೆ</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>ಕಡ್ಡಾಯ ಪರೀಕ್ಷಾ ಕಾರ್ಯ %tasks ಉತ್ತೀರ್ಣವಾಗಿಲ್ಲ</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>ಕಡ್ಡಾಯ ಪರೀಕ್ಷಾ ಕಾರ್ಯಗಳು %tasks ಉತ್ತೀರ್ಣವಾಗಿಲ್ಲ</translation>
+    </message>
+</context>
 </TS>

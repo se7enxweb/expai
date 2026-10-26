@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: синхронизация переводов</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Нет службы перевода</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Заблокировано политикой данных</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Переведено: %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: сводка</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Службы перевода</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Служба по умолчанию: %default; если выбранная служба не может перевести языковую пару: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Правило</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Служба</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>машинный перевод</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>модель</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>В службу машинного перевода передается только текст переводимых блоков (при SendContext — также соседние блоки), но никогда не другие поля или имя объекта.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Правила, по которым запрос отклоняется (expai.ini [RequestVeto] Rules[], у каждого свой [RequestVeto_&lt;rule&gt;]).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>Службы перевода на основе ИИ</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Службы перевода для синхронизации переводов и действия поля «Перевести» (expai.ini [TranslationProvider_&lt;name&gt;] Class=, реализующие expAiTranslationProvider; выбираются через [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Принятые части удалили бы следующее: %items из поля %field. Ничего не записано.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Для %source → %target не установлена служба перевода.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Политика данных запрещает передавать это содержимое любой службе перевода для %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Служба перевода %service не настроена.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Служба перевода %service не переводит с %source на %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Служба перевода %service отклонила ключ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Служба перевода %service занята. Повторите попытку позже.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Служба перевода %service недоступна (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Служба перевода %service отклонила запрос (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Квота службы перевода %service исчерпана.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Не удалось подключиться к службе перевода %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Не удалось прочитать ответ службы перевода %service.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Поле пустое: переводить нечего.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>неизвестная модель</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>модель не поддерживает собственный вызов инструментов (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools не включен для модели</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>модель не прошла проверку (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>проверка выполнялась с другим идентификатором модели</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>доля успешных проверок %rate% ниже %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>обязательная задача проверки %tasks не пройдена</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>обязательные задачи проверки %tasks не пройдены</translation>
+    </message>
+</context>
 </TS>

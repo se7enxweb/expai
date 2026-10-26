@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: అనువాద సింక్</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>అనువాద సేవ లేదు</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>డేటా విధానం ద్వారా బ్లాక్ చేయబడింది</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>అనువదించినది: %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: సారాంశం</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>అనువాద సేవలు</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>డిఫాల్ట్ సేవ: %default; ఎంచుకున్న సేవ ఒక భాషా జతను అనువదించలేనప్పుడు: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>నియమం</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>సేవ</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>యంత్ర అనువాదం</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>మోడల్</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>అనువదించాల్సిన బ్లాక్‌ల టెక్స్ట్ మాత్రమే యంత్ర అనువాద సేవకు వెళ్తుంది (SendContext తో వాటి పక్కన ఉన్న బ్లాక్‌లు కూడా), ఇతర ఫీల్డ్‌లు లేదా ఆబ్జెక్ట్ పేరు ఎప్పుడూ వెళ్లవు.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>అభ్యర్థనను తిరస్కరించే నియమాలు (expai.ini [RequestVeto] Rules[], ప్రతిదానికి దాని [RequestVeto_&lt;rule&gt;] ఉంటుంది).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI అనువాద సేవలు</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>అనువాద సింక్ మరియు “అనువదించండి” ఫీల్డ్ చర్య యొక్క అనువాద సేవలు (expai.ini [TranslationProvider_&lt;name&gt;] Class=, expAiTranslationProvider ను అమలు చేసేవి; [TranslationSettings] ద్వారా ఎంచుకోబడినవి).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>ఆమోదించిన భాగాలు ఫీల్డ్ %field నుండి %itemsను తీసివేస్తాయి. ఏదీ వ్రాయబడలేదు.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>%source → %target కోసం ఏ అనువాద సేవా ఇన్‌స్టాల్ చేయబడలేదు.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>డేటా విధానం ఈ కంటెంట్‌ను %source → %target కోసం ప్రతి అనువాద సేవ నుండి దూరంగా ఉంచుతుంది.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>అనువాద సేవ %service కాన్ఫిగర్ చేయబడలేదు.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>అనువాద సేవ %service అనేది %source నుండి %target కు అనువదించదు.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>అనువాద సేవ %service కీని తిరస్కరించింది.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>అనువాద సేవ %service బిజీగా ఉంది. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>అనువాద సేవ %service అందుబాటులో లేదు (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>అనువాద సేవ %service అభ్యర్థనను తిరస్కరించింది (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>అనువాద సేవ %service యొక్క కోటా అయిపోయింది.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>అనువాద సేవ %service ను చేరుకోలేకపోయాము.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>అనువాద సేవ %service యొక్క సమాధానాన్ని చదవలేకపోయాము.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>ఫీల్డ్ ఖాళీగా ఉంది: అనువదించడానికి ఏమీ లేదు.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>తెలియని మోడల్</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>ఈ మోడల్‌కు స్థానిక టూల్ కాలింగ్ లేదు (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>ఈ మోడల్ కోసం WriteTools ప్రారంభించబడలేదు</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>మోడల్ ప్రోబ్‌లో ఉత్తీర్ణత సాధించలేదు (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>ప్రోబ్ వేరే మోడల్ ID తో అమలు చేయబడింది</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>ప్రోబ్ ఉత్తీర్ణత రేటు %rate% అనేది %threshold% కంటే తక్కువగా ఉంది</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>తప్పనిసరి ప్రోబ్ టాస్క్ %tasks ఉత్తీర్ణత సాధించలేదు</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>తప్పనిసరి ప్రోబ్ టాస్క్‌లు %tasks ఉత్తీర్ణత సాధించలేదు</translation>
+    </message>
+</context>
 </TS>

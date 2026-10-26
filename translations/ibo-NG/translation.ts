@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: nhazi ntụgharị</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Enweghị ọrụ ntụgharị asụsụ</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Iwu data gbochiri ya</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Nke %provider tụgharịrị</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: Nchịkọta</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Ọrụ ntụgharị asụsụ</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Ọrụ ndabara: %default; mgbe ọrụ a họọrọ enweghị ike ịtụgharị otu ụzọ asụsụ abụọ: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Iwu</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Ọrụ</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>ntụgharị igwe</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>ụdị</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Ọ bụ naanị ederede nke ngọngọ a ga-atụgharị na-aga n&apos;ọrụ ntụgharị igwe (na SendContext, ngọngọ ndị dị n&apos;akụkụ ha kwa), ọ bụghị ubi ndị ọzọ ma ọ bụ aha ihe ahụ.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Iwu ndị na-ajụ arịrịọ (expai.ini [RequestVeto] Rules[], nke ọ bụla nwere [RequestVeto_&lt;rule&gt;] ya).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>Ọrụ ntụgharị asụsụ AI</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Ọrụ ntụgharị asụsụ nke nhazi ntụgharị na omume ubi Tụgharịa (expai.ini [TranslationProvider_&lt;name&gt;] Class=, na-emejupụta expAiTranslationProvider; a na-ahọrọ ha site na [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Akụkụ ndị e kwenyere ga-ewepụ %items n&apos;Ubi %field. Edeghị ihe ọ bụla.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Ọ dịghị ọrụ ntụgharị asụsụ etinyere maka %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Iwu data na-egbochi ọdịnaya a ịga n&apos;ọrụ ntụgharị asụsụ ọ bụla maka %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Ahazibeghị ọrụ ntụgharị asụsụ %service.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Ọrụ ntụgharị asụsụ %service anaghị atụgharị %source gaa na %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Ọrụ ntụgharị asụsụ %service jụrụ igodo ahụ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Ọrụ ntụgharị asụsụ %service nọ n&apos;ọrụ. Biko nwaa ọzọ ma emechaa.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Ọrụ ntụgharị asụsụ %service adịghị (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Ọrụ ntụgharị asụsụ %service jụrụ arịrịọ ahụ (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Oke ọrụ ntụgharị asụsụ %service agwụla.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Enweghị ike iru ọrụ ntụgharị asụsụ %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Enweghị ike ịgụ azịza ọrụ ntụgharị asụsụ %service.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Ubi ahụ tọgbọ chakoo: ọ dịghị ihe a ga-atụgharị.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>ụdị amaghị ama</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>ụdị ahụ enweghị oku ngwaọrụ nke ya (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>agbanyeghị WriteTools maka ụdị ahụ</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>ụdị ahụ agafeghị nnwale ahụ (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>e jiri ID ụdị ọzọ mee nnwale ahụ</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>ọnụego ngafe nnwale %rate% dị n&apos;okpuru %threshold%</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>ọrụ nnwale dị mkpa %tasks agafeghị</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>ọrụ nnwale ndị dị mkpa %tasks agafeghị</translation>
+    </message>
+</context>
 </TS>

@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: ìṣọ̀kan ìtúmọ̀</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>Kò sí iṣẹ́ ìtúmọ̀</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Ìlànà dátà ti dí i</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Ìtúmọ̀ láti ọwọ́ %provider</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: Àkópọ̀</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>Àwọn iṣẹ́ ìtúmọ̀</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Iṣẹ́ àtilẹ̀wá: %default; nígbà tí iṣẹ́ tí a yàn kò bá lè túmọ̀ méjì èdè kan: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Òfin</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Iṣẹ́</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>ìtúmọ̀ ẹ̀rọ</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>àwòṣe</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Ọ̀rọ̀ inú àwọn búlọ́ọ̀kù tí a ó túmọ̀ nìkan ni ó ń lọ sí iṣẹ́ ìtúmọ̀ ẹ̀rọ (pẹ̀lú SendContext, àwọn búlọ́ọ̀kù tó wà lẹ́gbẹ̀ẹ́ wọn náà), kì í ṣe àwọn pápá mìíràn tàbí orúkọ ohun náà láé.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>Àwọn òfin tí ó ń kọ ìbéèrè kan (expai.ini [RequestVeto] Rules[], ọ̀kọ̀ọ̀kan pẹ̀lú [RequestVeto_&lt;rule&gt;] rẹ̀).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>Àwọn iṣẹ́ ìtúmọ̀ AI</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Àwọn iṣẹ́ ìtúmọ̀ ti Ìbámu Ìtúmọ̀ àti ìṣe pápá “Túmọ̀” (expai.ini [TranslationProvider_&lt;name&gt;] Class=, tí ó ń ṣe expAiTranslationProvider; tí a yàn nípasẹ̀ [TranslationSettings]).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>Àwọn apá tí a fọwọ́ sí yóò yọ %items kúrò nínú pápá %field. A kò kọ nǹkan kan.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Kò sí iṣẹ́ ìtúmọ̀ tí a fi sórí ẹ̀rọ fún %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Ìlànà dátà pa àkóónú yìí mọ́ kúrò lọ́dọ̀ gbogbo iṣẹ́ ìtúmọ̀ fún %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>A kò tíì ṣètò iṣẹ́ ìtúmọ̀ %service.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Iṣẹ́ ìtúmọ̀ %service kò túmọ̀ láti %source sí %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Iṣẹ́ ìtúmọ̀ %service kọ kọ́kọ́rọ́ náà.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Iṣẹ́ ìtúmọ̀ %service ń ṣiṣẹ́ lọ́wọ́. Ẹ jọ̀wọ́ ẹ gbìyànjú lẹ́ẹ̀kan sí i nígbà míì.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Iṣẹ́ ìtúmọ̀ %service kò sí (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Iṣẹ́ ìtúmọ̀ %service kọ ìbéèrè náà (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Ìpín iṣẹ́ ìtúmọ̀ %service ti tán.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>A kò lè dé ọ̀dọ̀ iṣẹ́ ìtúmọ̀ %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>A kò lè ka ìdáhùn iṣẹ́ ìtúmọ̀ %service.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Pápá náà ṣófo: kò sí ohun tí a ó túmọ̀.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>àwòṣe tí a kò mọ̀</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>àwòṣe náà kò ní ìpè irinṣẹ́ àbínibí (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>WriteTools kò ṣiṣẹ́ fún àwòṣe náà</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>àwòṣe náà kò yege nínú àyẹ̀wò (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>a ṣe àyẹ̀wò náà pẹ̀lú ID àwòṣe mìíràn</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>ìwọ̀n àṣeyọrí àyẹ̀wò %rate% kéré ju %threshold% lọ</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>iṣẹ́ àyẹ̀wò dandan %tasks kò yege</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>àwọn iṣẹ́ àyẹ̀wò dandan %tasks kò yege</translation>
+    </message>
+</context>
 </TS>

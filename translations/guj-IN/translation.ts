@@ -4081,6 +4081,18 @@
         <source>Exponential Intelligence: translation sync</source>
         <translation>Exponential Intelligence: અનુવાદ સિંક</translation>
     </message>
+    <message>
+        <source>No translation service</source>
+        <translation>કોઈ અનુવાદ સેવા નથી</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>ડેટા નીતિ દ્વારા અવરોધિત</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>%provider દ્વારા અનુવાદિત</translation>
+    </message>
 </context>
 <!-- expai translation sync: end -->
 <!-- #370 M5 alt text (doc/alt-text.md) -->
@@ -4851,6 +4863,34 @@
     <message>
         <source>EI: Summary</source>
         <translation>EI: સારાંશ</translation>
+    </message>
+    <message>
+        <source>Translation services</source>
+        <translation>અનુવાદ સેવાઓ</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>ડિફૉલ્ટ સેવા: %default; જ્યારે પસંદ કરેલી સેવા કોઈ ભાષા જોડીનો અનુવાદ ન કરી શકે: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>નિયમ</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>સેવા</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>મશીન અનુવાદ</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>મૉડલ</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>મશીન અનુવાદ સેવાને ફક્ત અનુવાદ કરવાના બ્લૉકનો ટેક્સ્ટ જ મોકલવામાં આવે છે (SendContext સાથે તેમની બાજુના બ્લૉક પણ), ક્યારેય અન્ય ફીલ્ડ અથવા ઑબ્જેક્ટનું નામ નહીં.</translation>
     </message>
 </context>
 <!-- expai vector review/plan: begin -->
@@ -6631,6 +6671,14 @@
         <source>The rules that refuse a request (expai.ini [RequestVeto] Rules[], each with its [RequestVeto_&lt;rule&gt;]).</source>
         <translation>વિનંતીનો અસ્વીકાર કરતા નિયમો (expai.ini [RequestVeto] Rules[], દરેકની પોતાની [RequestVeto_&lt;rule&gt;] સાથે).</translation>
     </message>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI અનુવાદ સેવાઓ</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>અનુવાદ સિંક અને ફીલ્ડ ક્રિયા “અનુવાદ કરો” ની અનુવાદ સેવાઓ (expai.ini [TranslationProvider_&lt;name&gt;] Class=, જે expAiTranslationProvider અમલમાં મૂકે છે; [TranslationSettings] દ્વારા પસંદ કરાય છે).</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/error</name>
@@ -6757,6 +6805,54 @@
         <source>The accepted parts would remove %items from the field %field. Nothing was written.</source>
         <translation>સ્વીકારેલા ભાગો ફીલ્ડ %fieldમાંથી %items દૂર કરશે. કંઈ લખાયું નથી.</translation>
     </message>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>%source → %target માટે કોઈ અનુવાદ સેવા ઇન્સ્ટૉલ કરેલી નથી.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>ડેટા નીતિ આ સામગ્રીને %source → %target માટેની દરેક અનુવાદ સેવાથી દૂર રાખે છે.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>અનુવાદ સેવા %service ગોઠવેલી નથી.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>અનુવાદ સેવા %service, %source થી %target માં અનુવાદ કરતી નથી.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>અનુવાદ સેવા %service એ કી નકારી.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>અનુવાદ સેવા %service વ્યસ્ત છે. કૃપા કરીને પછીથી ફરી પ્રયાસ કરો.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>અનુવાદ સેવા %service ઉપલબ્ધ નથી (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>અનુવાદ સેવા %service એ વિનંતી નકારી (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>અનુવાદ સેવા %service નો ક્વોટા પૂરો થઈ ગયો છે.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>અનુવાદ સેવા %service સુધી પહોંચી શકાયું નથી.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>અનુવાદ સેવા %service નો જવાબ વાંચી શકાયો નથી.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>ફીલ્ડ ખાલી છે: અનુવાદ કરવા માટે કંઈ નથી.</translation>
+    </message>
 </context>
 <context>
     <name>extension/expai/step</name>
@@ -6773,4 +6869,39 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<context>
+    <name>extension/expai/probe</name>
+    <message>
+        <source>unknown model</source>
+        <translation>અજ્ઞાત મૉડલ</translation>
+    </message>
+    <message>
+        <source>the model has no native tool calling (ToolUse=%tooluse)</source>
+        <translation>મૉડલમાં પોતાનું ટૂલ કૉલિંગ નથી (ToolUse=%tooluse)</translation>
+    </message>
+    <message>
+        <source>WriteTools is not enabled for the model</source>
+        <translation>મૉડલ માટે WriteTools સક્ષમ નથી</translation>
+    </message>
+    <message>
+        <source>the model has not passed the probe (%command)</source>
+        <translation>મૉડલ ચકાસણીમાં પાસ થયું નથી (%command)</translation>
+    </message>
+    <message>
+        <source>the probe was run with another model id</source>
+        <translation>ચકાસણી બીજા મૉડલ ID સાથે ચલાવવામાં આવી હતી</translation>
+    </message>
+    <message>
+        <source>the probe pass rate %rate% is below %threshold%</source>
+        <translation>ચકાસણીનો સફળતા દર %rate% છે, જે %threshold% કરતાં ઓછો છે</translation>
+    </message>
+    <message>
+        <source>the mandatory probe task %tasks did not pass</source>
+        <translation>ફરજિયાત ચકાસણી કાર્ય %tasks પાસ થયું નથી</translation>
+    </message>
+    <message>
+        <source>the mandatory probe tasks %tasks did not pass</source>
+        <translation>ફરજિયાત ચકાસણી કાર્યો %tasks પાસ થયાં નથી</translation>
+    </message>
+</context>
 </TS>
