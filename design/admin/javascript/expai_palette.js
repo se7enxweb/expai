@@ -189,7 +189,7 @@
             commands[id] = def || {};
         },
         get: function ( id ) { return commands[id]; },
-        list: function () { return order.map( function ( id ) { return $.extend( { id: id }, commands[id] ); } ); },
+        list: function () { return order.map( function ( id ) { return extend( { id: id }, commands[id] ); } ); },
         run: function ( id, arg ) {
             var c = commands[id];
             if ( c && ( !c.available || c.available() ) ) {
@@ -199,7 +199,18 @@
             return false;
         }
     };
-    var $ = window.jQuery;
+    // shallow merge that skips undefined values, as jQuery.extend did
+    function extend( target ) {
+        for ( var i = 1; i < arguments.length; i++ ) {
+            var source = arguments[i] || {};
+            for ( var key in source ) {
+                if ( Object.prototype.hasOwnProperty.call( source, key ) && source[key] !== undefined ) {
+                    target[key] = source[key];
+                }
+            }
+        }
+        return target;
+    }
     // commands registered before the palette was loaded (expai.js keeps them)
     waiting.forEach( function ( c ) { ExpAi.commands.register( c[0], c[1] ); } );
 
@@ -693,8 +704,8 @@
 
     window.ExpAiPalette = {
         configure: function ( cfg ) {
-            config = $.extend( config, cfg || {} );
-            config.strings = $.extend( { changed: 'changed', change: 'Change', reset: 'Reset', reset_all: 'Reset all shortcuts', press_keys: 'Press the new keys for "%command" (Esc cancels)' },
+            config = extend( config, cfg || {} );
+            config.strings = extend( { changed: 'changed', change: 'Change', reset: 'Reset', reset_all: 'Reset all shortcuts', press_keys: 'Press the new keys for "%command" (Esc cancels)' },
                                        config.strings || {} );
             if ( overlay ) {
                 overlay.parentNode.removeChild( overlay );
