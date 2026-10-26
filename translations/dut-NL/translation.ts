@@ -6785,4 +6785,114 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<!-- expai translation services: begin -->
+<context>
+    <name>extension/expai/translation</name>
+    <message>
+        <source>No translation service</source>
+        <translation>Geen vertaaldienst</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Geblokkeerd door het gegevensbeleid</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Vertaald door %provider</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/error</name>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Er is geen vertaaldienst geïnstalleerd voor %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Het gegevensbeleid houdt deze inhoud weg bij elke vertaaldienst voor %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>De vertaaldienst %service is niet geconfigureerd.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>De vertaaldienst %service vertaalt niet van %source naar %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>De vertaaldienst %service heeft de sleutel geweigerd.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>De vertaaldienst %service is bezet. Probeer het later opnieuw.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>De vertaaldienst %service is niet beschikbaar (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>De vertaaldienst %service heeft het verzoek geweigerd (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Het tegoed van de vertaaldienst %service is op.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>De vertaaldienst %service kon niet worden bereikt.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Het antwoord van de vertaaldienst %service kon niet worden gelezen.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Het veld is leeg: er valt niets te vertalen.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/summary</name>
+    <message>
+        <source>Translation services</source>
+        <translation>Vertaaldiensten</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Standaarddienst: %default; als de gekozen dienst een taalpaar niet kan vertalen: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Regel</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Dienst</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>machinevertaling</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>model</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Alleen de tekst van de te vertalen blokken gaat naar een dienst voor machinevertaling (met SendContext ook de blokken ernaast), nooit andere velden of de naam van het object.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/rad</name>
+    <message>
+        <source>AI translation services</source>
+        <translation>AI-vertaaldiensten</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>De vertaaldiensten van de vertaalsynchronisatie en de veldactie Vertalen (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementatie van expAiTranslationProvider; gekozen door [TranslationSettings]).</translation>
+    </message>
+</context>
+<!-- expai translation services: end -->
 </TS>

@@ -6785,4 +6785,114 @@
     </message>
 </context>
 <!-- expai rich text placeholders: end -->
+<!-- expai translation services: begin -->
+<context>
+    <name>extension/expai/translation</name>
+    <message>
+        <source>No translation service</source>
+        <translation>Nema usluge prevođenja</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Blokirano pravilom o podacima</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Preveo davatelj %provider</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/error</name>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Za %source → %target nije instalirana nijedna usluga prevođenja.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Pravilo o podacima ne dopušta slanje ovog sadržaja nijednoj usluzi prevođenja za %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Usluga prevođenja %service nije konfigurirana.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Usluga prevođenja %service ne prevodi s jezika %source na jezik %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Usluga prevođenja %service odbila je ključ.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Usluga prevođenja %service je zauzeta. Pokušajte ponovno kasnije.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Usluga prevođenja %service nije dostupna (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Usluga prevođenja %service odbila je zahtjev (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Kvota usluge prevođenja %service je potrošena.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Nije moguće uspostaviti vezu s uslugom prevođenja %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Odgovor usluge prevođenja %service nije moguće pročitati.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Polje je prazno: nema se što prevesti.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/summary</name>
+    <message>
+        <source>Translation services</source>
+        <translation>Usluge prevođenja</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Zadana usluga: %default; kada odabrana usluga ne može prevesti neki jezični par: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Pravilo</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Usluga</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>strojno prevođenje</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>model</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Usluzi strojnog prevođenja šalje se samo tekst blokova koje treba prevesti (uz SendContext i susjedni blokovi), nikada druga polja ni naziv objekta.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/rad</name>
+    <message>
+        <source>AI translation services</source>
+        <translation>Usluge prevođenja za umjetnu inteligenciju</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Usluge prevođenja za usklađivanje prijevoda i radnju polja „Prevedi“ (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementira expAiTranslationProvider; odabire ih [TranslationSettings]).</translation>
+    </message>
+</context>
+<!-- expai translation services: end -->
 </TS>

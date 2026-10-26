@@ -6744,4 +6744,114 @@
         <translation>הטקסט העשיר שומר על המבנה שלו רק כאשר כל מציין מיקום חוזר בדיוק פעם אחת וללא שינוי.</translation>
     </message>
 </context>
+<!-- expai translation services: begin -->
+<context>
+    <name>extension/expai/translation</name>
+    <message>
+        <source>No translation service</source>
+        <translation>אין שירות תרגום</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>נחסם על ידי מדיניות הנתונים</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>תורגם על ידי %provider</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/error</name>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>לא מותקן שירות תרגום עבור %source → %target.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>מדיניות הנתונים מרחיקה תוכן זה מכל שירותי התרגום עבור %source → %target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>שירות התרגום %service אינו מוגדר.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>שירות התרגום %service אינו מתרגם מ־%source ל־%target.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>שירות התרגום %service דחה את המפתח.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>שירות התרגום %service עמוס. נא לנסות שוב מאוחר יותר.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>שירות התרגום %service אינו זמין (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>שירות התרגום %service דחה את הבקשה (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>המכסה של שירות התרגום %service נוצלה.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>לא ניתן היה להתחבר לשירות התרגום %service.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>לא ניתן היה לקרוא את התשובה של שירות התרגום %service.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>השדה ריק: אין מה לתרגם.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/summary</name>
+    <message>
+        <source>Translation services</source>
+        <translation>שירותי תרגום</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>שירות ברירת המחדל: %default; כאשר השירות שנבחר אינו יכול לתרגם צמד שפות: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>כלל</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>שירות</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>תרגום מכונה</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>מודל שפה</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>רק הטקסט של הבלוקים לתרגום נשלח לשירות תרגום מכונה (עם SendContext גם הבלוקים הסמוכים להם), לעולם לא שדות אחרים או שם האובייקט.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/rad</name>
+    <message>
+        <source>AI translation services</source>
+        <translation>שירותי תרגום מבוססי בינה מלאכותית</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>שירותי התרגום של סנכרון התרגומים ושל פעולת השדה תרגום (expai.ini [TranslationProvider_&lt;name&gt;] Class=, המממשים את expAiTranslationProvider; נבחרים לפי [TranslationSettings]).</translation>
+    </message>
+</context>
+<!-- expai translation services: end -->
 </TS>

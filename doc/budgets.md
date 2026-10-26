@@ -30,6 +30,11 @@ When neither is set, nothing is held; the costs are still estimated, reserved an
 Resuming a held group on the expqueue pages puts its jobs back too; each is checked again before its call and held
 again when it still does not fit.
 
+A translation by a machine translation service (job `expai.translation.run`, [translation-providers.md](translation-providers.md))
+goes through the same steps: its estimate is the characters to translate x `[TranslationProvider_<id>]
+PricePerMChars`, reserved x `ReserveFactor`, checked again before the request and settled with the cost of the billed
+characters. The site budget and job group budgets cover it like a model request.
+
 The `[Limits]` of the panel still apply to queued requests ([configuration.md](configuration.md#limits-optional-limits)):
 a limit that is reached holds the job the same way.
 

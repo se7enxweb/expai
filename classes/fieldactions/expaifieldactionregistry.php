@@ -41,13 +41,20 @@ class expAiFieldActionRegistry
         return isset( $this->actions[$name] ) ? $this->actions[$name] : null;
     }
 
-    /** @return array for the edit form: name => { label, input, datatypes } (labels translated) */
+    /**
+     * @return array for the edit form: name => { label, input, datatypes } (labels translated); an action that cannot
+     *               be used at all (unavailableReason(), e.g. Translate without any translation service) is left out
+     */
     public function describe()
     {
         $out = array();
         foreach ( $this->actions as $name => $action )
+        {
+            if ( method_exists( $action, 'unavailableReason' ) && $action->unavailableReason() !== '' )
+                continue;
             $out[] = array( 'name' => $name, 'label' => ezpI18n::tr( 'extension/expai/fieldaction', $action->label() ),
                             'input' => $action->input(), 'datatypes' => $action->datatypes() );
+        }
         return $out;
     }
 

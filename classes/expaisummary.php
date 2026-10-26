@@ -41,6 +41,7 @@ class expAiSummary
             'note' => trim( (string) $this->config->get( 'SummarySettings', 'Note', '' ) ),
             'switches' => $this->switches(),
             'providers' => $this->providers( $roles ),
+            'translation' => $this->translation(),
             'policy' => $this->dataPolicy(),
             'limits' => $this->limits(),
             'retention' => $this->retention(),
@@ -189,6 +190,28 @@ class expAiSummary
             );
         }
         return $out;
+    }
+
+    /**
+     * The translation services (doc/translation-providers.md): the default and the fallback, the rules per language
+     * pair and purpose, every service with its region, retention, the source of its key and why it cannot be used.
+     * @return array default, fallback, rules (list of rule, provider), services (expAiTranslationProviderRegistry::describe()
+     *               rows with key and region_label)
+     */
+    protected function translation()
+    {
+        $registry = new expAiTranslationProviderRegistry( $this->config );
+        $services = array();
+        foreach ( $registry->describe() as $row )
+        {
+            $key = $row['group'] !== '' ? $this->secretSource( $row['group'], 'ApiKey' ) : array( 'set' => false, 'file' => '', 'placement' => '' );
+            $key['needed'] = $row['kind'] === 'mt' && $row['region'] !== 'local';
+            $services[] = $row + array( 'key' => $key, 'region_label' => self::regionLabel( $row['region'] ) );
+        }
+        $rules = array();
+        foreach ( $registry->rules() as $rule => $id )
+            $rules[] = array( 'rule' => 'ProviderFor[' . $rule . ']', 'provider' => $id );
+        return array( 'default' => $registry->defaultId(), 'fallback' => $registry->fallbackId(), 'rules' => $rules, 'services' => $services );
     }
 
     /**

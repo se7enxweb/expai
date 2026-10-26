@@ -78,6 +78,11 @@ class expAiTranslationSyncServerFunctions extends ezjscServerFunctions
                              'ratio' => isset( $row['change_ratio'] ) ? round( 100 * (float) $row['change_ratio'] ) : null,
                              'blocks' => isset( $row['blocks_changed'] ) ? (int) $row['blocks_changed'] : 0, 'units' => isset( $row['units'] ) ? (int) $row['units'] : 0,
                              'estimate' => (string) $row['estimate'], 'lane' => isset( $row['lane'] ) ? (string) $row['lane'] : '',
+                             // the translation service (doc/translation-providers.md): an id, its name, llm or mt, why none can take it
+                             'provider' => isset( $row['provider'] ) ? (string) $row['provider'] : '',
+                             'provider_label' => isset( $row['provider_label'] ) ? (string) $row['provider_label'] : '',
+                             'provider_kind' => isset( $row['provider_kind'] ) ? (string) $row['provider_kind'] : '',
+                             'provider_reason' => isset( $row['provider_reason'] ) ? expAiText::cut( (string) $row['provider_reason'], 300 ) : '',
                              'from_version' => isset( $row['from_version'] ) ? (int) $row['from_version'] : 0, 'to_version' => isset( $row['to_version'] ) ? (int) $row['to_version'] : 0,
                              'stale' => (bool) $row['stale'], 'job_uuid' => (string) $row['job_uuid'], 'job_state' => (string) $row['job_state'],
                              'draft_version' => isset( $row['draft_version'] ) && $row['state'] === 'draft' ? (int) $row['draft_version'] : 0,

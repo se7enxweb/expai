@@ -12,6 +12,10 @@ that translates both ways. Two adapters are built in:
 
 What is proven against which provider is in [provider-support.md](provider-support.md).
 
+Translation is chosen separately: the translation sync, the field action Translate and the chain step translate use a
+**translation service**, by default `llm` (the models of this page), or a machine translation service such as DeepL,
+per language pair and purpose ([translation-providers.md](translation-providers.md)).
+
 ## Registry
 
 ```ini

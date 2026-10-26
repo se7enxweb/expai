@@ -60,6 +60,14 @@ as **View record** (and **View job**), opening in a new tab. A failure after the
 `{error, record}` instead of an ezjscore error, so the link is there next to the error too; a failure before anything
 was sent (no row) stays an ezjscore error. Presets and the Improve menu (`expaipreset::preset`) do the same.
 
+**Translate** (`[FieldAction_translate] Handler=expAiTranslateFieldAction`) uses the translation service of the pair
+(the draft's language into the chosen one, `[TranslationSettings]` purpose `field`,
+[translation-providers.md](translation-providers.md)). With `llm` it is the prompt above, unchanged. With a machine
+translation service the request goes there directly: its data policy, the master switch, the veto and the cost limits
+apply, and only the field's value is sent (rich text as the editor's HTML, plain text line by line, keywords one by
+one), not the other fields. The record links to its usage row like any other. Without any translation service for
+fields the button is left out (`fetch( 'expai', 'unavailable_field_actions' )`).
+
 The version is marked in the log (action `field` or `fill`), so it carries the label.
 
 ## Getting values in and out of the fields

@@ -12,6 +12,7 @@ Registries[]=expai_batch_apis
 Registries[]=expai_lanes
 Registries[]=expai_tools
 Registries[]=expai_search_providers
+Registries[]=expai_translation_providers
 Registries[]=expai_mcp_servers
 Registries[]=expai_mcp_bridge_tools
 Registries[]=expai_service_tools
@@ -86,6 +87,15 @@ TranslationContext=extension/expai/rad
 Ini=expai.ini
 Section=SearchProvider_*
 Entries[Class]=expAiWebSearchProvider
+
+[Registry_expai_translation_providers]
+Title=AI translation services
+Description=The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_<name>] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).
+Doc=extension/expai/doc/translation-providers.md
+TranslationContext=extension/expai/rad
+Ini=expai.ini
+Section=TranslationProvider_*
+Entries[Class]=expAiTranslationProvider
 
 [Registry_expai_mcp_servers]
 Title=AI MCP servers

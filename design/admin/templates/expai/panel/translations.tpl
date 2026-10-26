@@ -1,6 +1,6 @@
 {* Panel section "translations" ([PanelSection_translations], doc/translation-sync.md): per translation of the object
-   the decision after the last change of the source language, the share that changed, the estimate, the queue job,
-   and Approve / Skip. Filled by expai_translations.js (expaitranslation::*), so nothing of it is part of the cached
+   the decision after the last change of the source language, the share that changed, the estimate (with the lane, or
+   the translation service that translates it), the queue job, and Approve / Skip. Filled by expai_translations.js (expaitranslation::*), so nothing of it is part of the cached
    view. Shown only for objects with more than one language. *}
 {if gt( $node.object.available_languages|count, 1 )}
 <div class="exp-ai-section exp-ai-translations" data-node-id="{$node.node_id}" hidden="hidden">
@@ -34,6 +34,9 @@
         'state_draft', 'Draft written'|i18n( 'extension/expai/translation' ),
         'state_failed', 'Failed'|i18n( 'extension/expai/translation' ),
         'state_skipped', 'Skipped'|i18n( 'extension/expai/translation' ),
+        'state_no_provider', 'No translation service'|i18n( 'extension/expai/translation' ),
+        'state_blocked', 'Blocked by the data policy'|i18n( 'extension/expai/translation' ),
+        'translated_by', 'Translated by %provider'|i18n( 'extension/expai/translation' ),
         'decision_noop', 'no change'|i18n( 'extension/expai/translation' ),
         'decision_patch', 'patch'|i18n( 'extension/expai/translation' ),
         'decision_full', 'full translation'|i18n( 'extension/expai/translation' ),

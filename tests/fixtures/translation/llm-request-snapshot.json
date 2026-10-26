@@ -1,0 +1,80 @@
+{
+    "patch": {
+        "system": "You update existing translations of website content from German (ger-DE) into English (United Kingdom) (eng-GB). The source text of some blocks changed. For a block with old_source, new_source and current_translation, change current_translation only where the source changed and keep its wording, terms and style everywhere else. For a block with only source, translate it in the style of the surrounding translation. Markup is written as numbered placeholders: <1>text</1> wraps text in a link or emphasis, <2/> is an embedded object or a line break. Keep every placeholder exactly once, with the same numbers, around the matching words; never add new ones. Escape < and & in text as &lt; and &amp;. Do not translate names of people, products or brands unless the source does. Answer with JSON only: {\"units\": [{\"id\": \"...\", \"text\": \"...\"}]}, one entry per block, the text in eng-GB.",
+        "messages": [
+            {
+                "role": "user",
+                "content": "{\n    \"source_language\": \"ger-DE\",\n    \"target_language\": \"eng-GB\",\n    \"units\": [\n        {\n            \"id\": \"u1\",\n            \"field\": \"title\",\n            \"old_source\": \"Alter Titel\",\n            \"new_source\": \"Neuer Titel\",\n            \"current_translation\": \"Old title\"\n        },\n        {\n            \"id\": \"u2\",\n            \"field\": \"body\",\n            \"old_source\": \"Der <1>Hund</1> schläft.\",\n            \"new_source\": \"Der <1>Hund</1> schläft &amp; träumt.<2/>\",\n            \"current_translation\": \"The <1>dog</1> sleeps.\",\n            \"context_before\": \"Ein langer Absatz davor, der gekürzt wird. Ein langer Absatz davor, der gekürzt wird. Ein langer Absatz davor, der gekürzt wird. Ein langer Absatz davor, der gekürzt wird. Ein langer Absatz davor, der gekürzt wird. Ein langer Absatz davor, der gekürzt wird. Ein langer Absatz davor, der gekürzt wird…\",\n            \"context_after\": \"Danach.\"\n        },\n        {\n            \"id\": \"u3\",\n            \"field\": \"body\",\n            \"source\": \"Ganz neu: 3 &lt; 4.\",\n            \"context_before\": \"Der Hund schläft und träumt.\"\n        },\n        {\n            \"id\": \"u4\",\n            \"field\": \"tags\",\n            \"type\": \"keywords (a comma-separated list)\",\n            \"old_source\": \"Hund, Katze\",\n            \"new_source\": \"Hund, Katze, Maus\",\n            \"current_translation\": \"dog, cat\"\n        }\n    ]\n}"
+            }
+        ],
+        "max_tokens": 1024,
+        "output_schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "units"
+            ],
+            "properties": {
+                "units": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "id",
+                            "text"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "text": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "est_output": 71
+    },
+    "full": {
+        "system": "You translate website content from German (ger-DE) into fre-FR. Translate every block completely, naturally and consistently. Markup is written as numbered placeholders: <1>text</1> wraps text in a link or emphasis, <2/> is an embedded object or a line break. Keep every placeholder exactly once, with the same numbers, around the matching words; never add new ones. Escape < and & in text as &lt; and &amp;. Do not translate names of people, products or brands unless the source does. Answer with JSON only: {\"units\": [{\"id\": \"...\", \"text\": \"...\"}]}, one entry per block, the text in fre-FR.",
+        "messages": [
+            {
+                "role": "user",
+                "content": "{\n    \"source_language\": \"ger-DE\",\n    \"target_language\": \"fre-FR\",\n    \"units\": [\n        {\n            \"id\": \"u1\",\n            \"field\": \"title\",\n            \"source\": \"Neuer Titel\"\n        },\n        {\n            \"id\": \"u2\",\n            \"field\": \"body\",\n            \"source\": \"Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. Satz. \",\n            \"context_after\": \"Ende.\"\n        }\n    ]\n}"
+            }
+        ],
+        "max_tokens": 4934,
+        "output_schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "units"
+            ],
+            "properties": {
+                "units": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "id",
+                            "text"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "text": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "est_output": 1876
+    }
+}

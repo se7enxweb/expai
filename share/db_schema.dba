@@ -1985,6 +1985,13 @@ $schema = array (
         'not_null' => '1',
         'default' => 0,
       ),
+      'billed_chars' => 
+      array (
+        'length' => 11,
+        'type' => 'int',
+        'not_null' => '1',
+        'default' => 0,
+      ),
       'cache_read_tokens' => 
       array (
         'length' => 11,

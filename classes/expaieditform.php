@@ -70,6 +70,16 @@ class expAiEditForm
         $request->instruction = expAiText::cut( trim( (string) $post['instruction'] ), $config->int( 'AssistantSettings', 'MaxMessageLength', 4000, 10 ) );
         $target = (string) $post['target_language'];
         $request->targetLanguage = in_array( $target, eZContentLanguage::fetchLocaleList(), true ) ? $target : '';
+        // Translate with a machine translation service (doc/translation-providers.md): its own data policy, gate and
+        // usage row; no model is asked, so neither the model fallback nor the web budget of a model applies
+        if ( $action instanceof expAiTranslateFieldAction && $request->targetLanguage !== '' && ( $service = $action->directService( $request ) ) )
+        {
+            $result = $action->runDirect( $request, $service );
+            self::$lastRecorder = $result['recorder'];
+            self::mark( $object, $version, $language, 'field', $action->name() . ( $request->instruction !== '' ? ': ' . $request->instruction : '' ), $result['model'], $service->id() );
+            return array( 'value' => $result['value'], 'note' => $result['note'], 'action' => $action->name(), 'datatype' => $datatype, 'fallback' => null,
+                          'record' => self::requestRecord() );
+        }
         $fallback = null;
         list( $result, $recorder ) = self::withFallback( $config, $object, 'field:' . $action->name(), function ( $recorder ) use ( $action, $request )
         {
@@ -200,7 +210,7 @@ class expAiEditForm
         return new expAiUsageRecorder( $provider, array( 'node_id' => $main ? (int) $main->attribute( 'node_id' ) : 0, 'action' => $action ) );
     }
 
-    /** @var expAiUsageRecorder|null the recorder of the last request of the edit form in this page request ("View record") */
+    /** @var expAiUsageRecorder|expAiTranslationRecorder|null the recorder of the last request of the edit form in this page request ("View record") */
     protected static $lastRecorder = null;
 
     /** Forgets the last request (a persistent worker keeps statics from one page request to the next) */

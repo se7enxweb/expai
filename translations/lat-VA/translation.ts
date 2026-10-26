@@ -6745,4 +6745,114 @@
         <translation>Textus ornatus structuram suam tantum servat cum omne signum loci semel et immutatum redit.</translation>
     </message>
 </context>
+<!-- expai translation services: begin -->
+<context>
+    <name>extension/expai/translation</name>
+    <message>
+        <source>No translation service</source>
+        <translation>Nullum servitium translationis</translation>
+    </message>
+    <message>
+        <source>Blocked by the data policy</source>
+        <translation>Ratione datorum impeditum</translation>
+    </message>
+    <message>
+        <source>Translated by %provider</source>
+        <translation>Vertit %provider</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/error</name>
+    <message>
+        <source>No translation service is installed for %source → %target.</source>
+        <translation>Nullum servitium translationis pro %source → %target institutum est.</translation>
+    </message>
+    <message>
+        <source>The data policy keeps this content away from every translation service for %source → %target.</source>
+        <translation>Ratio datorum haec contenta ab omnibus servitiis translationis pro %source → %target arcet.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not configured.</source>
+        <translation>Servitium translationis %service configuratum non est.</translation>
+    </message>
+    <message>
+        <source>The translation service %service does not translate %source into %target.</source>
+        <translation>Servitium translationis %service ex %source in %target non vertit.</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the key.</source>
+        <translation>Servitium translationis %service clavem recusavit.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is busy. Please try again later.</source>
+        <translation>Servitium translationis %service occupatum est. Postea iterum conare.</translation>
+    </message>
+    <message>
+        <source>The translation service %service is not available (HTTP %status).</source>
+        <translation>Servitium translationis %service praesto non est (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The translation service %service refused the request (HTTP %status).</source>
+        <translation>Servitium translationis %service petitionem recusavit (HTTP %status).</translation>
+    </message>
+    <message>
+        <source>The quota of the translation service %service is used up.</source>
+        <translation>Copia servitii translationis %service consumpta est.</translation>
+    </message>
+    <message>
+        <source>The translation service %service could not be reached.</source>
+        <translation>Ad servitium translationis %service perveniri non potuit.</translation>
+    </message>
+    <message>
+        <source>The answer of the translation service %service could not be read.</source>
+        <translation>Responsum servitii translationis %service legi non potuit.</translation>
+    </message>
+    <message>
+        <source>The field is empty: there is nothing to translate.</source>
+        <translation>Campus vacuus est: nihil est quod vertatur.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/summary</name>
+    <message>
+        <source>Translation services</source>
+        <translation>Servitia translationis</translation>
+    </message>
+    <message>
+        <source>Default service: %default; when the chosen service cannot translate a pair: %fallback.</source>
+        <translation>Servitium praedefinitum: %default; ubi servitium electum par linguarum vertere non potest: %fallback.</translation>
+    </message>
+    <message>
+        <source>Rule</source>
+        <translation>Norma</translation>
+    </message>
+    <message>
+        <source>Service</source>
+        <translation>Servitium</translation>
+    </message>
+    <message>
+        <source>machine translation</source>
+        <translation>translatio machinalis</translation>
+    </message>
+    <message>
+        <source>model</source>
+        <translation>exemplar</translation>
+    </message>
+    <message>
+        <source>Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.</source>
+        <translation>Solus textus segmentorum vertendorum ad servitium translationis machinalis mittitur (cum SendContext etiam segmenta finitima), numquam alii campi neque nomen rei.</translation>
+    </message>
+</context>
+<context>
+    <name>extension/expai/rad</name>
+    <message>
+        <source>AI translation services</source>
+        <translation>Servitia translationis IA</translation>
+    </message>
+    <message>
+        <source>The translation services of the translation sync and the field action Translate (expai.ini [TranslationProvider_&lt;name&gt;] Class=, implementing expAiTranslationProvider; chosen by [TranslationSettings]).</source>
+        <translation>Servitia translationis synchronizationis translationum et actionis campi Vertere (expai.ini [TranslationProvider_&lt;name&gt;] Class=, quae expAiTranslationProvider implent; per [TranslationSettings] eliguntur).</translation>
+    </message>
+</context>
+<!-- expai translation services: end -->
 </TS>

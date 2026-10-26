@@ -65,6 +65,37 @@
         <p class="exp-ai-hint">{'A model writes drafts only with native tool calling and a live probe pass rate of at least %threshold%, unless it is marked trusted.'|i18n( 'extension/expai/summary',, hash( '%threshold', first_set( $summary.providers.0.threshold, 90 ) ) )|wash}</p>
     </section>
 
+    <section class="exp-ai-card exp-ai-summary-section" id="exp-ai-summary-translation" aria-labelledby="exp-ai-summary-translation-title">
+        <h2 id="exp-ai-summary-translation-title">{'Translation services'|i18n( 'extension/expai/summary' )}</h2>
+        <p>{'Default service: %default; when the chosen service cannot translate a pair: %fallback.'|i18n( 'extension/expai/summary',, hash( '%default', $summary.translation.default, '%fallback', $summary.translation.fallback ) )|wash}</p>
+{if $summary.translation.rules|count}
+        <table class="list exp-ai-summary-table" cellspacing="0">
+            <thead><tr><th>{'Rule'|i18n( 'extension/expai/summary' )}</th><th>{'Service'|i18n( 'extension/expai/summary' )}</th></tr></thead>
+            <tbody>
+{foreach $summary.translation.rules as $r}
+                <tr><td><code>{$r.rule|wash}</code></td><td>{$r.provider|wash}</td></tr>
+{/foreach}
+            </tbody>
+        </table>
+{/if}
+        <table class="list exp-ai-summary-table" cellspacing="0">
+            <thead><tr><th>{'Service'|i18n( 'extension/expai/summary' )}</th><th>{'Kind'|i18n( 'extension/expai/summary' )}</th><th>{'Region'|i18n( 'extension/expai/summary' )}</th><th>{'Retention'|i18n( 'extension/expai/summary' )}</th><th>{'Key'|i18n( 'extension/expai/summary' )}</th><th>{'In use'|i18n( 'extension/expai/summary' )}</th></tr></thead>
+            <tbody>
+{foreach $summary.translation.services as $t}
+                <tr>
+                    <td>{$t.label|wash}<br /><code>{$t.id|wash}</code></td>
+                    <td>{if eq( $t.kind, 'mt' )}{'machine translation'|i18n( 'extension/expai/summary' )}{else}{'model'|i18n( 'extension/expai/summary' )}{/if}</td>
+                    <td>{$t.region_label|wash}</td>
+                    <td>{$t.retention|expai_retention|wash}{if $t.terms_checked_at} ({$t.terms_checked_at|wash}){/if}</td>
+                    <td>{if $t.key.set}{'From %file (%placement)'|i18n( 'extension/expai/summary',, hash( '%file', $t.key.file, '%placement', $t.key.placement ) )|wash}{elseif $t.key.needed|not}{'No key needed'|i18n( 'extension/expai/summary' )}{else}{'No key'|i18n( 'extension/expai/summary' )}{/if}</td>
+                    <td>{if $t.configured}{$yes}{else}{$no}<br /><small>{$t.reason|wash}</small>{/if}</td>
+                </tr>
+{/foreach}
+            </tbody>
+        </table>
+        <p class="exp-ai-hint">{'Only the text of the blocks to translate goes to a machine translation service (with SendContext also the blocks next to them), never other fields or the name of the object.'|i18n( 'extension/expai/summary' )}</p>
+    </section>
+
     <section class="exp-ai-card exp-ai-summary-section" id="exp-ai-summary-lanes" aria-labelledby="exp-ai-summary-lanes-title">
         <h2 id="exp-ai-summary-lanes-title">{'Lanes and their retention'|i18n( 'extension/expai/summary' )}</h2>
         <table class="list exp-ai-summary-table" cellspacing="0">

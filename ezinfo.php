@@ -10,14 +10,14 @@ class expaiInfo
     {
         return array(
             'Name'      => 'Exponential Intelligence',
-            'Version'   => "0.0.1.18",
+            'Version'   => "0.0.1.19",
             'Author'    => '7x',
             'Copyright' => "Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.",
             'License'   => "GNU General Public License v2.0 (or any later version)",
             'Info_url'  => 'https://github.com/se7enxweb/expai',
             'Uses the following service' => array(
                 'Name'      => 'Anthropic Messages API (Claude)',
-                'Version'   => '0.0.1.18',
+                'Version'   => '0.0.1.19',
                 'Copyright' => 'Claude and Anthropic are trademarks of Anthropic, PBC. The service is used under the account holder\'s own agreement with Anthropic; no Anthropic software is included.',
                 'License'   => 'Anthropic Commercial Terms of Service (https://www.anthropic.com/legal/commercial-terms)',
                 'Info_url'  => 'https://docs.anthropic.com/',

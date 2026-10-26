@@ -642,9 +642,41 @@ The section is added to the panel with `[PanelSettings] Sections[]=translations`
 Template=expai/panel/translations.tpl`), and the answers are written by `[QueueSettings]
 Appliers[translation_sync]=expAiTranslationSyncApplier`.
 
-Other files: `expqueue.ini [JobType_expai.translation.check]` (the check job, class `system`), `ezjscore.ini
-[ezjscServer_expaitranslation]` (the functions `expaitranslation::status`, `check`, `approve`, `skip`), and
-`workflow.ini [EventSettings]` (the event type `event_expaitranslationsync`).
+Other files: `expqueue.ini [JobType_expai.translation.check]` (the check job, class `system`), `expqueue.ini
+[JobType_expai.translation.run]` (a translation by a machine translation service, `[QueueResource_translation:<id>]`
+its concurrency), `ezjscore.ini [ezjscServer_expaitranslation]` (the functions `expaitranslation::status`, `check`,
+`approve`, `skip`), and `workflow.ini [EventSettings]` (the event type `event_expaitranslationsync`). `Model`,
+`Instructions`, `PatchLane` and `FullLane` apply to the translation service `llm` only.
+
+## [TranslationSettings], [TranslationProvider_<id>]: translation services
+
+See [translation-providers.md](translation-providers.md). Who translates for the translation sync, the field action
+Translate and the chain step translate. Without a `[TranslationSettings]` group: `llm`, as before.
+
+| `[TranslationSettings]` setting | Default | Effect |
+| --- | --- | --- |
+| `Provider` | `llm` | The default service: `llm` (the model providers of expai), `none` (no translation) or the id of a `[TranslationProvider_<id>]` group. |
+| `ProviderFor[<source>:<target>:<purpose>]` | (empty) | Per language pair and purpose (`patch`, `full`, `field`), the most specific rule wins: `<source>:<target>:<purpose>`, `<source>:<target>`, `*:<target>:<purpose>`, `*:<target>`, `<source>:*:<purpose>`, `<source>:*`, `*:*:<purpose>`, then `Provider`. Example: `ProviderFor[*:*:full]=deepl`. |
+| `Fallback` | `llm` | When the chosen service is not configured, does not translate the pair or the data policy keeps the content away from it: another id, or `none` (reported as not possible). A failure while translating never falls back. |
+| `DoNotTranslate[]` | (empty) | Terms that are never translated, for every service. |
+| `Glossary[<source>:<target>]` | (empty) | A tab-separated file (term, translation) for the `llm` service, relative to the installation. |
+
+| `[TranslationProvider_<id>]` setting | Default (deepl / libretranslate) | Effect |
+| --- | --- | --- |
+| `Class` | `expAiTranslationProviderDeepl` / `expAiTranslationProviderLibreTranslate` | A class implementing `expAiTranslationProvider` (`[TranslationProvider_llm] Class=expAiTranslationProviderLlm`). |
+| `Label` | `DeepL` / `LibreTranslate` | The name shown in the Translations section, EI: Summary and error texts. |
+| `Endpoint` | `https://api.deepl.com/v2/translate` / `http://127.0.0.1:5000/translate` | The API; plain `http` only with `Region=local`. |
+| `ApiKey`, `ApiKeyRequired` | (empty), enabled / (empty), disabled | The key: only in `settings/override` or an untracked `[ProviderSettings] KeyLocations[]` location (EI: Summary and the key placement check report it otherwise). |
+| `Region`, `Retention`, `TermsCheckedAt` | `eu`, `unknown` / `local`, `none` | For the data policy ([data-policy.md](data-policy.md)). |
+| `PricePerMChars`, `PriceCurrency` | `20`, `EUR` / `0` | The price of a million billed characters, converted to `[Pricing] Currency`; empty: the cost is unknown. |
+| `Formality` | `default` (DeepL) | `more`, `less`, `prefer_more`, `prefer_less`. |
+| `LanguageMap[<eZ locale>]`, `Languages[]` | (empty) | The service's code of a locale; the base codes it translates (empty: the built-in rules). |
+| `GlossaryId[<source>:<target>]` | (empty) | A DeepL glossary id. |
+| `Timeout`, `MaxTextsPerRequest`, `MaxBytesPerRequest` | `30`, `50`, `120000` / `60`, `25`, `60000` | The limits of one request. |
+| `MaxRetries`, `RetryAfterMax` | `2`, `10` | Retries of 429 and 5xx within one job; a longer `retry-after` is left to the queue. |
+| `SendContext` | `enabled` (DeepL) | The neighbouring blocks go along as context (one block per request then). |
+
+The field action is `[FieldAction_translate] Handler=expAiTranslateFieldAction` (purpose `field`).
 
 ## [AltTextSettings]: alt text for images
 

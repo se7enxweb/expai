@@ -27,6 +27,7 @@ CREATE TABLE expai_conversation (
 CREATE TABLE expai_usage_log (
   action varchar(40) NOT NULL DEFAULT '',
   batch_id int(11) NOT NULL DEFAULT '0',
+  billed_chars int(11) NOT NULL DEFAULT '0',
   cache_read_tokens int(11) NOT NULL DEFAULT '0',
   cache_write_tokens int(11) NOT NULL DEFAULT '0',
   conversation_id int(11) NOT NULL DEFAULT '0',

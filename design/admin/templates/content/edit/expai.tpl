@@ -14,12 +14,17 @@
                                                               'datatype', $exp_ai_attribute.data_type_string,
                                                               'name', $exp_ai_attribute.contentclass_attribute_name ) )}
 {/foreach}
+{* an action that cannot be used at all (Translate without a translation service) is left out *}
+{def $exp_ai_unavailable = fetch( 'expai', 'unavailable_field_actions' )}
 {foreach ezini( 'EditViewSettings', 'FieldActions', 'expai.ini' ) as $exp_ai_action}
+    {if $exp_ai_unavailable|contains( $exp_ai_action )|not}
     {set $exp_ai_actions = $exp_ai_actions|append( hash( 'name', $exp_ai_action,
                                                         'label', ezini( concat( 'FieldAction_', $exp_ai_action ), 'Label', 'expai.ini' )|i18n( 'extension/expai/fieldaction' ),
                                                         'input', ezini( concat( 'FieldAction_', $exp_ai_action ), 'Input', 'expai.ini' ),
                                                         'datatypes', ezini( concat( 'FieldAction_', $exp_ai_action ), 'Datatypes', 'expai.ini' ) ) )}
+    {/if}
 {/foreach}
+{undef $exp_ai_unavailable}
 {foreach fetch( 'content', 'prioritized_languages' ) as $exp_ai_language}
     {set $exp_ai_languages = $exp_ai_languages|append( hash( 'code', $exp_ai_language.locale, 'name', $exp_ai_language.name ) )}
 {/foreach}

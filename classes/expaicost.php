@@ -134,6 +134,10 @@ class expAiCost
     {
         if ( (int) $reportedMicros > 0 )
             return array( 'amount' => (int) $reportedMicros / 1000000, 'approx' => false, 'key' => 'reported', 'source' => 'reported' );
+        // a translation service (model_alias translation.<id>, expAiTranslationRecorder) bills characters, not tokens:
+        // its cost is what the recorder stored, also when that is nothing (a local service, PricePerMChars=0)
+        if ( strpos( (string) $alias, 'translation.' ) === 0 )
+            return array( 'amount' => 0.0, 'approx' => false, 'key' => 'reported', 'source' => 'reported' );
         $prompt = (int) $input + (int) $cacheWrite + (int) $cacheRead;
         $p = self::aliasPrices( $alias );
         $source = 'alias';

@@ -376,7 +376,9 @@ class expAiProviderRegistry
 
     /**
      * Problems of the key placement, for the administrator: an ApiKey or Token in a file that is not an override
-     * (the extension's settings, a siteaccess file inside an extension) is shipped with the code.
+     * (the extension's settings, a siteaccess file inside an extension) is shipped with the code. Checked: [AISettings],
+     * [Provider_<id>], [McpServer_<id>], the web search services [SearchProvider_<id>] and the translation services
+     * [TranslationProvider_<id>].
      * @return string[] readable warnings (paths relative to the installation, never the key)
      */
     public function keyPlacementProblems()
@@ -387,7 +389,7 @@ class expAiProviderRegistry
         $problems = array();
         foreach ( $placements as $group => $names )
         {
-            if ( !is_array( $names ) || ( $group !== 'AISettings' && strpos( $group, 'Provider_' ) !== 0 && strpos( $group, 'McpServer_' ) !== 0 ) )
+            if ( !is_array( $names ) || !self::keyGroup( $group ) )
                 continue;
             foreach ( array( 'ApiKey', 'Token' ) as $name )
             {
@@ -404,6 +406,18 @@ class expAiProviderRegistry
             }
         }
         return array_values( array_unique( $problems ) );
+    }
+
+    /** @return bool the group may hold a key (ApiKey, Token) whose placement keyPlacementProblems() checks */
+    public static function keyGroup( $group )
+    {
+        $group = (string) $group;
+        if ( $group === 'AISettings' )
+            return true;
+        foreach ( array( 'Provider_', 'McpServer_', 'SearchProvider_', 'TranslationProvider_' ) as $prefix )
+            if ( strpos( $group, $prefix ) === 0 )
+                return true;
+        return false;
     }
 
     /**
