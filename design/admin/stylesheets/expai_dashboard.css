@@ -10,14 +10,14 @@
 .exp-ai-ms-scroll { overflow-x: auto; }
 .exp-ai-ms-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
 .exp-ai-ms-table th, .exp-ai-ms-table td { padding: 0.5em 0.6em; text-align: left; vertical-align: top; border-bottom: 1px solid var(--exp-ai-line); }
-.exp-ai-ms-table thead th { font-size: 0.85em; font-weight: 600; color: var(--exp-ai-muted); white-space: nowrap; }
+.exp-ai-ms-table thead th { font-size: 0.85em; font-weight: var(--a4-weight-strong, 600); color: var(--exp-ai-muted); white-space: nowrap; }
 .exp-ai-ms-table tbody tr:last-child th, .exp-ai-ms-table tbody tr:last-child td { border-bottom: 0; }
-.exp-ai-ms-model { font-weight: 600; min-width: 11em; }
-.exp-ai-ms-badges { display: flex; flex-wrap: wrap; gap: 0.3em; margin-top: 0.25em; font-weight: 400; }
+.exp-ai-ms-model { font-weight: var(--a4-weight-strong, 600); min-width: 11em; }
+.exp-ai-ms-badges { display: flex; flex-wrap: wrap; gap: 0.3em; margin-top: 0.25em; font-weight: normal; }
 .exp-ai-ms-badge { display: inline-block; padding: 0 0.45em; border: 1px solid var(--exp-ai-line); border-radius: 999px; font-size: 0.8em; line-height: 1.6; color: var(--exp-ai-muted); }
 .exp-ai-ms-flag { border-color: var(--exp-ai-accent); color: var(--exp-ai-accent-text); background: var(--exp-ai-accent-soft); }
-.exp-ai-ms-alias { display: block; margin-top: 0.2em; font-size: 0.78em; font-weight: 400; color: var(--exp-ai-muted); white-space: nowrap; }
-.exp-ai-ms-big { display: block; font-weight: 600; white-space: nowrap; }
+.exp-ai-ms-alias { display: block; margin-top: 0.2em; font-size: 0.78em; font-weight: normal; color: var(--exp-ai-muted); white-space: nowrap; }
+.exp-ai-ms-big { display: block; font-weight: var(--a4-weight-strong, 600); white-space: nowrap; }
 .exp-ai-ms-small { display: block; font-size: 0.85em; color: var(--exp-ai-muted); }
 .exp-ai-ms-bad { color: var(--exp-ai-error); }
 .exp-ai-ms-checks { min-width: 13em; }
@@ -25,13 +25,13 @@
 /* latency per day: a small bar row; the figures are in the hidden text beside it and in each bar's title */
 .exp-ai-ms-spark { display: flex; align-items: flex-end; gap: 2px; height: 2em; min-width: 4em; margin: 0; padding: 0; list-style: none; }
 .exp-ai-ms-spark li { flex: 1 1 0; max-width: 0.6em; height: 100%; display: flex; align-items: flex-end; border-bottom: 1px solid var(--exp-ai-line); }
-.exp-ai-ms-spark span { display: block; width: 100%; height: calc(var(--a4-pct, 0) * 1%); background: var(--exp-ai-accent); border-radius: 1px 1px 0 0; }
+.exp-ai-ms-spark span { display: block; width: 100%; height: calc(var(--a4-pct, 0) * 1%); background: var(--exp-ai-accent); border-radius: var(--a4-radius-s, 1px) var(--a4-radius-s, 1px) 0 0; }
 .exp-ai-ms-slow .exp-ai-ms-spark span { background: var(--exp-ai-error); }
 
 /* "Watch this run" in the Start writing card */
 .exp-ai-watch { margin: 0 0 0.75em; }
 .exp-ai-watch-line { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4em 0.75em; margin: 0; padding: 0.5em 0.75em; border: 1px solid var(--exp-ai-line); border-radius: var(--exp-ai-radius); background: var(--exp-ai-surface); }
-.exp-ai-watch-chip { display: inline-flex; align-items: center; gap: 0.4em; font-weight: 600; white-space: nowrap; }
+.exp-ai-watch-chip { display: inline-flex; align-items: center; gap: 0.4em; font-weight: var(--a4-weight-strong, 600); white-space: nowrap; }
 .exp-ai-watch-what { flex: 1 1 10em; min-width: 0; overflow-wrap: anywhere; }
 .exp-ai-watch-links { display: inline-flex; flex-wrap: wrap; gap: 0.75em; }
-.exp-ai-watch-main { font-weight: 600; }
+.exp-ai-watch-main { font-weight: var(--a4-weight-strong, 600); }
