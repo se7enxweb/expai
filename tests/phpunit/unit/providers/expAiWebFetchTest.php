@@ -4,7 +4,7 @@
  * its transport hook, and once for real against a local web server), robots.txt, the web search with the Brave API
  * shape (an HTTP stub, never the real API) and the tools web_fetch and web_search.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

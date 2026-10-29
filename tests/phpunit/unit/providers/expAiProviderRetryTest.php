@@ -5,7 +5,7 @@
  * secrets in error texts, and an answer stream that broke off or carries an error. The HTTP client answers from
  * canned responses on a virtual clock: no network, no database, no sleeping.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

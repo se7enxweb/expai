@@ -5,7 +5,7 @@
  * written as a literal; the probe asks with the panel's instructions (and the site's extra instructions), and its
  * tasks read_node and two_nodes ask for the node ids the task names.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

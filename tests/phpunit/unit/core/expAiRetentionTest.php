@@ -4,7 +4,7 @@
  * users that no longer exist, the empty test of Oracle, and (with the database, inside a transaction that is rolled
  * back) the removal of the rows of a removed user and of old conversations, and the blanked request summaries.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

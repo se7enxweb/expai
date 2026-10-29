@@ -4,7 +4,7 @@
  * expai/vector (Subtree, Section, Scope, Review) allow. Users and roles of their own; threads, draft log rows and
  * approval items in a transaction that is rolled back.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

@@ -10,7 +10,7 @@
  *  - usage(): a row of expai_usage_log, removed after the test.
  *  - draftLog(): a row of expai_draft_log, removed after the test.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

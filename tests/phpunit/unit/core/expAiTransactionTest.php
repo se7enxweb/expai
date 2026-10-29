@@ -4,7 +4,7 @@
  * method, and the content writer refuses unknown fields before it opens one. A transaction left open would run the
  * rest of the request inside it, and the end of the request would roll back everything written after it.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

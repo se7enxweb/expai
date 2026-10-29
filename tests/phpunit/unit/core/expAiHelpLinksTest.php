@@ -3,7 +3,7 @@
  * expAiHelpLinks: the extension's documentation is in the help center (exphelp, Exponential 6.0.15 and later); the
  * page names become the page ids there and every link leads straight to it. Reads files and needs no database.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

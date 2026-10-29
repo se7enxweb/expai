@@ -10,7 +10,7 @@
  * Starting runs: POST ExpAiChainStartButton with ExpAiChain, ExpAiNodeID, ExpAiPrompt (the brief), ExpAiCount (items)
  * and ExpAiChainLanguage, from the Intelligence tab (panel section "chains") and the dashboard's "Start writing".
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

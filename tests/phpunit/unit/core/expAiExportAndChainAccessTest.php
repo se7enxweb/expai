@@ -4,7 +4,7 @@
  * run is shown only to the user who started it, holders of expai/log and users who may edit its object
  * (expAiChainPolicy::maySee()). No database: the users, runs and objects are made in memory.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

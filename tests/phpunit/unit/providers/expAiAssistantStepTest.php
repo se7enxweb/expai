@@ -6,7 +6,7 @@
  * a model without tools, the prompted protocol's retries, and the history the panel shows. The conversation, thread
  * and usage rows are written in a transaction that is rolled back; the test folder is removed.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

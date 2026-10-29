@@ -6,7 +6,7 @@
  * retention, the data policy rules, the limits and budgets against this month's usage, the tools that reach outside
  * the site and the master switch. No view parameters change what is shown; printing uses the browser (Save as PDF).
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

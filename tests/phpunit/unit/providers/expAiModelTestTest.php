@@ -6,7 +6,7 @@
  * off, and where the start itself is tested the "PHP binary" is /bin/true. The jobs and usage rows of the test are
  * removed.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

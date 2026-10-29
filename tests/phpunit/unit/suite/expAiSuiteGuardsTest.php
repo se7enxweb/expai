@@ -3,7 +3,7 @@
  * The guards of the suite itself: no test can reach a real provider through the site's settings, mail goes to
  * files, and the audit writes into the run's throwaway directory. The messages name settings, never their values.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

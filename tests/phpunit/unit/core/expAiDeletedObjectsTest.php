@@ -4,7 +4,7 @@
  * the dashboard, the log and the links list such a row as removed, without a link, and write no "Object not found"
  * error to the debug output; the cronjob marks the rows "deleted".
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

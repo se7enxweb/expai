@@ -20,7 +20,7 @@
  *   php bin/php/ezexec.php -s admin extension/expai/tests/expaibridge_e2e_test.php
  * Prints one line per check and ends with PASS or FAIL (exit code 0 or 1).
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

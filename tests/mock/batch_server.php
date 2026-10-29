@@ -23,7 +23,7 @@
  * had an output schema). A missing key or the key "invalid" gets 401. Every request is appended to
  * <state>/requests.jsonl without its key headers, and every batch is a JSON file in <state>/batches/.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

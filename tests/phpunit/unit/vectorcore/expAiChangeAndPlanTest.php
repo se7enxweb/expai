@@ -3,7 +3,7 @@
  * expAiChange (decisions and counts), expAiPlan (as the browser sees it), expAiPlanEstimate (frame and context sizes,
  * the calibration from finished plans, the site budget) and expAiChangeApplier (what it refuses and skips).
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

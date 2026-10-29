@@ -14,7 +14,7 @@
  * doc/changelog/<version>.md, any other name for doc/<name>.md. A name of a page the extension does not have leads to
  * the index.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

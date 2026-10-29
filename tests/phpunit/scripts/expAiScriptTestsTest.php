@@ -15,7 +15,7 @@
  * What a script leaves below its folder (drafts, a folder it moved to the trash, log rows, conversations, threads)
  * and the rows of the mock providers that exist only in its memory are removed after it, also when it fails.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

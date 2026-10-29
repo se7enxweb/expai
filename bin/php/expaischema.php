@@ -18,7 +18,7 @@
  * -s <siteaccess> is mandatory (not with --print and --write-files): the script prints the siteaccess and its database (stderr) and does not run
  * where expai is not active (expAiScript).
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

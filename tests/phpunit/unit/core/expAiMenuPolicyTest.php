@@ -10,7 +10,7 @@
  * Reads the two files as text and needs no kernel: module.php is not included (it builds limitation values from the
  * database). Also runs on its own: php vendor/bin/phpunit --no-configuration extension/expai/tests/phpunit/unit/core/expAiMenuPolicyTest.php
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

@@ -5,7 +5,7 @@
  * the translation hand-off, the run and step rows, and the offline link check and answer cleaning. The chain's model
  * is the stub provider; its resource is paused, so no worker of the site runs a step, and no step is answered.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

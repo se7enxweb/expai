@@ -24,7 +24,7 @@
  * -s <siteaccess> is mandatory: the script prints the siteaccess and its database (stderr) and does not run
  * where expai is not active (expAiScript).
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  * @description Translation sync: decide, queue, skip or show the updates of translations

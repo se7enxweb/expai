@@ -3,7 +3,7 @@
  * expAiThreadTurnHandler (job type expai.thread.turn): a turn of a thread run by the queue worker, here with jobs in
  * memory only and the stub provider of the fixture (no worker, no network).
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

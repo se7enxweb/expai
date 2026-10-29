@@ -1,6 +1,6 @@
 /*!
  * expai - Exponential Intelligence: small actions of the report pages, without inline code
- * Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * GNU General Public License v2.0 (or any later version)
  *
  * Printed by expai/alttext.tpl and expai/summary.tpl (ezscript). One listener per event on the document, set up once:

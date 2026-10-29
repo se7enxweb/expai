@@ -1,6 +1,6 @@
 /*!
  * expai - Exponential Intelligence: alt text for images (doc/alt-text.md)
- * Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * GNU General Public License v2.0 (or any later version)
  *
  * Loaded by expai/edit/alttext.tpl in the content edit form. Next to every image field (ezimage) it adds

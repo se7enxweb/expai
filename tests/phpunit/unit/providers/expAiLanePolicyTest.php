@@ -3,7 +3,7 @@
  * expAiLane and expAiLanePolicy: the lanes a provider and a model offer, their settings, the provider of a lane, and
  * the choice of a lane for a request (order, prices, the fast lane, urgent requests, deadlines). Settings in memory.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

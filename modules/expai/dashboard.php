@@ -4,7 +4,7 @@
  * entry in menu.ini [Leftmenu_my]): the user's drafts, the AI-written versions waiting for their approval, "Start
  * writing" (pick a location with the content browser, then the panel opens there with the request) and the status.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

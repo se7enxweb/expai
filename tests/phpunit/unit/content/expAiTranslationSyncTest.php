@@ -4,7 +4,7 @@
  * a patch and of a full translation, check / approve / skip / status, the answer written into a draft of the target
  * language, and the publish trigger. The model is never called: the queued request is answered by the test.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

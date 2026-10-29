@@ -5,7 +5,7 @@
  * administrator, against the mock server of tests/mock/server.php (the provider exists only in memory; nothing leaves
  * 127.0.0.1). The folder is removed with every draft, log row, conversation and thread made below it.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

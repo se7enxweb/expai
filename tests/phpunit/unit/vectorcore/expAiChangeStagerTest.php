@@ -3,7 +3,7 @@
  * expAiChangeStager: the write tools in staged review. Scope checks, the bulk guard, values in storage form per
  * datatype, fields held by another run, restaging and editing a hunk.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

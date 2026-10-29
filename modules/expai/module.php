@@ -30,7 +30,7 @@
  *                    (thread)/<uuid>, (node)/<node id>, (tab)/plan|diff|cost, (shelf)/settled|archived
  *   expai/summary    the "EI: Summary" page for a data protection officer, printable (expai/summary)
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

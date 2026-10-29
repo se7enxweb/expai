@@ -5,7 +5,7 @@
  * (EXPAI_MOCK_STATE): "mode" (ok, e400, e401, e503) and the batch's "status.json" and "results.jsonl". Every
  * request is appended to requests.jsonl. No Exponential bootstrap.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

@@ -1,6 +1,6 @@
 /*!
  * expai - "Watch this run" on expai/dashboard (doc/dashboard.md "Start writing")
- * Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * GNU General Public License v2.0 (or any later version)
  *
  * Loaded by expai/dashboard.tpl. While the request sent with "Start writing" waits or works, the state line asks

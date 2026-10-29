@@ -3,7 +3,7 @@
  * expAiImageInput: the checks of an image before it goes to a vision model (the field, the stored file, the format,
  * the decompression bomb guard, scaling down until it fits, transparency) and the redaction of requests for logs.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

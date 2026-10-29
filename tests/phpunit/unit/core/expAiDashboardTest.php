@@ -4,7 +4,7 @@
  * expAiApprovalCheck: what the dashboard shows for the current user, on a hidden folder of the test (removed with
  * everything below it, also from the trash) and rows of the test that are removed again.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

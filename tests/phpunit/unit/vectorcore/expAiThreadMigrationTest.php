@@ -3,7 +3,7 @@
  * expAiThreadMigration: panel conversations of earlier builds become threads. Everything runs in a transaction that
  * is rolled back (the migration works on every conversation without a thread, and this site has none of its own).
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

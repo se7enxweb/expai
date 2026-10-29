@@ -3,7 +3,7 @@
  * expAiThreadItemHandler (job type expai.thread.item): one item of an approved plan in its child run, with jobs in
  * memory only and the stub provider of the fixture.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

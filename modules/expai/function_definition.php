@@ -7,7 +7,7 @@
  *   fetch( 'expai', 'waiting_for_my_approval' )              AI-written versions waiting for the user's approval
  *   fetch( 'expai', 'models' )                               the models the user may choose, the default and the current choice
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

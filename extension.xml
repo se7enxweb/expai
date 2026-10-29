@@ -3,7 +3,7 @@
     <metadata>
         <name>Exponential Intelligence</name>
         <version>0.0.1.21</version>
-        <copyright>Copyright (C) 1998 - 2026 7x &amp; Exponential Foundation. All rights reserved.</copyright>
+        <copyright>Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.</copyright>
         <license>GNU General Public License v2.0 (or any later version)</license>
         <info_url>https://github.com/se7enxweb/expai</info_url>
         <description>A writing assistant for the Exponential administration interface: a conversation panel on the content full view and controls in the content edit form. It writes drafts only, as the logged-in editor and with the editor's permissions, labels them "Exponential Intelligence" and leaves publishing (with approval where the site requires it) to the editor.</description>

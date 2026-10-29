@@ -4,7 +4,7 @@
  * that exists only in this process's memory, settings of the site's expai.ini changed in memory and restored after
  * the test, articles with a translation below the test's folder, and ezjscore requests.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

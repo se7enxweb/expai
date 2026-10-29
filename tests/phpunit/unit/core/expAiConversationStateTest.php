@@ -6,7 +6,7 @@
  * external tool's result is in the window, the scope of the write tools, the check of a call's arguments against
  * the tool's schema, and the lock of a conversation while a step runs.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

@@ -5,7 +5,7 @@
  * the chips with data-action, the form box and the note), disabled until expai.js takes it on, and expai.js takes a
  * drawn bar on instead of adding a second one. No database.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

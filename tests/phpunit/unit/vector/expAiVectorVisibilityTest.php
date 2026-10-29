@@ -5,7 +5,7 @@
  * made by the code that makes them in a running site (expAiPlanner::newItem(), expAiPlan, expAiChange, the draft key
  * of expAiAssistant), so that a renamed field cannot let everything through; what cannot be told is withheld.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

@@ -4,7 +4,7 @@
  * "ai": links, the dashboard card, an event's fields and links, object links, the chart). The audit of the suite
  * writes into its throwaway directory (expAiTestAudit), never into the site's audit trail.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

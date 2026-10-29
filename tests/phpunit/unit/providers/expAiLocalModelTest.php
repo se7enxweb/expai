@@ -4,7 +4,7 @@
  * like Ollama's /api/version, /api/ps and /api/tags), the helper's status file, and the requests written to the
  * helper's spool directory. Nothing is started or stopped: the spool is a directory of the test.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

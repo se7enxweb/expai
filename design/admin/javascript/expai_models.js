@@ -1,6 +1,6 @@
 /*!
  * expai - "Test prompt" and "Load model" on expai/models (doc/local-models.md "Test prompt and Load model")
- * Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * GNU General Public License v2.0 (or any later version)
  *
  * Loaded by expai/models.tpl. The buttons queue a job (expaimodel::test, expaimodel::load: POST with the form token,

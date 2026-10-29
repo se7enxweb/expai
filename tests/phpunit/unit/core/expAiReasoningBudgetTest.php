@@ -4,7 +4,7 @@
  * spends output tokens on thinking, so a request to it never gets fewer than REASONING_MIN_TOKENS; another model
  * keeps the configured value. The alt text request uses it. No database, no request.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

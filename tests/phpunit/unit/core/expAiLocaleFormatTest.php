@@ -3,7 +3,7 @@
  * Numbers in machine-readable text do not follow the locale: under a German LC_NUMERIC (decimal comma) the reasons of
  * expAiTranslationSync::decide() still read "0.60", as the stored state and its tests expect. No database.
  *
- * @copyright Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * @copyright Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * @license GNU General Public License v2.0 (or any later version)
  * @package expai
  */

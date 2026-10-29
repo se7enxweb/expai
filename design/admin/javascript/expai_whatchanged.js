@@ -1,6 +1,6 @@
 /*!
  * expai - Exponential Intelligence
- * Copyright (C) 1998 - 2026 7x & Exponential Foundation. All rights reserved.
+ * Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
  * GNU General Public License v2.0 (or any later version)
  *
  * "What changed" of a draft the assistant wrote directly (doc/review.md, "Direct mode: what changed, and revert"):
