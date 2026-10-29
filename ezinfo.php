@@ -10,7 +10,7 @@ class expaiInfo
     {
         return array(
             'Name'      => 'Exponential Intelligence',
-            'Version'   => "0.0.1.21",
+            'Version'   => "0.0.1.22",
             'Author'    => '7x',
             'Copyright' => "Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.",
             'License'   => "GNU General Public License v2.0 (or any later version)",
