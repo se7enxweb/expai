@@ -56,6 +56,7 @@
 | [changelog/0.0.1.17.md](changelog/0.0.1.17.md) | The old help reader is removed; the documentation needs the help center of Exponential 6.0.15 |
 | [changelog/0.0.1.19.md](changelog/0.0.1.19.md) | Translation services: DeepL and LibreTranslate next to the model, per language pair and purpose |
 | [changelog/0.0.1.20.md](changelog/0.0.1.20.md) | What 0.0.1.20 changes: translations into more languages |
+| [changelog/0.0.1.21.md](changelog/0.0.1.21.md) | What 0.0.1.21 changes: the admin stylesheets use the shared admin tokens |
 | [changelog/0.0.1.2.md](changelog/0.0.1.2.md) | Every translation file validates again, so expai is translated |
 | [changelog/0.0.1.3.md](changelog/0.0.1.3.md) | Draft log entries of removed objects show as removed, without an "Object not found" error |
 | [changelog/0.0.1.1.md](changelog/0.0.1.1.md) | No "Decorative" choice for a field that requires an alt text |
